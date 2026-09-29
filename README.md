@@ -5,9 +5,9 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> **Official Public Reproduction Package** — MIT Sloan Sports Analytics Conference 2027 (Soccer Track)
+> **Official Public Reproduction Package** (MIT Sloan Sports Analytics Conference 2027, Soccer Track)
 
-Modern pitch control models quantify spatial dominance in observed player configurations, but cannot measure how precarious a defensive structure is to subtle attacking adjustments. **`fragility`** evaluates **Structural Opening Gain (SOG)** by subjecting every off-ball attacker to an exhaustive grid of micro-counterfactual displacements ($\pm 0.5\text{ m}, \pm 1.0\text{ m}, \pm 1.5\text{ m}$ in 8 compass directions). Aggregating the tail (top 10%) of these counterfactual gains yields a scalar measure of macro defensive fragility ($F_{\text{SOG}}$).
+Modern pitch control models evaluate spatial control in observed player configurations, but miss how precarious a defensive structure is to small attacking adjustments. **`fragility`** measures **Structural Opening Gain (SOG)** by subjecting every off-ball attacker to an exhaustive grid of micro-counterfactual displacements ($\pm 0.5\text{ m}, \pm 1.0\text{ m}, \pm 1.5\text{ m}$ in 8 compass directions). Aggregating the top 10% of these gains yields a scalar measure of defensive fragility ($F_{\text{SOG}}$).
 
 ---
 
@@ -89,7 +89,7 @@ fragility/
 ├── CODE_PROVENANCE.md         # Lineage mapping to canonical research commits
 ├── DATA_ACCESS.md             # Reviewer guide for licensed PFF FC tracking data
 ├── REPRODUCIBILITY.md         # Full reproduction protocol and environment specifications
-└── RELEASE_AUDIT.md           # 21-category privacy, licensing, and security audit
+└── RELEASE_AUDIT.md           # Release checklist and data licensing audit
 ```
 
 ---
