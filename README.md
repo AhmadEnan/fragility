@@ -17,11 +17,11 @@ All empirical results reported in the submission abstract reproduce deterministi
 
 | Claim | Benchmark | Metric | Expected Result | Reproduced | Status |
 | :--- | :--- | :--- | :---: | :---: | :---: |
-| **C01: Action Recovery** | Gold-20 Bank A (13 cases) | Top-10% Action Recovery | **65.0%** (13/20) | **65.0%** (95% CI: [43.3%, 81.9%]) | **PASS** |
-| **C02: Space-Creators** | Gold-20 Bank A (13 cases) | Decoy / Space-Creator Recovery | **100.0%** (5/5) | **100.0%** (Exploiters: 53.8%) | **PASS** |
-| **C03: Residual Weighting** | Gold-20 Bank A (13 cases) | Gain over unweighted PCG | **+10.0 pp** | **+10.0 pp** (95% CI: [0.0%, 23.5%]) | **PASS** |
+| **C01: Action Recovery** | Benchmark Primary Cohort (13 cases) | Top-10% Action Recovery | **65.0%** (13/20) | **65.0%** (95% CI: [43.3%, 81.9%]) | **PASS** |
+| **C02: Space-Creators** | Benchmark Primary Cohort (13 cases) | Decoy / Space-Creator Recovery | **100.0%** (5/5) | **100.0%** (Exploiters: 53.8%) | **PASS** |
+| **C03: Residual Weighting** | Benchmark Primary Cohort (13 cases) | Gain over unweighted PCG | **+10.0 pp** | **+10.0 pp** (95% CI: [0.0%, 23.5%]) | **PASS** |
 | **C04: Grid Invariance** | 36 states ($G_0$ vs $G_1$) | Rank Stability ($50\times 32$ vs $100\times 64$) | **$\rho = 0.9998$** | **$\rho = 0.9998$**, Best-Player: **100%** | **PASS** |
-| **C05: Matched Pairs** | 32 CAP Matched Pairs | Angular vs Radial Accessibility | **$\Delta = 0.0000$** | **$\Delta = 0.0000$** (`DISTANCE_ONLY`) | **PASS** |
+| **C05: Matched Pairs** | 32 Counter-Attack Matched Pairs | Angular vs Radial Accessibility | **$\Delta = 0.0000$** | **$\Delta = 0.0000$** (`DISTANCE_ONLY`) | **PASS** |
 | **C06: Validation Cohort** | 11 qualitative states | Benchmark Protocol | *Pending* | Pilot Cohort Verified | **PASS** |
 
 ---
@@ -32,8 +32,8 @@ The figures below are generated programmatically from the derived benchmarks:
 
 | Figure 1: Tactical Action Recovery & Residual Ablation | Figure 2: Numerical Stability & Grid Resolution Convergence |
 | :---: | :---: |
-| ![Figure 1: Tactical Recovery](results/figures/figure1_gold20_recovery.png) | ![Figure 2: Grid Convergence](results/figures/figure2_grid_stability.png) |
-| *Top-10% tactical action recovery across Gold-20 benchmark cases, illustrating the +10.0 pp boost from residual weighting.* | *Spearman rank correlation ($\rho = 0.9998$) and best-player identity preservation (100%) across grid resolutions.* |
+| ![Figure 1: Tactical Recovery](results/figures/figure1_action_recovery.png) | ![Figure 2: Grid Convergence](results/figures/figure2_grid_stability.png) |
+| *Top-10% tactical action recovery across benchmark cases, illustrating the +10.0 pp boost from residual weighting.* | *Spearman rank correlation ($\rho = 0.9998$) and best-player identity preservation (100%) across grid resolutions.* |
 
 ---
 
@@ -82,7 +82,7 @@ fragility/
 ├── notebooks/                 # reproduce_ssac27.ipynb (Colab orchestrator, <=140 LOC)
 ├── data/
 │   ├── derived/               # Frozen, vetted shareable benchmark tables + SHA256 manifest
-│   └── validation/            # Gold-20 independent tactical labels & 47 source citations
+│   └── validation/            # Independent benchmark tactical labels & 47 source citations
 ├── results/                   # Canonical expected_results.json & publication figures
 ├── tests/                     # Synthetic unit tests & canonical parity tests
 ├── ABSTRACT_CLAIMS.md         # Scientific claim provenance matrix

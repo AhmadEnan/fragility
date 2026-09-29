@@ -1,7 +1,7 @@
 """Publication-quality figure generation functions for SSAC 2027.
 
 Regenerates the two abstract figures directly from data tables:
-- Figure 1: Tactical validation and incremental residual ablation (Gold20 recovery)
+- Figure 1: Tactical benchmark action recovery and incremental residual ablation
 - Figure 2: Numerical validity and grid resolution convergence (50x32 vs 100x64)
 """
 
@@ -17,18 +17,13 @@ import pandas as pd
 from fragility.validation import wilson_ci
 
 
-def plot_gold20_recovery(
+def plot_action_recovery(
     ablation_df: pd.DataFrame,
     out_path: str | Path,
     figsize: tuple[float, float] = (8.5, 5.0),
     dpi: int = 200,
 ) -> Path:
-    """Generate Figure 1: Gold20 tactical recovery hit rate (SOG vs PCG).
-
-    Matches canonical presentation in EXP025 Figure 06 (excluding SOG-PA):
-    player-only and player x direction top-10 recovery rates with Wilson 95%
-    confidence intervals, background null diamond markers, and case-bootstrap Delta.
-    """
+    """Generate Figure 1: Tactical benchmark action recovery (SOG vs unweighted PCG)."""
     df = ablation_df[ablation_df["evidence_strength"] == "A"].copy() if "evidence_strength" in ablation_df.columns else ablation_df.copy()
     nA = len(df) if len(df) > 0 else 20
 
@@ -108,9 +103,9 @@ def plot_gold20_recovery(
     ax.set_xticks(xs)
     ax.set_xticklabels([f"{l}\n{pk[i]}/{nA} pl · {dk[i]}/{nA} dir" for i, l in enumerate(labels)], fontsize=10)
 
-    ax.set_ylabel("A-grade documented-action TOP10 rate", fontsize=10)
+    ax.set_ylabel("Documented action top-10% recovery rate", fontsize=10)
     ax.set_ylim(0.0, 1.25)
-    ax.set_title("SOG vs PCG: player-only and player×direction TOP10 (frozen bank, n=20)", fontsize=11, pad=12)
+    ax.set_title("Tactical action recovery: SOG vs PCG (20 benchmark cases)", fontsize=11, pad=12)
     ax.legend(frameon=True, fontsize=10, loc="lower right", facecolor="white", edgecolor="#cccccc")
     ax.grid(axis="y", alpha=0.25, linestyle="-", zorder=0)
 
@@ -127,6 +122,10 @@ def plot_gold20_recovery(
     plt.savefig(p, bbox_inches="tight")
     plt.close()
     return p
+
+
+# Compatibility alias
+plot_gold20_recovery = plot_action_recovery
 
 
 def plot_grid_stability(

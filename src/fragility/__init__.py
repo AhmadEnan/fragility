@@ -28,6 +28,7 @@ from fragility.sog import (
     aggregate_cells,
 )
 from fragility.validation import (
+    evaluate_tactical_recovery,
     evaluate_gold20,
     evaluate_ablation,
     evaluate_grid_stability,
@@ -36,6 +37,7 @@ from fragility.validation import (
     wilson_ci,
 )
 from fragility.figures import (
+    plot_action_recovery,
     plot_gold20_recovery,
     plot_grid_stability,
 )
@@ -63,12 +65,14 @@ __all__ = [
     "score_state",
     "state_fragility",
     "aggregate_cells",
+    "evaluate_tactical_recovery",
     "evaluate_gold20",
     "evaluate_ablation",
     "evaluate_grid_stability",
     "evaluate_state_fragility",
     "exact_permutation_auc",
     "wilson_ci",
+    "plot_action_recovery",
     "plot_gold20_recovery",
     "plot_grid_stability",
     "__version__",

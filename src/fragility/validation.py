@@ -1,7 +1,7 @@
 """Validation statistics and statistical testing for SOG abstract claims.
 
 Includes:
-1. Gold20 tactical recovery (EXP023)
+1. Tactical benchmark action recovery
 2. Residual-weight incremental ablation SOG vs PCG (EXP024)
 3. Grid resolution convergence G0 vs G1 (EXP026A)
 4. State-level fragility and path accessibility on CAP pairs (EXP027)
@@ -31,11 +31,11 @@ def wilson_ci(k: int | float, n: int, z: float = 1.96) -> tuple[float, float]:
     return (float(lo), float(hi))
 
 
-def evaluate_gold20(
+def evaluate_tactical_recovery(
     player_actions_df: pd.DataFrame,
     cases_df: pd.DataFrame | None = None,
 ) -> dict[str, Any]:
-    """Evaluate Gold20 independent tactical recovery metrics (EXP023)."""
+    """Evaluate tactical benchmark recovery performance."""
     df = player_actions_df.copy()
     evaluable_mask = df["evaluability"].isin(["DIRECTLY_EVALUABLE", "OFFSIDE_CONFOUNDED_BUT_SCOREABLE"])
     eval_df = df[evaluable_mask].copy()
@@ -96,6 +96,10 @@ def evaluate_gold20(
             out["A"]["null_window_background_rate"] = float(c_a["NULL_WINDOW_HIT_RATE"].median())
 
     return out
+
+
+# Compatibility alias
+evaluate_gold20 = evaluate_tactical_recovery
 
 
 def evaluate_ablation(ablation_df: pd.DataFrame) -> dict[str, Any]:

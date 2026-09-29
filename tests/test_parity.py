@@ -16,6 +16,7 @@ from fragility.config import CANONICAL_CONFIG
 from fragility.pff import load_synthetic_state, load_pff_state
 from fragility.sog import score_state, aggregate_cells
 from fragility.validation import (
+    evaluate_tactical_recovery,
     evaluate_gold20,
     evaluate_ablation,
     evaluate_grid_stability,
@@ -35,15 +36,15 @@ def expected() -> dict:
 
 
 def test_gold20_claim_c01_and_c02_parity(expected):
-    pa_path = DERIVED_DIR / "gold20_player_actions.csv"
-    cs_path = DERIVED_DIR / "gold20_cases_summary.csv"
+    pa_path = DERIVED_DIR / "action_recovery.csv"
+    cs_path = DERIVED_DIR / "case_summary.csv"
     assert pa_path.exists()
     assert cs_path.exists()
 
     pa = pd.read_csv(pa_path)
     cs = pd.read_csv(cs_path)
 
-    res = evaluate_gold20(pa, cs)
+    res = evaluate_tactical_recovery(pa, cs)
     exp = expected["claims"]["C01_gold20_action_recovery"]
 
     # Bank A primary claims
@@ -67,7 +68,7 @@ def test_gold20_claim_c01_and_c02_parity(expected):
 
 
 def test_ablation_claim_c03_parity(expected):
-    abl_path = DERIVED_DIR / "gold20_ablation_comparison.csv"
+    abl_path = DERIVED_DIR / "residual_ablation.csv"
     assert abl_path.exists()
 
     abl = pd.read_csv(abl_path)
@@ -84,7 +85,7 @@ def test_ablation_claim_c03_parity(expected):
 
 
 def test_grid_convergence_claim_c04_parity(expected):
-    gs_path = DERIVED_DIR / "grid_stability_summary.csv"
+    gs_path = DERIVED_DIR / "grid_stability.csv"
     assert gs_path.exists()
 
     gs = pd.read_csv(gs_path)
@@ -99,7 +100,7 @@ def test_grid_convergence_claim_c04_parity(expected):
 
 
 def test_state_fragility_claim_c05_parity(expected):
-    cp_path = DERIVED_DIR / "cap_pair_scores.csv"
+    cp_path = DERIVED_DIR / "counterattack_pairs.csv"
     assert cp_path.exists()
 
     cp = pd.read_csv(cp_path)

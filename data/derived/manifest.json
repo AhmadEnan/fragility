@@ -1,72 +1,42 @@
 {
-  "gold20_player_actions.csv": {
-    "filename": "gold20_player_actions.csv",
+  "action_recovery.csv": {
+    "filename": "action_recovery.csv",
     "sha256": "67f0adb1bcbc44edd93d57d62862861d57a6b060f7ba57083446faa3f4bc8fc8",
+    "bytes": 7154,
     "row_count": 46,
     "raw_pff_content": false,
-    "contains_player_coordinates": false,
-    "contains_player_velocities": false,
-    "redistribution_eligible": true,
-    "license_note": "Aggregated derived research metrics and percentiles; contains no proprietary PFF tracking arrays.",
-    "generating_experiment": "EXP_SOG_GOLD20_CONFIRMATION_023",
-    "generating_commit": "db10578",
-    "generating_script": "kaggle_kernel_sog_gold20_solve/kernel.py",
-    "role_in_reproduction": "Per-action SOG recovery percentiles and hit flags for independent Gold20 tactical validation"
+    "role_in_reproduction": "Per-action SOG recovery percentiles and hit flags for tactical benchmark validation"
   },
-  "gold20_cases_summary.csv": {
-    "filename": "gold20_cases_summary.csv",
+  "case_summary.csv": {
+    "filename": "case_summary.csv",
     "sha256": "46394b892f94ac7478023e4dd20765b6effaf3cece4ef27b278e3017b1043b22",
+    "bytes": 1819,
     "row_count": 20,
     "raw_pff_content": false,
-    "contains_player_coordinates": false,
-    "contains_player_velocities": false,
-    "redistribution_eligible": true,
-    "license_note": "Aggregated derived research metrics and percentiles; contains no proprietary PFF tracking arrays.",
-    "generating_experiment": "EXP_SOG_GOLD20_CONFIRMATION_023",
-    "generating_commit": "db10578",
-    "generating_script": "kaggle_kernel_sog_gold20_solve/kernel.py",
-    "role_in_reproduction": "Per-case tactical mechanism support levels and primary exploiter hit flags"
+    "role_in_reproduction": "Case-level recovery performance and background null rates across 20 benchmark cases"
   },
-  "gold20_ablation_comparison.csv": {
-    "filename": "gold20_ablation_comparison.csv",
+  "residual_ablation.csv": {
+    "filename": "residual_ablation.csv",
     "sha256": "2556d6ad4ad5ddadb53d469cb6ca643e742e98081dfae0cd1b5f750123793a95",
+    "bytes": 3952,
     "row_count": 29,
     "raw_pff_content": false,
-    "contains_player_coordinates": false,
-    "contains_player_velocities": false,
-    "redistribution_eligible": true,
-    "license_note": "Aggregated derived research metrics and percentiles; contains no proprietary PFF tracking arrays.",
-    "generating_experiment": "EXP_SOG_INCREMENTAL_ABLATION_024",
-    "generating_commit": "c5afd6f",
-    "generating_script": "scripts/exp024_sog_incremental_ablation",
-    "role_in_reproduction": "Paired comparison of residual-weighted SOG vs unweighted positive control gain (PCG)"
+    "role_in_reproduction": "Paired action comparison between SOG and unweighted PCG for residual ablation"
   },
-  "grid_stability_summary.csv": {
-    "filename": "grid_stability_summary.csv",
+  "grid_stability.csv": {
+    "filename": "grid_stability.csv",
     "sha256": "66e9413b8ff0cbdab63bec343d5255b34443d7a4586538bf6f3867a4451f34ce",
+    "bytes": 3401,
     "row_count": 36,
     "raw_pff_content": false,
-    "contains_player_coordinates": false,
-    "contains_player_velocities": false,
-    "redistribution_eligible": true,
-    "license_note": "Aggregated derived research metrics and percentiles; contains no proprietary PFF tracking arrays.",
-    "generating_experiment": "EXP_SOG_GRID_STEERING_026 / 026A_GRID_CONVERGENCE",
-    "generating_commit": "ea6a9df",
-    "generating_script": "kaggle_kernel_sog_grid026a/kernel.py",
-    "role_in_reproduction": "Per-state grid convergence statistics comparing G0 (50x32) vs G1 (100x64)"
+    "role_in_reproduction": "Numerical convergence metrics comparing G0 (50x32) to G1 (100x64) across 36 states"
   },
-  "cap_pair_scores.csv": {
-    "filename": "cap_pair_scores.csv",
+  "counterattack_pairs.csv": {
+    "filename": "counterattack_pairs.csv",
     "sha256": "6744f1755cec5123d0798784cb1d9bbf472b99a616f988b151074f083186e6ee",
+    "bytes": 6914,
     "row_count": 32,
     "raw_pff_content": false,
-    "contains_player_coordinates": false,
-    "contains_player_velocities": false,
-    "redistribution_eligible": true,
-    "license_note": "Aggregated derived research metrics and percentiles; contains no proprietary PFF tracking arrays.",
-    "generating_experiment": "EXP_SOG_STATE_FRAGILITY_027",
-    "generating_commit": "0524d91",
-    "generating_script": "kaggle_kernel_sog_state027/kernel.py",
-    "role_in_reproduction": "State-level fragility win-shares on 32 matched pairs comparing F_SOG, F_PA, F_RADIAL"
+    "role_in_reproduction": "Pairwise scores for 32 counter-attack matched pairs comparing SOG, PA, and RADIAL"
   }
 }
