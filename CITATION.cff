@@ -6,7 +6,7 @@ authors:
   - name: "SSAC 2027 Research Team"
 date-released: "2026-09-29"
 version: "1.0.0"
-repository-code: "https://github.com/ssac2027/fragility"
+repository-code: "https://github.com/AhmadEnan/fragility"
 license: "MIT"
 keywords:
   - "soccer analytics"

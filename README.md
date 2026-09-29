@@ -1,9 +1,9 @@
 # One Meter from Trouble: Counterfactual Defensive Fragility from Player Tracking
 
-[![Tests and Parity Verification](https://github.com/ssac2027/fragility/actions/workflows/tests.yml/badge.svg)](https://github.com/ssac2027/fragility/actions/workflows/tests.yml)
+[![Tests and Parity Verification](https://github.com/AhmadEnan/fragility/actions/workflows/tests.yml/badge.svg)](https://github.com/AhmadEnan/fragility/actions/workflows/tests.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ssac2027/fragility/blob/main/notebooks/reproduce_ssac27.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AhmadEnan/fragility/blob/main/notebooks/reproduce_ssac27.ipynb)
 
 **Official Public Reproduction Package** for the paper:  
 *“One Meter from Trouble: Counterfactual Defensive Fragility from Player Tracking”*  
@@ -41,7 +41,7 @@ For full experimental provenance and canonical git commits, see [ABSTRACT_CLAIMS
 ### 1. Installation
 
 ```bash
-git clone https://github.com/ssac2027/fragility.git
+git clone https://github.com/AhmadEnan/fragility.git
 cd fragility
 python -m pip install -e .
 ```

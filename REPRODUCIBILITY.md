@@ -20,7 +20,7 @@ To reproduce all published claims from derived tables and regenerate publication
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/ssac2027/fragility.git
+git clone https://github.com/AhmadEnan/fragility.git
 cd fragility
 
 # 2. Create virtual environment
