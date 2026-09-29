@@ -1,0 +1,47 @@
+case_id,player_name,shirt_number,team,role_in_mechanism,movement_description,source_id,evidence_strength,evaluability,frozen_direction_deg
+GOLD001,Jordan Henderson,8,England,SUPPORT_RUNNER,Advances into Kane's vacated forward position and finishes.,GOLD001-S1,A,DIRECTLY_EVALUABLE,0.0
+GOLD001,Harry Kane,9,England,SPACE_CREATOR,"Drops from the last line, pulling a centre-back and opening depth for Bellingham.",GOLD001-S1,A,DIRECTLY_EVALUABLE,0.0
+GOLD001,Bukayo Saka,17,England,PINNING_PLAYER,Pins the full-back wide so he cannot cover Henderson's run.,GOLD001-S1,A,STATIC_ROLE_NOT_ACTION_COMPATIBLE,
+GOLD001,Jude Bellingham,22,England,PRIMARY_EXPLOITER,Attacks the vacated half-space/in-behind lane and then supplies Henderson.,GOLD001-S1,A,DIRECTLY_EVALUABLE,0.0
+GOLD002,Aleksandar Mitrović,9,Serbia,PRIMARY_EXPLOITER,Attacks the large space created by Vlahović's drop and scores.,GOLD002-S1,A,DIRECTLY_EVALUABLE,45.0
+GOLD002,Dušan Vlahović,18,Serbia,SPACE_CREATOR,Drops to receive and pulls Switzerland's right centre-back away.,GOLD002-S1,A,DIRECTLY_EVALUABLE,0.0
+GOLD003,Ricardo Rodríguez,13,Switzerland,PRIMARY_EXPLOITER,Acts as the free left-back in the overload and is released into the final third.,GOLD003-S1,B,DIRECTLY_EVALUABLE,0.0
+GOLD003,Ruben Vargas,17,Switzerland,PINNING_PLAYER,Occupies the right wing-back jointly with the left-back and participates in the one-two.,GOLD003-S1,B,STATIC_ROLE_NOT_ACTION_COMPATIBLE,
+GOLD004,Julián Álvarez,9,Argentina,PRIMARY_EXPLOITER,Attacks the opened space after Lovren's jump and wins the penalty.,GOLD004-S1,A,DIRECTLY_EVALUABLE,0.0
+GOLD004,Enzo Fernández,24,Argentina,SPACE_CREATOR,Occupies advanced between-lines/half-space areas that create hesitation and space behind defensive jumps.,GOLD004-S1,A,DIRECTLY_EVALUABLE,0.0
+GOLD005,Kylian Mbappé,10,France,PINNING_PLAYER,Maintains high-wide threat and attracts three defenders when receiving.,GOLD005-S1,A,STATIC_ROLE_NOT_ACTION_COMPATIBLE,
+GOLD005,Theo Hernández,22,France,PRIMARY_EXPLOITER,"Carries forward, combines wide, then underlaps undetected to combine for the goal.",GOLD005-S1,A,DIRECTLY_EVALUABLE,0.0
+GOLD006,Takuma Asano,18,Japan,PRIMARY_EXPLOITER,Escapes Schlotterbeck and attacks behind Germany's uneven line.,GOLD006-S1,A,OFFSIDE_CONFOUNDED_BUT_SCOREABLE,180.0
+GOLD007,Lionel Messi,10,Argentina,PASSER,Receives Molina's release and threads the through ball into Molina's run.,GOLD007-S1,A,PASSER_ONLY_NOT_ACTION_COMPATIBLE,
+GOLD007,Nahuel Molina,26,Argentina,PRIMARY_EXPLOITER,Releases to Messi then attacks the box with the recurring interior wing-back movement.,GOLD007-S1,A,DIRECTLY_EVALUABLE,45.0
+GOLD008,Vincent Aboubakar,10,Cameroon,SUPPORT_RUNNER,Makes one of the coordinated outside-centre-back runs and then releases Choupo-Moting.,GOLD008-S1,A,DIRECTLY_EVALUABLE,0.0
+GOLD008,Eric Maxim Choupo-Moting,13,Cameroon,PRIMARY_EXPLOITER,Makes the complementary transition run outside the recovering centre-backs and scores.,GOLD008-S1,A,DIRECTLY_EVALUABLE,0.0
+GOLD009,Toby Alderweireld,2,Belgium,PASSER,Plays the pass in behind to Batshuayi.,GOLD009-S1,A,PASSER_ONLY_NOT_ACTION_COMPATIBLE,
+GOLD009,Yannick Carrasco,11,Belgium,DECOY,Runs in behind and drags Richie Laryea deeper than Canada's defensive line.,GOLD009-S1,A,DIRECTLY_EVALUABLE,315.0
+GOLD009,Michy Batshuayi,23,Belgium,PRIMARY_EXPLOITER,"Times the earlier run on the centre-backs, stays onside, receives in behind and scores.",GOLD009-S1,A,DIRECTLY_EVALUABLE,45.0
+GOLD010,Harry Kane,9,England,PASSER,Faces play and times the through pass to Rashford's run.,GOLD010-S1,A,PASSER_ONLY_NOT_ACTION_COMPATIBLE,
+GOLD010,Marcus Rashford,11,England,PRIMARY_EXPLOITER,Accelerates behind his marker to receive Kane's through pass.,GOLD010-S1,A,DIRECTLY_EVALUABLE,0.0
+GOLD011,Julián Álvarez,9,Argentina,PINNING_PLAYER,"Pushes France's last line deeper, creating central receiving space.",GOLD011-S1,A,STATIC_ROLE_NOT_ACTION_COMPATIBLE,
+GOLD011,Lionel Messi,10,Argentina,SPACE_CREATOR,Receives in central spaces created by Álvarez's depth and helps initiate/link the counter.,GOLD011-S1,A,DIRECTLY_EVALUABLE,225.0
+GOLD011,Ángel Di María,11,Argentina,PRIMARY_EXPLOITER,Arrives from the left and finishes the coordinated counter.,GOLD011-S1,A,DIRECTLY_EVALUABLE,0.0
+GOLD011,Alexis Mac Allister,20,Argentina,PASSER,Advances through the left inside channel and supplies the final pass for Di María.,GOLD011-S1,A,PASSER_ONLY_NOT_ACTION_COMPATIBLE,
+GOLD012,Aurélien Tchouaméni,8,France,PRIMARY_EXPLOITER,Remains free outside/around the crowded box and scores the first goal.,GOLD012-S1,B,DIRECTLY_EVALUABLE,315.0
+GOLD012,Dayot Upamecano,18,France,BALL_CARRIER,Recovers from Saka and bursts into the space Walker vacated to launch the transition.,GOLD012-S1,B,BALL_CARRIER_NOT_ACTION_COMPATIBLE,
+GOLD013,Harry Kane,9,England,PRIMARY_EXPLOITER,"Attacks the area vacated by Diallo, draws Koulibaly away from Foden, then continues for the return pass and scores.",GOLD013-S1,A,DIRECTLY_EVALUABLE,0.0
+GOLD013,Phil Foden,20,England,PASSER,Supports outside; Kane's manipulation frees him to receive Bellingham's pass and return first time to Kane.,GOLD013-S1,A,PASSER_ONLY_NOT_ACTION_COMPATIBLE,
+GOLD013,Jude Bellingham,22,England,BALL_CARRIER,"Breaks forward and forces Diallo to commit, creating the vacancy that Kane attacks before passing to Foden.",GOLD013-S1,A,BALL_CARRIER_NOT_ACTION_COMPATIBLE,
+GOLD014,Luke Shaw,3,England,PASSER,Advances from left-back and supplies the cross for Bellingham's late arrival.,GOLD014-S1,A,PASSER_ONLY_NOT_ACTION_COMPATIBLE,
+GOLD014,Harry Kane,9,England,PINNING_PLAYER,"Occupies Iran's central defenders, fixing the last-line reference while Bellingham advances from deep.",GOLD014-S1,A,STATIC_ROLE_NOT_ACTION_COMPATIBLE,
+GOLD014,Jude Bellingham,22,England,PRIMARY_EXPLOITER,Pushes forward from deep midfield and arrives to head Shaw's cross in.,GOLD014-S1,A,DIRECTLY_EVALUABLE,45.0
+GOLD015,Raphaël Varane,4,France,PASSER,Uses the centre-back passing lane to find Griezmann as France seek line-breaking central passes.,GOLD015-S1,A,PASSER_ONLY_NOT_ACTION_COMPATIBLE,
+GOLD015,Antoine Griezmann,7,France,PRIMARY_EXPLOITER,"Moves between the lines, then rolls beyond the relevant line to receive in behind and initiate the opening-goal action.",GOLD015-S1,A,DIRECTLY_EVALUABLE,270.0
+GOLD016,Memphis Depay,10,Netherlands,SUPPORT_RUNNER,Arrives centrally into excessive space and finishes the cutback first time.,GOLD016-S1,B,DIRECTLY_EVALUABLE,315.0
+GOLD016,Denzel Dumfries,22,Netherlands,PRIMARY_EXPLOITER,Receives the right-sided release and immediately pulls the ball back into the unprotected central zone.,GOLD016-S1,B,DIRECTLY_EVALUABLE,0.0
+GOLD017,Daley Blind,17,Netherlands,SUPPORT_RUNNER,"Makes the late box run while Dest trails the mark, then finishes first time.",GOLD017-S1,B,DIRECTLY_EVALUABLE,270.0
+GOLD017,Denzel Dumfries,22,Netherlands,PRIMARY_EXPLOITER,Gets behind on the right and supplies the cutback for the late runner.,GOLD017-S1,B,DIRECTLY_EVALUABLE,45.0
+GOLD018,Daley Blind,17,Netherlands,PASSER,Delivers from the left after the U.S. defence has oriented to the ball side.,GOLD018-S1,B,PASSER_ONLY_NOT_ACTION_COMPATIBLE,
+GOLD018,Denzel Dumfries,22,Netherlands,PRIMARY_EXPLOITER,Occupies the weak-side/back-post space and is left entirely untracked for the finish.,GOLD018-S1,B,DIRECTLY_EVALUABLE,315.0
+GOLD019,Julián Álvarez,9,Argentina,BALL_CARRIER,Acts as the counter-attacking outlet and drives directly at Croatia's unorganised post-corner back line.,GOLD019-S1,B,BALL_CARRIER_NOT_ACTION_COMPATIBLE,
+GOLD020,Harry Kane,9,England,SPACE_CREATOR,Moves diagonally away from Senegal's centre-backs to receive and change their reference points.,GOLD020-S1,B,DIRECTLY_EVALUABLE,315.0
+GOLD020,Bukayo Saka,17,England,PRIMARY_EXPLOITER,Makes the run beyond Senegal's shape in the pattern that culminates in England's third goal.,GOLD020-S1,B,DIRECTLY_EVALUABLE,45.0
+GOLD020,Phil Foden,20,England,PASSER,Attacks beyond the altered block and supplies Saka for the third goal.,GOLD020-S1,B,PASSER_ONLY_NOT_ACTION_COMPATIBLE,
