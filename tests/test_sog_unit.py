@@ -37,7 +37,7 @@ from fragility.sog import (
 FIXTURE_PATH = Path(__file__).resolve().parent / "fixtures" / "synthetic_state.json"
 
 
-@pytest.fixture
+@pytest.fixture(scope="module")
 def synthetic_state() -> TrackingState:
     assert FIXTURE_PATH.exists(), f"Missing fixture at {FIXTURE_PATH}"
     return load_synthetic_state(FIXTURE_PATH)
@@ -111,9 +111,14 @@ def test_tti_kinematics():
     assert np.isclose(tau[0, 0, 0], 33.0 / 14.0, atol=1e-5)
 
 
-def test_score_state_execution(synthetic_state):
+@pytest.fixture(scope="module")
+def scored_synthetic(synthetic_state) -> tuple[pd.DataFrame, float]:
     grid = make_grid(CANONICAL_CONFIG.grid_nx, CANONICAL_CONFIG.grid_ny)
-    df, F = score_state(synthetic_state, CANONICAL_CONFIG, grid)
+    return score_state(synthetic_state, CANONICAL_CONFIG, grid)
+
+
+def test_score_state_execution(scored_synthetic):
+    df, F = scored_synthetic
 
     assert len(df) == 216
     assert np.isfinite(F)
@@ -131,9 +136,8 @@ def test_score_state_execution(synthetic_state):
     assert np.isclose(F, top_k_mean)
 
 
-def test_cell_aggregation(synthetic_state):
-    grid = make_grid(CANONICAL_CONFIG.grid_nx, CANONICAL_CONFIG.grid_ny)
-    df, _ = score_state(synthetic_state, CANONICAL_CONFIG, grid)
+def test_cell_aggregation(scored_synthetic):
+    df, _ = scored_synthetic
     cells = aggregate_cells(df)
 
     assert not cells.empty

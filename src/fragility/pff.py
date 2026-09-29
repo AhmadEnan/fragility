@@ -122,10 +122,13 @@ def load_pff_state(
     """
     root = Path(data_root)
 
-    # First check frame_cache subdirectory or root
+    # Search frame_cache subdirectory, direct root, or parent paths
     cache_candidates = [
         root / f"match_{match_id}_stride8.parquet",
         root / "frame_cache" / f"match_{match_id}_stride8.parquet",
+        root / "FIFA World Cup 2022" / "frame_cache" / f"match_{match_id}_stride8.parquet",
+        root / "FIFA World Cup 2022" / f"match_{match_id}_stride8.parquet",
+        root.parent / "frame_cache" / f"match_{match_id}_stride8.parquet",
     ]
     cache_path = next((p for p in cache_candidates if p.exists()), None)
 

@@ -6,11 +6,15 @@ Asserts exact equality or tight numerical tolerances for all reported claims.
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 import numpy as np
 import pandas as pd
 import pytest
 
+from fragility.config import CANONICAL_CONFIG
+from fragility.pff import load_synthetic_state, load_pff_state
+from fragility.sog import score_state, aggregate_cells
 from fragility.validation import (
     evaluate_gold20,
     evaluate_ablation,
@@ -106,5 +110,71 @@ def test_state_fragility_claim_c05_parity(expected):
     assert np.isclose(res["win_share_F_SOG"], exp["win_share_F_SOG"], atol=1e-5)
     assert np.isclose(res["win_share_F_PA"], exp["win_share_F_PA"], atol=1e-5)
     assert np.isclose(res["win_share_F_RADIAL"], exp["win_share_F_RADIAL"], atol=1e-5)
-    assert np.isclose(res["delta_PA_RADIAL"], exp["delta_PA_RADIAL"], atol=1e-6)
+    assert res["delta_PA_RADIAL"] == exp["delta_PA_RADIAL"]
     assert res["verdict"] == exp["verdict"]
+
+
+def test_synthetic_state_sog_engine_parity():
+    """Verify end-to-end numerical parity of SOG solver on synthetic fixture."""
+    fixture_path = REPO_ROOT / "tests" / "fixtures" / "synthetic_state.json"
+    state = load_synthetic_state(fixture_path)
+    df, F = score_state(state, CANONICAL_CONFIG)
+
+    # Invariants
+    assert len(df) == 216
+    assert df["valid_primary"].sum() == 216
+    # Exact frozen arithmetic mean of top-10% (k=22 actions)
+    assert np.isclose(F, 3.375321759226284, atol=1e-5)
+
+    cells = aggregate_cells(df)
+    assert len(cells) == 72  # 9 players * 8 directions
+    assert cells["rank"].min() == 1
+    assert cells["percentile"].max() == 1.0
+
+
+def test_canonical_real_state_sog_parity():
+    """Verify numerical parity of SOG calculation on canonical World Cup match state.
+
+    Tests GOLD001 best documented frame (Match 10505, Frame 70930) against canonical
+    experiment records from EXP_SOG_GOLD20_CONFIRMATION_023 (cases/GOLD001.md):
+      - State F_SOG == 3.5180
+      - Top cell: #9 Harry Kane @ 0 deg, Q == 6.1950, rank 1/80, pct 1.000
+      - Rank 2 cell: #9 Harry Kane @ 45 deg, Q == 5.2533, rank 2/80, pct 0.987
+      - Rank 3 cell: #9 Harry Kane @ 315 deg, Q == 4.0727, rank 3/80, pct 0.975
+    """
+    pff_root = os.environ.get("PFF_DATA_ROOT")
+    candidate_roots = [
+        pff_root,
+        Path("C:/dev/MIT/frame_cache"),
+        Path("C:/dev/MIT/FIFA World Cup 2022"),
+    ]
+    valid_root = next((r for r in candidate_roots if r and Path(r).exists()), None)
+    if not valid_root:
+        pytest.skip("PFF tracking data or frame cache not configured (set PFF_DATA_ROOT)")
+
+    try:
+        state = load_pff_state(valid_root, 10505, 70930, focal_is_home=True)
+    except FileNotFoundError:
+        pytest.skip(f"Match 10505 not found under {valid_root}")
+
+    df, F = score_state(state, CANONICAL_CONFIG)
+    assert np.isclose(F, 3.5180, atol=1e-3)
+
+    cells = aggregate_cells(df)
+    top_cell = cells.iloc[0]
+    assert top_cell["jersey"] == "9"
+    assert np.isclose(top_cell["direction_deg"], 0.0)
+    assert np.isclose(top_cell["Q"], 6.1950, atol=1e-3)
+    assert top_cell["rank"] == 1
+    assert np.isclose(top_cell["percentile"], 1.0)
+
+    second_cell = cells.iloc[1]
+    assert second_cell["jersey"] == "9"
+    assert np.isclose(second_cell["direction_deg"], 45.0)
+    assert np.isclose(second_cell["Q"], 5.2533, atol=1e-3)
+
+    third_cell = cells.iloc[2]
+    assert third_cell["jersey"] == "9"
+    assert np.isclose(third_cell["direction_deg"], 315.0)
+    assert np.isclose(third_cell["Q"], 4.0727, atol=1e-3)
+

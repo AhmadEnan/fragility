@@ -8,15 +8,15 @@ This document records the exact lineage, source commits, and experiment provenan
 
 The canonical research implementation was developed and frozen in the primary research repository across experiments `EXP020` through `EXP028`. The canonical engine configuration is anchored at commit **`db10578`**.
 
-| Public Module (`src/fragility/`) | Internal Origin (`research-repo`) | Canonical Commit | Purpose / Scientific Responsibilities |
-| :--- | :--- | :--- | :--- |
-| `config.py` | `src/sog/config.py` | `db10578` | Frozen numerical constants ($50 \times 32$ grid, 8 directions, 3 radii, 0.5 m collision, Law 11 offside, top 10% reducer). |
-| `pitch_control.py` | `src/pitch_control/` | `db10578` | Vectorized analytical PPCF integrator. TTI kinematics with verified continuous acceleration-cruise mechanics ($v_{\max} = 5.0\text{ m/s}, a_{\max} = 7.0\text{ m/s}^2$). |
-| `pff.py` | `src/data/pff.py` | `db10578` | Coordinate normalization, Law 11 second-last defender offside plane calculation, carrier exclusion ($d \le 2.0\text{ m}$), and tracking state parsing. |
-| `sog.py` | `src/sog/engine.py` | `db10578` | Counterfactual perturbation generator (24 candidate actions/attacker), boundary/collision/offside filtering, cell aggregation, and state fragility reduction $F_{\text{SOG}}$. |
-| `validation.py` | `src/sog/analysis/` | `db10578` | Wilson score 95% CI, 1,000-resample paired case bootstrap, Spearman rank correlation, Jaccard overlap, CAP pair win-shares, and exact permutation AUC. |
-| `figures.py` | `scripts/` | `db10578` | Publication-ready figure generation for Figure 1 (tactical recovery) and Figure 2 (grid convergence). |
-| `__init__.py` | New clean export | `db10578` | Exposes public API: `SOGConfig`, `TrackingState`, `evaluate_*`, `plot_*`. |
+| Public Path (`src/fragility/`) | Original Internal Path | Canonical Commit | Why Required | Copied or Refactored | Parity Test Used |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `config.py` | `src/sog/config.py` | `db10578` | Encodes frozen canonical parameters (50x32 grid, 8 directions, 3 radii, 0.5 m collision, Law 11 offside, top 10% reducer). | Refactored into standalone frozen dataclass | `tests/test_sog_unit.py::test_grid_geometry` |
+| `pitch_control.py` | `src/obso/ppcf.py` | `db10578` | Analytical continuous acceleration-cruise kinematics ($v_{\max}=5.0, a_{\max}=7.0$), exponential PPCF integration. | Refactored for clean NumPy vectorization | `tests/test_sog_unit.py::test_tti_kinematics`, `test_score_state_execution` |
+| `pff.py` | `src/fragility/pff.py` & `sfa_common.py` | `db10578` | Coordinate normalization (+x attack), Law 11 offside line, carrier exclusion ($d \le 2.0\text{ m}$), tracking state loader. | Refactored for minimal dependencies | `tests/test_sog_unit.py::test_offside_line_and_status`, `test_carrier_exclusion` |
+| `sog.py` | `scripts/exp020_.../rc_common.py` | `db10578` | Counterfactual perturbation generator (24 actions/player), boundary/collision/offside-switch filters, SOG scoring, cell aggregation. | Refactored for clean modular API | `tests/test_parity.py::test_sog_state_numerical_parity`, `tests/test_sog_unit.py` |
+| `validation.py` | `scripts/exp023_.../` & `scripts/exp027_.../` | `db10578` | Statistical metrics: Wilson 95% CI, case bootstrap, Spearman $\rho$, Jaccard overlap, CAP win-shares, permutation AUC. | Refactored into unified validation library | `tests/test_parity.py::test_gold20_claim_c01_and_c02_parity`, `test_ablation_claim_c03_parity`, etc. |
+| `figures.py` | `scripts/res0_case_visuals/` | `db10578` | Automated regeneration of publication-ready Figures 1 and 2 directly from data tables. | Refactored for clean matplotlib styling | `notebooks/reproduce_ssac27.ipynb` Cell 9 visual generation |
+| `__init__.py` | Clean public export | `db10578` | Exposes unified public API (`SOGConfig`, `TrackingState`, `score_state`, `evaluate_*`). | New | All package imports across test suite |
 
 ---
 
