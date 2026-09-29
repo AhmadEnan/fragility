@@ -25,7 +25,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -e .[dev]
+        pip install -e ".[dev,test]"
 
     - name: Run unit and parity tests
       run: |
@@ -33,13 +33,4 @@ jobs:
 
     - name: Run Colab notebook reproduction verification
       run: |
-        python -c "
-        import json
-        with open('notebooks/reproduce_ssac27.ipynb', encoding='utf-8') as f:
-            nb = json.load(f)
-        assert len(nb['cells']) <= 10, 'Notebook has more than 10 cells'
-        g = {}
-        for c in nb['cells']:
-            exec(''.join(c['source']), g)
-        print('SSAC27 Reproduction Verified')
-        "
+        python tests/verify_notebook.py

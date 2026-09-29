@@ -29,7 +29,7 @@
   },
   "gold20_ablation_comparison.csv": {
     "filename": "gold20_ablation_comparison.csv",
-    "sha256": "e842c7d24efc3121c8e88aa747f90ed4cd1b26be6235603ac884f7cec3b4074a",
+    "sha256": "2556d6ad4ad5ddadb53d469cb6ca643e742e98081dfae0cd1b5f750123793a95",
     "row_count": 29,
     "raw_pff_content": false,
     "contains_player_coordinates": false,
