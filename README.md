@@ -1,12 +1,18 @@
-# Fragility Score: Mapping Counterfactual Openings in Soccer Defenses
+# Fragility Score
 
-Code and derived inputs for the SSAC 2027 abstract.
+Mapping counterfactual openings in soccer defenses.
 
-[Run in Colab](https://colab.research.google.com/github/AhmadEnan/fragility/blob/main/notebooks/reproduce_ssac27.ipynb)
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AhmadEnan/fragility/blob/main/notebooks/reproduce_ssac27.ipynb)
+[![Tests](https://github.com/AhmadEnan/fragility/actions/workflows/tests.yml/badge.svg)](https://github.com/AhmadEnan/fragility/actions/workflows/tests.yml)
+[![Code license: MIT](https://img.shields.io/badge/Code%20license-MIT-blue.svg)](LICENSE)
 
-Choose **Runtime > Run all**. The notebook recomputes classifier scores, verifies the abstract results and creates both submission figures. No PFF download, credentials or GPU are needed.
+Reproduction package for the SSAC 2027 soccer abstract using PFF FC's 2022 World Cup data. Structural Opening Gain (SOG) scores and ranks hypothetical player movements by the openings they create in a fixed defensive configuration.
 
-For local runs, use Python 3.12 or newer:
+## Reproduce the figures
+
+Open the Colab notebook above and select **Runtime > Run all**. It recomputes classifier scores, checks the abstract statistics and displays both submission figures. No raw-data download, credentials or GPU are required.
+
+For local execution, use Python 3.12 or newer:
 
 ```bash
 python -m pip install -r requirements-reproduce.txt -e ".[test]"
@@ -14,13 +20,27 @@ python tests/verify_notebook.py
 python -m pytest
 ```
 
-| Evaluation | Matches | States | Result |
-|---|---:|---:|---|
-| Held-out test | 16 | 38,751 | AP 0.0482 to 0.0598; 170 to 220 retrieved events |
-| Figure 2, development comparison | 16 | 38,035 | 195 to 245 retrieved events |
+## Reported results
 
-SOG recovers 13/20 documented tactical actions versus 11/20 for plain control gain. Pre-release recovery ties at 10/20. Centered velocities include subsequent positions, so evaluation is retrospective.
+The comparison adds SOG landscape features to an observed-context baseline classifier.
 
-Public reproduction starts from derived features and computed control fields. Raw PFF files are excluded. The [tracking feature extractor](src/fragility/extract_features.py) is included for reference and licensed-data checks. See [data access](DATA_ACCESS.md), [reproduction](REPRODUCIBILITY.md) and [verification](RELEASE_AUDIT.md). The MIT license covers code only.
+| Evaluation | Matches | States | Baseline | With SOG landscape features |
+|---|---:|---:|---:|---:|
+| Held-out test: average precision | 16 | 38,751 | 0.0482 | 0.0598 |
+| Held-out test: events retrieved | 16 | 38,751 | 170 / 694 | 220 / 694 |
+| Figure 2 development comparison: events retrieved | 16 | 38,035 | 195 / 752 | 245 / 752 |
 
-The package is verified in fresh Windows and Linux kernels. See [data access](DATA_ACCESS.md) for provider terms and [verification](RELEASE_AUDIT.md) for the scope of the checks.
+Event retrieval uses the same top 10% review budget. The Figure 2 comparison uses development matches. Across 20 documented tactical actions, SOG recovers 13 versus 11 for plain control gain; pre-release recovery ties at 10 each. Centered velocities include subsequent positions, so evaluation is retrospective.
+
+## Data and reference code
+
+The notebook uses derived features, outcome labels, event links and computed control fields. Raw PFF files are excluded. The [data-access guide](DATA_ACCESS.md) explains how to request the underlying dataset from Gradient Sports.
+
+The repo includes the original preprocessing and feature functions, a [runnable tracking feature extractor](src/fragility/extract_features.py), and the original [comparator extraction functions](reference/exp032_comparators.py) for reference. The complete raw-event qualification pipeline is outside this compact package.
+
+- [Reproduction details](REPRODUCIBILITY.md)
+- [Code provenance](CODE_PROVENANCE.md)
+- [Abstract claims](ABSTRACT_CLAIMS.md)
+- [Verification record](RELEASE_AUDIT.md)
+
+The MIT license covers code only. See the data-access guide for the status of derived-data sharing terms.
