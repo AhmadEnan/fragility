@@ -1,6 +1,6 @@
 # Verification status
 
-The submission package is verified locally. Hosted execution status is recorded below.
+The submission package is verified locally, in GitHub Actions and in Google Colab.
 
 - Fresh Windows and clean Linux kernels execute all notebook cells using only the released inputs.
 - Held-out and development scores match frozen predictions within 1e-12. Abstract statistics match within 1e-12; event counts match exactly.
@@ -12,9 +12,11 @@ The submission package is verified locally. Hosted execution status is recorded 
 - The reference extractor matches 23 original feature values and flags in each of four held-out states, with maximum absolute error 1.3e-14.
 - Tests check input hashes, extracted function fingerprints, score behavior, outcome boundaries and abstract results.
 - Latest Windows suite: 11 passed, one optional licensed-data test skipped. The earlier licensed-data run passed all 12 tests. The clean Linux notebook and four submission checks also passed.
+- [All six GitHub jobs passed](https://github.com/AhmadEnan/fragility/actions/runs/36893753470): Windows and Linux, Python 3.12, 3.13 and 3.14. Each job runs the tests and executes the notebook.
+- Google Colab CPU `Run all` passed on 2026-10-01 at commit `98b1e5cc89a998135cc7f2da566f9da68a6328b5`. All three cells completed and both figures displayed, without raw PFF files or a manual kernel restart.
 
 The public reproduction starts from frozen derived features and labels. It does not rebuild the complete raw-event cohort or CAP qualification pipeline. See [code provenance](CODE_PROVENANCE.md).
 
-Provider permission for downloadable derived inputs has not been independently established. The updated notebook has not been run in hosted Google Colab. Historical commits retain earlier documentation and local paths; history has not been rewritten.
+Provider permission for downloadable derived inputs has not been independently established. Historical commits retain earlier documentation and local paths; history has not been rewritten.
 
 Provider access and contact links were verified on 2026-10-01. The provider's official contact page lists `support@gradientsports.com`; delivery and access approval have not been tested.

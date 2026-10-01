@@ -1,10 +1,10 @@
 cff-version: 1.2.0
 message: "If you use this software, reproducible workflows, or derived validation datasets, please cite it as below."
-title: "One Meter from Trouble: Counterfactual Defensive Fragility from Player Tracking"
-abstract: "Public reproducibility repository and standalone Python library for Structural Opening Gain (SOG) counterfactual defensive fragility evaluation for the MIT Sloan Sports Analytics Conference 2027 (Soccer Track)."
+title: "Fragility Score: Mapping Counterfactual Openings in Soccer Defenses"
+abstract: "Code and derived inputs for reproducing the SSAC 2027 soccer abstract and its Structural Opening Gain (SOG) results."
 authors:
   - name: "SSAC 2027 Research Team"
-date-released: "2026-09-29"
+date-released: "2026-10-01"
 version: "1.0.0"
 repository-code: "https://github.com/AhmadEnan/fragility"
 license: "MIT"
