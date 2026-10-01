@@ -40,3 +40,12 @@ htmlcov/
 *.swo
 .DS_Store
 Thumbs.db
+
+# Provider raw tracking and private reconstruction outputs
+*.jsonl
+*.jsonl.bz2
+FIFA World Cup 2022/
+private_cache/
+private_index/
+local_reconstruction/
+.local-review/

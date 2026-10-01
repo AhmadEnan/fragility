@@ -1,0 +1,15 @@
+{
+  "case": "GOLD001",
+  "fresh_states": 39,
+  "fresh_candidates": 8736,
+  "validity_exact": true,
+  "max_abs_errors": {
+    "SOG": 6.447250847923534e-14,
+    "PCG": 3.5219917260409517e-13
+  },
+  "recovery_flags_exact": true,
+  "hits": {
+    "SOG": 3,
+    "PCG": 3
+  }
+}

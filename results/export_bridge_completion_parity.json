@@ -1,0 +1,57 @@
+{
+  "inputs": "freshly reconstructed full cohorts/labels/links; original frozen research-unit feature/comparator tables; freshly fitted classifiers",
+  "results": {
+    "dev": {
+      "max_normalized_feature_error": 0.0,
+      "labels_exact": true,
+      "arms": {
+        "M0": {
+          "max_probability_error": 5.828670879282072e-16,
+          "events_captured": 195
+        },
+        "M0+SOG(incumbent)": {
+          "max_probability_error": 2.0261570199409107e-15,
+          "events_captured": 245
+        },
+        "M0+EPV_WEIGHTED_CONTROL": {
+          "max_probability_error": 7.771561172376096e-16,
+          "events_captured": 191
+        },
+        "M0+EPV_AT_BALL": {
+          "max_probability_error": 7.771561172376096e-16,
+          "events_captured": 193
+        },
+        "M0+D_OBSO": {
+          "max_probability_error": 4.314176446640339e-08,
+          "events_captured": 195
+        },
+        "M0+DAS": {
+          "max_probability_error": 5.037679592923006e-09,
+          "events_captured": 190
+        }
+      }
+    },
+    "test": {
+      "max_normalized_feature_error": 0.0,
+      "labels_exact": true,
+      "arms": {
+        "M0": {
+          "max_probability_error": 3.3306690738754696e-16,
+          "events_captured": 170
+        },
+        "M1": {
+          "max_probability_error": 4.440892098500626e-16,
+          "events_captured": 168
+        },
+        "M2": {
+          "max_probability_error": 3.3306690738754696e-16,
+          "events_captured": 220
+        },
+        "M2_LANDSCAPE_ONLY": {
+          "max_probability_error": 3.885780586188048e-16,
+          "events_captured": 176
+        }
+      }
+    }
+  }
+}

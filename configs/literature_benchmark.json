@@ -1,0 +1,383 @@
+{
+  "experiment_id": "EXP_LITERATURE_BENCHMARK_032",
+  "status": "EXPERIMENTAL",
+  "cohort": "DEV_ONLY",
+  "dev_matches": [
+    "3812",
+    "3814",
+    "3816",
+    "3818",
+    "3820",
+    "3822",
+    "3824",
+    "3826",
+    "3828",
+    "3830",
+    "3832",
+    "3834",
+    "3836",
+    "3838",
+    "3840",
+    "3842"
+  ],
+  "forbidden_matches": [
+    "3844",
+    "3846",
+    "3848",
+    "3850",
+    "3852",
+    "3854",
+    "3856",
+    "3858",
+    "10502",
+    "10504",
+    "10506",
+    "10508",
+    "10510",
+    "10512",
+    "10514",
+    "10516"
+  ],
+  "outcome": "Y_CAP_2S",
+  "n_states_expected": 38035,
+  "n_positives_expected": 1314,
+  "grid": {
+    "nx": 50,
+    "ny": 32,
+    "n_cells": 1600,
+    "epv_grid_csv": "assets/EPV_grid.csv",
+    "epv_grid_shape": [
+      32,
+      50
+    ]
+  },
+  "review_budget_primary": 0.1,
+  "review_budget_sweep": [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25
+  ],
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20261001,
+    "unit": "match"
+  },
+  "cv": {
+    "folds": 5,
+    "grouped_by": "match",
+    "estimator": "e22_common.fit_logistic",
+    "C": 1.0
+  },
+  "baselines": {
+    "LOC": [
+      "ball_x_norm",
+      "abs_ball_y_m",
+      "ball_dist_to_goal_m"
+    ],
+    "LOC_squared": true,
+    "M0": [
+      "ball_x_norm",
+      "abs_ball_y_m",
+      "ball_dist_to_goal_m",
+      "possession_age_s",
+      "carrier_nearest_def_dist_m",
+      "nearest_def_closing_speed_ms",
+      "carrier_speed_ms",
+      "offball_att_speed_mean_ms",
+      "offball_att_speed_max_ms",
+      "def_outfield_speed_mean_ms",
+      "def_width_m",
+      "def_depth_m",
+      "def_hull_area_m2",
+      "C0_ATTACK_AREA_m2"
+    ],
+    "M0_squared": [
+      "ball_x_norm",
+      "abs_ball_y_m",
+      "ball_dist_to_goal_m"
+    ]
+  },
+  "incumbent": {
+    "SOG6": [
+      "F_SOG",
+      "R_MAX",
+      "R_MEDIAN",
+      "TOP_CONCENTRATION",
+      "TOP_GAP",
+      "PLAYER_CONCENTRATION"
+    ],
+    "ALIGN2": [
+      "BEST_ALIGNMENT",
+      "TOP_PLAYER_ALIGNMENT"
+    ],
+    "velocity_dependent": true
+  },
+  "note_on_orientation": "E1 single-metric AUC depends on sign orientation; E2/E3 logistic increments do NOT (the estimator fits the sign). The preregistered verdict rests on E3 and is therefore orientation-invariant. Where a_priori_sign is 'ambiguous', E1 reports both orientations and neither is marked primary.",
+  "comparators": [
+    {
+      "id": "PITCH_CONTROL_AREA",
+      "cols": [
+        "C0_ATTACK_AREA_m2"
+      ],
+      "group": "A",
+      "source": "frozen_dev_features",
+      "lineage": "Spearman 2018 pitch control",
+      "a_priori_sign": "+",
+      "velocity_dependent": true
+    },
+    {
+      "id": "DEF_HULL_AREA",
+      "cols": [
+        "def_hull_area_m2"
+      ],
+      "group": "A",
+      "source": "frozen_dev_features",
+      "lineage": "team shape / compactness",
+      "a_priori_sign": "+",
+      "velocity_dependent": false
+    },
+    {
+      "id": "DEF_WIDTH_DEPTH",
+      "cols": [
+        "def_width_m",
+        "def_depth_m"
+      ],
+      "group": "A",
+      "source": "frozen_dev_features",
+      "lineage": "team shape / dispersion",
+      "a_priori_sign": "+",
+      "velocity_dependent": false
+    },
+    {
+      "id": "PRESSING_PROXIMITY",
+      "cols": [
+        "carrier_nearest_def_dist_m",
+        "nearest_def_closing_speed_ms"
+      ],
+      "group": "A",
+      "source": "frozen_dev_features",
+      "lineage": "pressing / pressure intensity",
+      "a_priori_sign": "ambiguous",
+      "velocity_dependent": true
+    },
+    {
+      "id": "BALL_DIST_TO_GOAL",
+      "cols": [
+        "ball_dist_to_goal_m"
+      ],
+      "group": "A",
+      "source": "frozen_dev_features",
+      "lineage": "location value benchmark (xT-style)",
+      "a_priori_sign": "-",
+      "velocity_dependent": false
+    },
+    {
+      "id": "EPV_AT_BALL",
+      "cols": [
+        "EPV_AT_BALL"
+      ],
+      "group": "B",
+      "source": "epv_grid_lookup",
+      "lineage": "EPV grid (Fernandez/Shaw lineage)",
+      "a_priori_sign": "+",
+      "velocity_dependent": false
+    },
+    {
+      "id": "DOMINANT_REGION_SHARE",
+      "cols": [
+        "DOMINANT_REGION_SHARE"
+      ],
+      "group": "B",
+      "source": "positions",
+      "lineage": "Taki & Hasegawa dominant region",
+      "a_priori_sign": "+",
+      "velocity_dependent": true
+    },
+    {
+      "id": "OFFSIDE_LINE_X",
+      "cols": [
+        "OFFSIDE_LINE_X"
+      ],
+      "group": "B",
+      "source": "positions",
+      "lineage": "defensive line height",
+      "a_priori_sign": "ambiguous",
+      "velocity_dependent": false
+    },
+    {
+      "id": "G_LAT_MAX",
+      "cols": [
+        "G_LAT_MAX"
+      ],
+      "group": "B",
+      "source": "positions",
+      "lineage": "corridor aperture / lateral gap",
+      "a_priori_sign": "+",
+      "velocity_dependent": false
+    },
+    {
+      "id": "CV_NND",
+      "cols": [
+        "CV_NND"
+      ],
+      "group": "B",
+      "source": "positions",
+      "lineage": "clumping index",
+      "a_priori_sign": "ambiguous",
+      "velocity_dependent": false
+    },
+    {
+      "id": "SOLIDITY_IPQ",
+      "cols": [
+        "SOLIDITY_BBOX",
+        "IPQ"
+      ],
+      "group": "B",
+      "source": "positions",
+      "lineage": "hull morphology",
+      "a_priori_sign": "ambiguous",
+      "velocity_dependent": false
+    },
+    {
+      "id": "R_EMPTY_GRID",
+      "cols": [
+        "R_EMPTY_GRID"
+      ],
+      "group": "B",
+      "source": "positions",
+      "lineage": "maximum empty disc",
+      "a_priori_sign": "+",
+      "velocity_dependent": false
+    },
+    {
+      "id": "PACKING_BYPASSED",
+      "cols": [
+        "PACKING_BYPASSED"
+      ],
+      "group": "B",
+      "source": "positions",
+      "lineage": "packing / defenders bypassed",
+      "a_priori_sign": "+",
+      "velocity_dependent": false
+    },
+    {
+      "id": "D_OBSO",
+      "cols": [
+        "D_OBSO"
+      ],
+      "group": "C",
+      "source": "c0_solve",
+      "lineage": "Spearman 2018/2020 OBSO danger",
+      "a_priori_sign": "+",
+      "velocity_dependent": true
+    },
+    {
+      "id": "EPV_WEIGHTED_CONTROL",
+      "cols": [
+        "EPV_WEIGHTED_CONTROL"
+      ],
+      "group": "C",
+      "source": "c0_solve",
+      "lineage": "EPV-weighted pitch control",
+      "a_priori_sign": "+",
+      "velocity_dependent": true
+    },
+    {
+      "id": "SSCORE_WEIGHTED_CONTROL",
+      "cols": [
+        "SSCORE_WEIGHTED_CONTROL"
+      ],
+      "group": "C",
+      "source": "c0_solve",
+      "lineage": "score-surface-weighted control (EXP017 Candidate-1 family)",
+      "a_priori_sign": "+",
+      "velocity_dependent": true
+    },
+    {
+      "id": "FIELD_WEIGHTED_CONTROL",
+      "cols": [
+        "FIELD_WEIGHTED_CONTROL"
+      ],
+      "group": "C",
+      "source": "c0_solve",
+      "lineage": "Ogawa 2025 field-value-weighted control",
+      "a_priori_sign": "+",
+      "velocity_dependent": true
+    },
+    {
+      "id": "DAS",
+      "cols": [
+        "DAS"
+      ],
+      "group": "D",
+      "source": "accessible_space_2_1_0",
+      "lineage": "Bischofberger & Baca 2026 dangerous accessible space (J Big Data 13:76)",
+      "a_priori_sign": "+",
+      "velocity_dependent": true
+    },
+    {
+      "id": "AS_ACC",
+      "cols": [
+        "AS_ACC"
+      ],
+      "group": "D",
+      "source": "accessible_space_2_1_0",
+      "lineage": "Bischofberger & Baca 2026 accessible space, un-valued companion to DAS",
+      "a_priori_sign": "+",
+      "velocity_dependent": true
+    },
+    {
+      "id": "D_OBSO_SIGMA14",
+      "cols": [
+        "D_OBSO_SIGMA14"
+      ],
+      "group": "D",
+      "source": "c0_solve",
+      "lineage": "Continuous OBSO-family adaptation, sigma=14 m sensitivity; original fitted Spearman 2018 sigma is 23.9 m",
+      "a_priori_sign": "+",
+      "velocity_dependent": true
+    }
+  ],
+  "gates": {
+    "SOG_LEADS": "incumbent E3 dAUC > every comparator E3 dAUC AND incumbent CI excludes 0 AND paired (d_SOG - d_best) CI excludes 0",
+    "SOG_COMPETITIVE": "incumbent E3 dAUC within 0.01 of best comparator OR paired CI includes 0",
+    "SOG_TRAILS": "some comparator E3 dAUC exceeds incumbent by >= 0.01 AND paired CI excludes 0",
+    "LOCATION_COLLAPSE": "median over all candidates incl. SOG of (E2 increment / standalone increment) <= 0.50"
+  },
+  "stop_rules": {
+    "max_drop_total_frac": 0.05,
+    "max_drop_per_match_frac": 0.1,
+    "c0_equivalence_tol": 1e-09,
+    "c0_equivalence_n_audit": 50,
+    "max_wall_clock_hours_8workers": 4.0
+  },
+  "amendments": [
+    "EXP032-LB-AM01",
+    "EXP032-LB-AM02",
+    "EXP032-LB-AM03"
+  ],
+  "am02_disclosure": "EXP032-LB-AM02 adds DAS, AS_ACC and D_OBSO_SIGMA14 POST-HOC, after the AM01 run had already produced the verdict SOG_LEADS. The addition is a literature-completeness correction authorised by the owner, not a rescue. All three are reported in full regardless of outcome, and if any exceeds the incumbent E3 dAUC by >= 0.01 with a paired CI excluding zero then SOG_TRAILS fires and the abstract's novelty framing must be revised. Any claim that SOG beats 'all established measures' must disclose that 3 of the 20 were added late.",
+  "das_frozen_params": {
+    "n_angles": 30,
+    "n_v0": 15,
+    "v0_min": 3,
+    "v0_max": 30,
+    "radial_gridsize": 3,
+    "danger_weight": 1,
+    "normalize": true,
+    "use_max": false,
+    "v0_prob_aggregation_mode": "mean",
+    "respect_offside": true,
+    "chunk_size": 5,
+    "library_version": "accessible-space==2.1.0",
+    "simulations_per_state": 450,
+    "obso_transition_sigma_m": 14.0,
+    "chunk_size_invariance_proof": "chunk_size is a batching knob, not a model parameter. DAS and AS computed at chunk_size 150, 15 and 5 are BIT-IDENTICAL (max abs diff 0.000e+00) on 40 real DEV states. Lowering it therefore cannot alter any value and is used only to bound memory. Worker count is 6, not 8, because each worker holds a ~824 MB resident baseline on this 8 GB host.",
+    "pandas3_workaround": "team_id and team_in_possession passed as numpy object dtype; accessible_space/interface.py:216 is broken under pandas 3.0.5 and the installed package is NOT patched"
+  },
+  "no_rescue": "Comparator list frozen here. No comparator may be added, removed, re-oriented or relegated after any number is read. No tuning, no threshold search, no outcome swap, no TEST access. AM02 is the sole, owner-authorised, disclosed exception: three comparators added post-hoc for literature completeness, reported in full, with the verdict consequence pre-committed.",
+  "am03_refresh_source": "archive/exp032_pre_am03/outputs",
+  "am03_disclosure": "Owner-authorized defect repair: all 22 players, consistent actual carrier, exact frame mapping, draw-instance bootstrap capture; unchanged inherited columns reused bit-identically. No outcome/model/fold tuning. Sigma14 is sensitivity, not parameter-fidelity correction."
+}

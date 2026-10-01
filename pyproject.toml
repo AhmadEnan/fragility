@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fragility"
-version = "1.0.0"
-description = "Counterfactual Defensive Fragility and SOG Engine for SSAC 2027"
+version = "1.1.0"
+description = "Structural Opening Gain: mapping counterfactual openings in soccer defenses"
 readme = "README.md"
 requires-python = ">=3.12"
 license = {text = "MIT"}
 authors = [
-    {name = "MIT Sloan Sports Analytics Conference 2027 Submission"}
+    {name = "SSAC 2027 Research Team"}
 ]
 dependencies = [
     "numpy>=1.24,<3",
@@ -22,6 +22,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+raw = ["accessible-space==2.1.0"]
 test = [
     "pytest>=7.0.0",
     "nbformat>=5.10",

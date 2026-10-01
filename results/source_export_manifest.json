@@ -1,0 +1,328 @@
+[
+  {
+    "source": "src/obso/__init__.py",
+    "target": "src/obso/__init__.py",
+    "source_sha256": "46bf3db5728cc5d1e03c70b5b5f1cb0a4662a967b49949e8bad0ff164d1e03e0"
+  },
+  {
+    "source": "src/obso/danger.py",
+    "target": "src/obso/danger.py",
+    "source_sha256": "15c45998cf1ed6daec88f7d69e366875a84421696e299535cfaf7002e6938c7c"
+  },
+  {
+    "source": "src/obso/evaluate.py",
+    "target": "src/obso/evaluate.py",
+    "source_sha256": "0055340e23d8029d5dcc2c052f15bacb8eb067c1857fb670c4ef561686563b11"
+  },
+  {
+    "source": "src/obso/fieldvalue.py",
+    "target": "src/obso/fieldvalue.py",
+    "source_sha256": "e2f7b027140baa8b2464074bb9c93c9d252a724b8800417f11c83cd90137e5ce"
+  },
+  {
+    "source": "src/obso/grid.py",
+    "target": "src/obso/grid.py",
+    "source_sha256": "3ba26ba3e580af8c7a5e8f0307f55b0235ec039a061446d4dcbf06bac87e542d"
+  },
+  {
+    "source": "src/obso/operator.py",
+    "target": "src/obso/operator.py",
+    "source_sha256": "7e1247d4f7cea4b41c58d7d3ffa265109318d83e385ce2c008b28d45701b3d20"
+  },
+  {
+    "source": "src/obso/ppcf.py",
+    "target": "src/obso/ppcf.py",
+    "source_sha256": "27648c0f7f6053ef21b59bd3016d41bb4d7ee8ef8b23d70aac1658e1e2e0b32f"
+  },
+  {
+    "source": "src/obso/state.py",
+    "target": "src/obso/state.py",
+    "source_sha256": "da751d44b17068a9c90459556843913196fb4b99b59f9b30aaf0b5a8566d62ca"
+  },
+  {
+    "source": "src/fragility/passes.py",
+    "target": "src/fragility/raw_events.py",
+    "symbol": "load_events",
+    "source_sha256": "0eeef8689b33e226dd3a447a3f477dbdc0b4718d22c2bccc0ea654da86deb95e",
+    "ast_sha256": "c34836d097b72c9bc9b9a651deb06b5cba2c2bc0613fc0d300cd0d137464740c"
+  },
+  {
+    "source": "src/fragility/passes.py",
+    "target": "src/fragility/raw_events.py",
+    "symbol": "assign_possessions",
+    "source_sha256": "0eeef8689b33e226dd3a447a3f477dbdc0b4718d22c2bccc0ea654da86deb95e",
+    "ast_sha256": "7dff922b7a309f4c77919e40fed721c62d0d410cf7ddd83d533a5195cedc27fb"
+  },
+  {
+    "source": "src/fragility/passes.py",
+    "target": "src/fragility/raw_events.py",
+    "symbol": "add_frame_timing",
+    "source_sha256": "0eeef8689b33e226dd3a447a3f477dbdc0b4718d22c2bccc0ea654da86deb95e",
+    "ast_sha256": "92d72b6a1d3876235882bebd180c7235760769633aacb930ee99d6df28da1ba1"
+  },
+  {
+    "source": "scripts/obso_pilot/00_build_event_frame_index.py",
+    "target": "src/fragility/raw_index.py",
+    "symbol": "build",
+    "source_sha256": "3a1f21cfd81470722019234d881bb814980b41ce26d1650f1ccae35d64c1771e",
+    "ast_sha256": "812eef841c79875d6476910b63b256d0d694499dd6862038e4d49664c493b609"
+  },
+  {
+    "source": "scripts/fragility_operator_pilot/op_common.py",
+    "target": "src/fragility/raw_third.py",
+    "symbol": "third_of",
+    "source_sha256": "081e813d586ed13f4cc241c8fc7e9ab0fdceb32dd52e3e1c2c8f5b0746f3deb3",
+    "ast_sha256": "874accc0bcdd9846cde2cd0f4e41f4c840ea098e2e911cd4fc04e2d9e22fe357"
+  },
+  {
+    "source": "scripts/cap_validation_pilot/cap_common.py",
+    "target": "src/fragility/raw_cap.py",
+    "symbol": "match_fps",
+    "source_sha256": "0592696e5726c85c74bee894cb524990ebb92965901008efe065ec807589756d",
+    "ast_sha256": "bf865ccd11d2247db79a52205008cd5d3f4cb153354c657cf6a323f7a88ca082"
+  },
+  {
+    "source": "scripts/cap_validation_pilot/cap_common.py",
+    "target": "src/fragility/raw_cap.py",
+    "symbol": "_extra_outcome_fields",
+    "source_sha256": "0592696e5726c85c74bee894cb524990ebb92965901008efe065ec807589756d",
+    "ast_sha256": "a71afa53bc93f52f1dbaa970a5979b095564be932541f05f8558ec46938647e2"
+  },
+  {
+    "source": "scripts/cap_validation_pilot/cap_common.py",
+    "target": "src/fragility/raw_cap.py",
+    "symbol": "events_with_possessions",
+    "source_sha256": "0592696e5726c85c74bee894cb524990ebb92965901008efe065ec807589756d",
+    "ast_sha256": "d3e0fee64cc29b79188e30e280264ff51b3b5ef4f2dbff257ee20d3d0891b1ea"
+  },
+  {
+    "source": "scripts/cap_validation_pilot/cap_common.py",
+    "target": "src/fragility/raw_cap.py",
+    "symbol": "possession_table",
+    "source_sha256": "0592696e5726c85c74bee894cb524990ebb92965901008efe065ec807589756d",
+    "ast_sha256": "dfcc62c8aa64f423c564a0f6ffdd1588e70ccdf1407ec7b60db01030dc9cf9f4"
+  },
+  {
+    "source": "scripts/cap_validation_pilot/cap_common.py",
+    "target": "src/fragility/raw_cap.py",
+    "symbol": "frame_possession",
+    "source_sha256": "0592696e5726c85c74bee894cb524990ebb92965901008efe065ec807589756d",
+    "ast_sha256": "c61cdd454bf2d93cd9cfa828528ef536423effab5724397701112a46f386cacf"
+  },
+  {
+    "source": "scripts/cap_validation_pilot/cap_common.py",
+    "target": "src/fragility/raw_cap.py",
+    "symbol": "load_cache_unique",
+    "source_sha256": "0592696e5726c85c74bee894cb524990ebb92965901008efe065ec807589756d",
+    "ast_sha256": "7f2eb6db56916ae2d2cf9d407547491f7e6009cdd913290d4f4acf6d77720273"
+  },
+  {
+    "source": "scripts/cap_validation_pilot/cap_common.py",
+    "target": "src/fragility/raw_cap.py",
+    "symbol": "corrected_annotation",
+    "source_sha256": "0592696e5726c85c74bee894cb524990ebb92965901008efe065ec807589756d",
+    "ast_sha256": "a07bae96081fb0f34f9c90af386c740771ceb23f32661cf6bf455a059e71801e"
+  },
+  {
+    "source": "scripts/cap_validation_pilot/cap_common.py",
+    "target": "src/fragility/raw_cap.py",
+    "symbol": "state_phase",
+    "source_sha256": "0592696e5726c85c74bee894cb524990ebb92965901008efe065ec807589756d",
+    "ast_sha256": "070e2e2682084a7d86cfe0b418c356ba547dd26c8b28b919ca8a7fa07e1fdc9f"
+  },
+  {
+    "source": "scripts/cap_validation_pilot/cap_common.py",
+    "target": "src/fragility/raw_cap.py",
+    "symbol": "TrackingView",
+    "source_sha256": "0592696e5726c85c74bee894cb524990ebb92965901008efe065ec807589756d",
+    "ast_sha256": "8fcaef250080b4885c7b80f3834f6c1ab2a81162529879750217a3c5ea0a00e8"
+  },
+  {
+    "source": "scripts/cap_validation_pilot/cap_common.py",
+    "target": "src/fragility/raw_cap.py",
+    "symbol": "view",
+    "source_sha256": "0592696e5726c85c74bee894cb524990ebb92965901008efe065ec807589756d",
+    "ast_sha256": "8a6ef51f458964465bd256bb5a7f5c2ca857e2af0ca59defcca7e7e04a88674e"
+  },
+  {
+    "source": "scripts/cap_validation_pilot/cap_common.py",
+    "target": "src/fragility/raw_cap.py",
+    "symbol": "detect_units",
+    "source_sha256": "0592696e5726c85c74bee894cb524990ebb92965901008efe065ec807589756d",
+    "ast_sha256": "cc35d965ba383c208c00de3957a13014d5ecb6b32bf92ae8a8328afe1ac9446e"
+  },
+  {
+    "source": "scripts/cap_validation_pilot/cap_common.py",
+    "target": "src/fragility/raw_cap.py",
+    "symbol": "_family_and_completion",
+    "source_sha256": "0592696e5726c85c74bee894cb524990ebb92965901008efe065ec807589756d",
+    "ast_sha256": "53de028008546f487d037280e8e9d85f6f5fd28e2a4b0d889cb2a0a1c63749f8"
+  },
+  {
+    "source": "scripts/cap_validation_pilot/cap_common.py",
+    "target": "src/fragility/raw_cap.py",
+    "symbol": "candidate_actions",
+    "source_sha256": "0592696e5726c85c74bee894cb524990ebb92965901008efe065ec807589756d",
+    "ast_sha256": "a59535c929009f8bca930f7d361c5e0f13c98507e1ab0a8099ebe3a4c3669673"
+  },
+  {
+    "source": "scripts/cap_validation_pilot/cap_common.py",
+    "target": "src/fragility/raw_cap.py",
+    "symbol": "label_cap",
+    "source_sha256": "0592696e5726c85c74bee894cb524990ebb92965901008efe065ec807589756d",
+    "ast_sha256": "4542f1ece9dbd46d47ddd1f314fe9220b8d5555fba7dc92f67d082013f549ae1"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_common.py",
+    "target": "src/fragility/raw_cohort.py",
+    "symbol": "eligible_frames",
+    "source_sha256": "dee44d070362b586842340de281dd890c692cc429086bada9fe9107adbe62dce",
+    "ast_sha256": "323764e41f63c856bb770dcf2f5f18a555cca297f6f3e408d89cb58283e4d179"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_common.py",
+    "target": "src/fragility/raw_cohort.py",
+    "symbol": "cadence_states",
+    "source_sha256": "dee44d070362b586842340de281dd890c692cc429086bada9fe9107adbe62dce",
+    "ast_sha256": "e5bc11581ec327adb76d08c2e895d603b302265e9317ca2dc9c3c8ab19677824"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_common.py",
+    "target": "src/fragility/raw_cohort.py",
+    "symbol": "cap_events",
+    "source_sha256": "dee44d070362b586842340de281dd890c692cc429086bada9fe9107adbe62dce",
+    "ast_sha256": "969a3482df717734303cd536ffeeb71948c8384c155fe9eb45f8fd91fe5e3fc5"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_common.py",
+    "target": "src/fragility/raw_cohort.py",
+    "symbol": "label_states",
+    "source_sha256": "dee44d070362b586842340de281dd890c692cc429086bada9fe9107adbe62dce",
+    "ast_sha256": "59a4353b56f7e01cc1d0007a20418f81eed38a44f512769089b7f9a5d1aa6c94"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_common.py",
+    "target": "src/fragility/raw_cohort.py",
+    "symbol": "assign_folds",
+    "source_sha256": "dee44d070362b586842340de281dd890c692cc429086bada9fe9107adbe62dce",
+    "ast_sha256": "d005208a78745b1adce413e435a9d7643d5a1cec5f00fccbb1ed7f91165e6fa5"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_solver.py",
+    "target": "src/fragility/fast_sog.py",
+    "symbol": "_step_table",
+    "source_sha256": "8e05a5ec33a1dda25b4c7801dd201c4c31cb9db4718d2489fcb9255c1a5faccf",
+    "ast_sha256": "ecca60e9294bf52ae11297f0c35a5b6f85090c2650c012e4452518c9e47dd18e"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_solver.py",
+    "target": "src/fragility/fast_sog.py",
+    "symbol": "_integrate_from_player",
+    "source_sha256": "8e05a5ec33a1dda25b4c7801dd201c4c31cb9db4718d2489fcb9255c1a5faccf",
+    "ast_sha256": "69bb70a0aff26ed9fa2c87453526d406d83cecb09718f283e965fc61cd3a0fb9"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_solver.py",
+    "target": "src/fragility/fast_sog.py",
+    "symbol": "solve_state_res0",
+    "source_sha256": "8e05a5ec33a1dda25b4c7801dd201c4c31cb9db4718d2489fcb9255c1a5faccf",
+    "ast_sha256": "324d1de1ca8ee32aa666acc82b5346a2a76ae9c1276f782c852758e9cd2f7595"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_solver.py",
+    "target": "src/fragility/fast_sog.py",
+    "symbol": "state_scores_res0",
+    "source_sha256": "8e05a5ec33a1dda25b4c7801dd201c4c31cb9db4718d2489fcb9255c1a5faccf",
+    "ast_sha256": "ca6e52b22064f651fff249e3e3ceaf0bf4e0a0bd860fd1edb84505c00c1d1466"
+  },
+  {
+    "source": "scripts/exp032_literature_benchmark/01_comparators.py",
+    "target": "src/fragility/das_adapter.py",
+    "symbol": "_das_batch",
+    "source_sha256": "48abdd232fb4d9bc6f5429836875d634ae2d0218187659d348b419a6f3753b58",
+    "ast_sha256": "7d3c857b0ad72f93f3ac23bbad6c7abf99ad2f56a2cc35ea8c5b979470322de9"
+  },
+  {
+    "source": "scripts/exp032_literature_benchmark/01_comparators.py",
+    "target": "src/fragility/das_adapter.py",
+    "symbol": "_frozen_cell_area",
+    "source_sha256": "48abdd232fb4d9bc6f5429836875d634ae2d0218187659d348b419a6f3753b58",
+    "ast_sha256": "ca0261bb75a2200200064c91ba87f8c2d22c9812d8d7b5d9102e1a270efe0e58"
+  },
+  {
+    "source": "scripts/exp025_sog_path_accessibility/04_score.py",
+    "target": "src/fragility/tactical_summary.py",
+    "symbol": "dir6",
+    "source_sha256": "60cbc531ed52f889abc1bf050d0d0f85582e9753f1a5ceabe8a9487e32d008ae",
+    "ast_sha256": "f9fd85dc0a3387ab7534e5ac00414459b57f667a09f4a1eef4c23f83f5e38705"
+  },
+  {
+    "source": "scripts/exp025_sog_path_accessibility/04_score.py",
+    "target": "src/fragility/tactical_summary.py",
+    "symbol": "run_stats",
+    "source_sha256": "60cbc531ed52f889abc1bf050d0d0f85582e9753f1a5ceabe8a9487e32d008ae",
+    "ast_sha256": "7a017632bb2bd929b94c53df306b311bca9d78d0385c6d901d954e42107e84a6"
+  },
+  {
+    "source": "scripts/exp025_sog_path_accessibility/04_score.py",
+    "target": "src/fragility/tactical_summary.py",
+    "symbol": "summarize",
+    "source_sha256": "60cbc531ed52f889abc1bf050d0d0f85582e9753f1a5ceabe8a9487e32d008ae",
+    "ast_sha256": "0c0fcadd01d52665fa397b4c71326c33f53a64796667987a026d6d9ce9efa39e"
+  },
+  {
+    "source": "configs/exp032_literature_benchmark.json",
+    "target": "configs/literature_benchmark.json",
+    "source_sha256": "d6246b8aa7f15ed1e5b8f4dc7c4bf8a7170d889a06b5f71e994500a7c28fa537"
+  },
+  {
+    "source": "assets/EPV_grid.csv",
+    "target": "assets/EPV_grid.csv",
+    "source_sha256": "5733e1d99f311affd4ac39ebd48b245562e1d8086339281d5b0e7822a2b53274"
+  },
+  {
+    "source": "experiments/EXP_SOG_PREDICTIVE_CONFIRM_029/cohorts/TEST_WINDOW_EXCLUSIONS.csv",
+    "target": "data/identity/test_window_exclusions.csv",
+    "source_sha256": "49e4500689be63d540146392c37c2f98b4752128434fecef4011b238a3f30e51"
+  },
+  {
+    "source": "experiments/EXP_SOG_GOLD20_CONFIRMATION_023/01_CASE_ALIGNMENT_FREEZE.csv",
+    "target": "data/validation/case_alignment_freeze.csv",
+    "source_sha256": "f546927118b9f8be1c705686a26b485ea3df7e5ca2693f5b3fc4ad3f2171923d"
+  },
+  {
+    "source": "experiments/EXP_SOG_GOLD20_CONFIRMATION_023/02_PLAYER_ACTION_FREEZE.csv",
+    "target": "data/validation/player_action_freeze.csv",
+    "source_sha256": "7360c78730288321a6674b0335773e11c13673a2fdbfc78f8713147b3aaee2d9"
+  },
+  {
+    "source": "experiments/EXP_SOG_INCREMENTAL_ABLATION_024/DOCUMENTED_ACTION_COMPARISON.csv",
+    "target": "data/validation/action_recovery_reference.csv",
+    "source_sha256": "05eb686810dd315b02574b5ceb324b82d7e9abbffdbe89524bcd2a7d7c1e9ed4"
+  },
+  {
+    "source": "experiments/EXP_SOG_INCREMENTAL_ABLATION_024/PREREGISTRATION.md",
+    "target": "docs/protocols/tactical_ablation.md",
+    "source_sha256": "9bbb7ff9b3c87919f79bd48dee002454cfb3637779c1612d2cb8a7ac607d4387"
+  },
+  {
+    "source": "experiments/EXP_SOG_PREDICTIVE_CONFIRM_029/PREREGISTRATION.md",
+    "target": "docs/protocols/heldout.md",
+    "source_sha256": "80cded250a693bd21afcb3455c36752b4e3d03f846a0592ad3c8865f87621c82"
+  },
+  {
+    "source": "docs/submission/ssac27_2026-09-30/ABSTRACT.md",
+    "target": "docs/submission/ABSTRACT.md",
+    "source_sha256": "4d28f921eef0d4e1385352413c90fc37c54f9528b732044f3f6239723a9d92f6"
+  },
+  {
+    "source": "docs/submission/ssac27_2026-09-30/FIGURE_CAPTIONS.md",
+    "target": "docs/submission/FIGURE_CAPTIONS.md",
+    "source_sha256": "c1dce3787ffb0fa9fea27493d86f16c278de1db728cab955c2b58aecd8d02d87"
+  },
+  {
+    "source": "docs/submission/ssac27_2026-09-30/CLAIMS_AND_PROVENANCE.md",
+    "target": "docs/submission/CLAIMS_AND_PROVENANCE.md",
+    "source_sha256": "acc3d8fcb823f84bf4707726f2e500bea5e4d30d50269552100b38679f7b87bb"
+  }
+]

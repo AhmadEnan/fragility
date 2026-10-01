@@ -2,3 +2,24 @@ data/derived/*.json text eol=lf
 data/derived/*.csv text eol=lf
 *.parquet binary
 *.npz binary
+
+# Preserve byte-identical copied research sources and authored frozen artifacts.
+src/obso/__init__.py -text
+src/obso/danger.py -text
+src/obso/evaluate.py -text
+src/obso/fieldvalue.py -text
+src/obso/grid.py -text
+src/obso/operator.py -text
+src/obso/ppcf.py -text
+src/obso/state.py -text
+configs/literature_benchmark.json -text
+assets/EPV_grid.csv -text
+data/identity/test_window_exclusions.csv -text
+data/validation/case_alignment_freeze.csv -text
+data/validation/player_action_freeze.csv -text
+data/validation/action_recovery_reference.csv -text
+docs/protocols/tactical_ablation.md -text
+docs/protocols/heldout.md -text
+docs/submission/ABSTRACT.md -text
+docs/submission/FIGURE_CAPTIONS.md -text
+docs/submission/CLAIMS_AND_PROVENANCE.md -text

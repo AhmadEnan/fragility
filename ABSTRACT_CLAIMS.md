@@ -1,6 +1,6 @@
 # Abstract results
 
-Results reported in `SSAC27_ABSTRACT_REVIEW.pdf` and its accompanying figures, dated 2026-10-01.
+Results in the [exact submitted abstract](docs/submission/ABSTRACT.md) and [figure captions](docs/submission/FIGURE_CAPTIONS.md), exported from the original submission packet on 2026-10-01.
 
 | Result | Derived input | Reproduced value |
 |---|---|---|
@@ -9,7 +9,7 @@ Results reported in `SSAC27_ABSTRACT_REVIEW.pdf` and its accompanying figures, d
 | Scalar feature gives no material AUC improvement | M0 and M1 test scores | AUC 0.6449802 and 0.6448875 |
 | 16 development and 16 test matches | Anonymous match groups | 16 per cohort, kept separate |
 | Figure 2 comparison | Development scores and links | All six methods |
-| SOG 13/20 versus PCG 11/20 | Tactical flags | 13 sequences, 20 actions |
+| SOG 13/20 versus PCG 11/20 | Recomputed candidate rankings and frozen annotations | 13 sequences, 20 actions |
 | Difference +10 pp, interval 0 to 24 pp | Case-grouped flags | 10,000 draws; upper bound 23.5294 pp |
 | Pre-release tie; extra hits post-release only | Pre-release flags | 10/20 each; both extra SOG hits lack pre-release support |
 | Figure 1 Richarlison example | Computed fields and rendered artwork | Original PNG pixels match |

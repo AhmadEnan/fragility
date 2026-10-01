@@ -1,0 +1,3 @@
+**Figure 1.** Illustrative development case, not validation. Inset: all tested directions at 1.5 m for Richarlison; faint arrow sizes encode frozen scores, while blue highlights the illustrated move. Suggestion lengths are illustrative. Other player states remain fixed. Dashed routes show static clearance; dynamic interception and shot success are unvalidated.
+
+**Figure 2.** All models are compared on the same 38,035 match situations and 752 successful penetrations. A: unique events found when reviewing the highest-scoring 10% of situations. B: ranking quality. These matches were used for model development. Results are retrospective; centered velocities limit prospective interpretation.

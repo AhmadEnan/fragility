@@ -42,5 +42,9 @@
   "train_features.parquet": {
     "sha256": "c6ecb7f7e6e71bd47a40e1da48f5dfaf6aa26bf537722720f0998e12dbedc961",
     "bytes": 7215344
+  },
+  "tactical_candidate_scores.parquet": {
+    "sha256": "e61d404c5680aad5c75f99d602aed2e3d6f9d8879b9d2e561a76d5dd3ec537d3",
+    "bytes": 3667106
   }
 }

@@ -1,0 +1,15 @@
+{
+  "states": [
+    "3812|4378|False",
+    "3812|4410|False",
+    "3812|4442|False",
+    "3812|4474|False"
+  ],
+  "library": "accessible-space==2.1.0",
+  "max_abs_error_by_feature": {
+    "EPV_AT_BALL": 0.0,
+    "EPV_WEIGHTED_CONTROL": 0.0,
+    "D_OBSO": 0.0,
+    "DAS": 0.0
+  }
+}

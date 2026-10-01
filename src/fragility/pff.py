@@ -120,8 +120,8 @@ def load_pff_state(
 ) -> TrackingState:
     """Load a specific match frame from reviewer-provided PFF dataset directory.
 
-    Looks for frame cache parquets (match_{match_id}_stride8.parquet) or raw
-    tracking data under the provided data root.
+    Reads a stride-8 cache Parquet. Build it first with fragility.preprocessing;
+    this function does not decode raw tracking JSONL files.
     """
     root = Path(data_root)
 
@@ -197,9 +197,10 @@ def load_pff_state(
             is_gk=is_gk,
             jerseys=jerseys,
             ball=ball,
+            offside=compute_offside(positions, is_att, ball, offside_tol_m),
         )
 
     raise FileNotFoundError(
-        f"Could not locate tracking data for match {match_id} under {data_root}. "
+        f"Could not locate stride-8 cache for match {match_id} under {data_root}. "
         "Please verify your PFF dataset layout per DATA_ACCESS.md."
     )

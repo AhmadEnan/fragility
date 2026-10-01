@@ -18,7 +18,7 @@ REFERENCE = ROOT / "results/reference"
 
 def cohort_results(cohort):
     df = pd.read_parquet(DATA / f"{cohort}_predictions.parquet")
-    features, predictions = score(cohort)
+    features, predictions = score(cohort, DATA)
     assert features.match.equals(df.match)
     np.testing.assert_array_equal(
         features.Y_CAP_2S.to_numpy(bool), df.Y_CAP_2S.to_numpy(bool)
@@ -80,8 +80,21 @@ def cohort_results(cohort):
     return result
 
 
-def tactical_results():
-    df = pd.read_csv(DATA / "tactical_comparison.csv")
+def tactical_results(tactical_candidates=None):
+    from .tactical import verify as verify_tactical
+    if tactical_candidates:
+        from .tactical import evaluate
+        actions, evidence = evaluate(pd.read_parquet(tactical_candidates))
+    else:
+        actions, evidence = verify_tactical()
+    actions = actions.loc[actions.evidence_strength.eq("A")]
+    df = actions.loc[actions.metric.eq("SOG"), ["action_key", "case_id", "top10", "pre_sup"]].rename(columns={"top10": "SOG_TOP10", "pre_sup": "SOG_pre_sup"})
+    pcg = actions.loc[actions.metric.eq("PCG"), ["action_key", "top10", "pre_sup"]].rename(columns={"top10": "PCG_TOP10", "pre_sup": "PCG_pre_sup"})
+    df = df.merge(pcg, on="action_key", validate="one_to_one")
+    output = OUTPUT
+    output.mkdir(parents=True, exist_ok=True)
+    actions.to_csv(output / "tactical_action_recovery.csv", index=False)
+    evidence.to_parquet(output / "tactical_frame_evidence.parquet", index=False)
     assert len(df) == 20 and df.case_id.nunique() == 13
     assert df.SOG_TOP10.sum() == 13 and df.PCG_TOP10.sum() == 11
     assert df.SOG_pre_sup.sum() == df.PCG_pre_sup.sum() == 10
@@ -111,7 +124,7 @@ def tactical_results():
 
 def development_interval():
     df = pd.read_parquet(DATA / "dev_predictions.parquet")
-    for column, values in score("dev")[1].items():
+    for column, values in score("dev", DATA)[1].items():
         df[column] = values
     y = df.Y_CAP_2S.to_numpy(float)
     matches = sorted(df.match.unique())
@@ -137,14 +150,17 @@ def development_interval():
     return ci.tolist()
 
 
-def verify():
+OUTPUT = ROOT / "results/reproduced"
+
+
+def verify(tactical_candidates=None):
     manifest = json.loads((DATA / "manifest.json").read_text())
     for name, entry in manifest.items():
         assert (
             hashlib.sha256((DATA / name).read_bytes()).hexdigest() == entry["sha256"]
         ), name
-    fields = np.load(DATA / "figure1_plot.npz")
-    illustration = json.loads((DATA / "figure1_plot.json").read_text())
+    fields = np.load(ROOT / "data/derived/figure1_plot.npz")
+    illustration = json.loads((ROOT / "data/derived/figure1_plot.json").read_text())
     assert fields["C0"].shape == fields["gain"].shape == (32, 50)
     assert np.isfinite(fields["C0"]).all() and np.isfinite(fields["gain"]).all()
     np.testing.assert_allclose(
@@ -156,8 +172,8 @@ def verify():
     gain = test.loc["M2", "events_captured"] / test.loc["M0", "events_captured"] - 1
     np.testing.assert_allclose(gain, 50 / 170, rtol=0, atol=1e-12)
     interval = development_interval()
-    output = ROOT / "results/reproduced"
-    output.mkdir(exist_ok=True)
+    output = OUTPUT
+    output.mkdir(parents=True, exist_ok=True)
     table = dev.reset_index().rename(
         columns={"model": "arm", "roc_auc": "auc", "pr_auc": "ap"}
     )
@@ -178,13 +194,21 @@ def verify():
         "held_out": test.reset_index().to_dict("records"),
         "development": dev.reset_index().to_dict("records"),
         "relative_event_gain": gain,
-        "tactical": tactical_results(),
+        "tactical": tactical_results(tactical_candidates),
         "development_auc_interval": interval,
     }
-    (ROOT / "results/verification.json").write_text(json.dumps(report, indent=2) + "\n")
+    report_path = ROOT / "results/verification.json" if OUTPUT == ROOT / "results/reproduced" else OUTPUT / "verification.json"
+    report_path.write_text(json.dumps(report, indent=2) + "\n")
     return report
 
 
 if __name__ == "__main__":
-    verify()
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--data-root", type=Path, default=DATA)
+    parser.add_argument("--output-root", type=Path, default=OUTPUT)
+    parser.add_argument("--tactical-candidates", type=Path)
+    args = parser.parse_args()
+    DATA, OUTPUT = args.data_root, args.output_root
+    verify(args.tactical_candidates)
     print("Submission results verified.")

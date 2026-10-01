@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "states": 38035,
+    "positives": 1314,
+    "events": 752,
+    "links": 1336,
+    "labels_exact": true,
+    "event_link_structure_exact": true,
+    "additional_sampled_states": 0
+  },
+  "test": {
+    "states": 38751,
+    "positives": 1216,
+    "events": 694,
+    "links": 1231,
+    "labels_exact": true,
+    "event_link_structure_exact": true,
+    "additional_sampled_states": 0
+  }
+}

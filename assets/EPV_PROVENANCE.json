@@ -1,0 +1,9 @@
+{
+  "source_repository": "https://github.com/Friends-of-Tracking-Data-FoTD/LaurieOnTracking",
+  "source_url": "https://raw.githubusercontent.com/Friends-of-Tracking-Data-FoTD/LaurieOnTracking/master/EPV_grid.csv",
+  "local_sha256": "5733e1d99f311affd4ac39ebd48b245562e1d8086339281d5b0e7822a2b53274",
+  "upstream_sha256": "5733e1d99f311affd4ac39ebd48b245562e1d8086339281d5b0e7822a2b53274",
+  "numeric_identity": true,
+  "accessed": "2026-10-01",
+  "license": "MIT; see EPV_GRID_LICENSE.txt"
+}

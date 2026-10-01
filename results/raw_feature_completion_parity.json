@@ -1,0 +1,33 @@
+{
+  "states": [
+    "3844|1684|True",
+    "3844|1908|True",
+    "3844|1940|True",
+    "3844|1972|True"
+  ],
+  "max_abs_error_by_feature": {
+    "ball_x_norm": 0.0,
+    "abs_ball_y_m": 0.0,
+    "ball_dist_to_goal_m": 0.0,
+    "possession_age_s": 0.0,
+    "carrier_nearest_def_dist_m": 0.0,
+    "nearest_def_closing_speed_ms": 0.0,
+    "carrier_speed_ms": 0.0,
+    "offball_att_speed_mean_ms": 0.0,
+    "offball_att_speed_max_ms": 0.0,
+    "def_outfield_speed_mean_ms": 0.0,
+    "def_width_m": 0.0,
+    "def_depth_m": 0.0,
+    "def_hull_area_m2": 0.0,
+    "C0_ATTACK_AREA_m2": 0.0,
+    "carrier_fallback": 0.0,
+    "F_SOG": 0.0,
+    "R_MAX": 1.7763568394002505e-15,
+    "R_MEDIAN": 6.661338147750939e-16,
+    "TOP_CONCENTRATION": 8.881784197001252e-16,
+    "TOP_GAP": 3.677613769070831e-16,
+    "PLAYER_CONCENTRATION": 5.551115123125783e-17,
+    "BEST_ALIGNMENT": 5.551115123125783e-17,
+    "TOP_PLAYER_ALIGNMENT": 0.0
+  }
+}

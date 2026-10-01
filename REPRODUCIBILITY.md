@@ -1,35 +1,69 @@
-# Reproducing the results
+# Reproducing the submission
 
-The notebook verifies input hashes, computes held-out and development classifier scores, checks the abstract statistics and renders both figures. Calculations run in fresh Python processes for compatibility with Colab's preloaded packages. Saved predictions are used only to check the recomputed scores.
+## Lightweight reviewer route
 
-## Features and models
-
-Inputs are normalized with development-only affine transforms. Absolute ball coordinates and the transforms back to provider units are not included. The original feature names identify their mathematical roles; released values are dimensionless. Squared ball-context terms are computed after fold standardization, as in the research code.
-
-Held-out model coefficients come from the original saved models, transformed for the normalized inputs. The development experiment did not save its fold coefficients; these were recovered from saved out-of-fold logits and the original design matrices, without outcome labels. Recomputed probabilities agree within 1e-12. `python -m fragility.scoring` independently refits all models using the original IRLS routine. Its largest local probability difference is 3.4e-8, reflecting stopping-point sensitivity after affine normalization.
-
-## Statistics and figures
-
-Statistics agree with the original tables within 1e-12; counts match exactly. The development AUC interval and tactical case interval use their original 10,000-draw seeds. Figure 1 reconstructs computed control fields beneath fixed annotation artwork, with saved raster compositing corrections. Its PNG pixels match the submitted illustration exactly. Figure 2 is redrawn from recalculated model metrics; Arial is used when installed, otherwise Liberation Sans or DejaVu Sans. Typography can differ across operating systems.
-
-Figure 2 is a development comparison. The abstract's 29.4% is the relative increase from 170 to 220 held-out events; Figure 2's 25.6% is 195 to 245.
-
-## Working with raw data
-
-After obtaining the dataset from the provider, generate a tracking cache with the original preprocessing functions:
+The notebook checks source fingerprints and input hashes, independently fits all ten classifier arms from labels, replays frozen coefficients, recomputes event retrieval and both 10,000-draw intervals, and regenerates both figures. Tactical recovery is computed from candidate scores and frozen annotations, rather than accepting supplied hit flags.
 
 ```bash
-python -m fragility.preprocessing RAW_ROOT CACHE_ROOT --match 10507
+python -m pip install -r requirements-reproduce.txt -e ".[test]"
+python tests/verify_notebook.py
 ```
 
-Preprocessing uses stride 8 and centered velocities. Set `PFF_DATA_ROOT` to the generated cache directory to enable the optional engine comparison test. The notebook uses the original derived outcome labels and event links; it does not rebuild the complete raw-event cohort or CAP outcome qualification pipeline.
+Separate Python processes avoid Colab's preloaded-package state. Frozen probabilities agree within 1e-12. Independent fitting checks training and evaluation rows at a fixed 1e-7 probability tolerance. Figure 2 typography may differ when Arial is unavailable.
 
-The feature extractor reads the cache and computes context, SOG and alignment features in original units:
+## Reconstruction from authorized provider data
+
+Use a source checkout and editable installation. Obtain the PFF FC 2022 World Cup dataset through [DATA_ACCESS.md](DATA_ACCESS.md). `RAW_ROOT` contains `Tracking Data`, `Event Data`, `Metadata` and `Rosters`; tracking filenames are `<match>.jsonl.bz2`. `WORK` is a separate local output directory outside raw inputs and existing cache/index directories.
 
 ```bash
-python -m fragility.extract_features CACHE_ROOT --match 3844 --frame 19209 --perspective home --possession-age-s 62.2288955622289 --output features.json
+python -m pip install -r requirements-reproduce.txt -e ".[raw,test]"
+
+# Build caches/indices, select situations, qualify CAP events and link releases.
+python -m fragility.raw_pipeline RAW_ROOT WORK/cohort --stage cohort
+
+# Calculate all context, SOG landscape and movement-alignment features.
+python -m fragility.raw_pipeline RAW_ROOT WORK/features --stage features --cache-root WORK/cohort/private_cache --index-root WORK/cohort/private_index
+
+# Calculate Figure 2 comparators on development matches only.
+python -m fragility.raw_pipeline RAW_ROOT WORK/comparators --stage comparators --cache-root WORK/cohort/private_cache --index-root WORK/cohort/private_index
+
+# DEV-only normalization, independent fitting, scores and event-link export.
+python -m fragility.export_inputs WORK/cohort WORK/features WORK/comparators WORK/derived
+
+# Check freshly qualified labels and the entire event-link structure.
+python -m fragility.integrity --cohort-root WORK/cohort
+
+# Rebuild the tactical action bank; build any missing caches privately.
+python -m fragility.raw_tactical WORK/cohort/private_cache WORK/tactical --raw-root RAW_ROOT
+python -m fragility.tactical --candidates WORK/tactical/tactical_candidate_scores.parquet --output WORK/tactical_results
+
+# Recalculate the submission statistics from the freshly fitted classifier inputs.
+python -m fragility.reproduce --data-root WORK/derived --output-root WORK/results --tactical-candidates WORK/tactical/tactical_candidate_scores.parquet
 ```
 
-Supply possession age from the cohort's possession timing. The extractor computes features only; outcome labels and external Figure 2 comparators are supplied separately in the derived inputs.
+Scripts never write into explicit raw/cache/index inputs. Existing caches and indices may be supplied read-only. Importing modules does not launch jobs or create research directories. Reconstruction uses this repository's dependencies and does not need the original research checkout.
 
-The original Figure 2 comparator extraction functions are in `reference/exp032_comparators.py` for inspection. Their fingerprints are checked against the research source. Running them requires the original experiment driver and research modules.
+Full feature reconstruction is CPU-intensive: up to 240 movements per state over 1,600 pitch cells. Allow hours, depending on hardware. Serial match processing bounds memory. A quick wiring check adds `--matches 3844 --limit 4` to the feature stage, or `--matches 3812 --limit 4` to the comparator stage. Bounded runs are recorded as such and cannot replace full-study inputs. Tactical extraction accepts `--cases GOLD001`. No GPU is required.
+
+The row manifest records 38,035 development states and 38,751 held-out states with match/frame/perspective keys and globally distinct match identities. Fresh extraction records solver failures; only those recorded failures may remove sampled states. Event linkage preserves multiple qualified releases reachable from one situation.
+
+## Normalization and fitting
+
+`data/identity/normalization.json` supplies the release transforms. `export_inputs.py` reconstructs them from DEV alone: `(x - DEV mean) / DEV population standard deviation`. Nonfinite values remain until classifier design. Feature names retain original-unit suffixes; released values are dimensionless.
+
+Classifier design median-imputes and standardizes on each training partition. Squared ball terms square the already-standardized linear term. Five folds deal numerically sorted development match IDs round-robin. Held-out models fit all development rows; test rows never fit normalization, imputation or coefficients.
+
+The original development run did not retain fold coefficients. Frozen replay coefficients were recovered from its out-of-fold logits without outcomes; independent IRLS fitting checks evaluation probabilities. Fresh raw-data export fits directly from fresh labels and does not rely on recovered coefficients.
+
+## Illustration and optional local checks
+
+Figure 1 renders saved scientific fields beneath fixed annotation artwork with sparse raster corrections, preserving the submitted image. Independently recompute its selected action and fields:
+
+```bash
+python -m fragility.preprocessing RAW_ROOT CACHE_ROOT --match 10507 10505
+python -m fragility.verify_illustration CACHE_ROOT
+```
+
+Set `PFF_DATA_ROOT` to `CACHE_ROOT` for the existing optional local engine-parity check, `python -m pytest`. It uses match **10505**. `load_pff_state` requires a cache and does not decode raw JSONL. No GitHub Actions tests are configured.
+
+The frozen [held-out](docs/protocols/heldout.md) and [tactical ablation](docs/protocols/tactical_ablation.md) protocols preserve historical registration. Their predictive language is qualified by the centered-velocity disclosure in the submitted abstract and [METHODS.md](METHODS.md). Reconstruction preserves the existing method without new thresholds or sampling.

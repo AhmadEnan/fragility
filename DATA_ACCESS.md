@@ -1,15 +1,19 @@
-# Data access
+# Data access and sharing
 
-The research uses PFF FC's 2022 World Cup tracking and events. The provider's current [Gradient Sports release page](https://www.gradientsports.com/blog/enhanced-2022-world-cup-dataset) describes free access.
+Research uses PFF FC's 2022 World Cup tracking and events. The [Gradient Sports release page](https://www.gradientsports.com/blog/enhanced-2022-world-cup-dataset) describes provider access.
 
-To obtain the underlying data:
+1. Use the release page's access form where available.
+2. Alternatively, contact [support@gradientsports.com](mailto:support@gradientsports.com), listed on the [official contact page](https://www.gradientsports.com/contact).
+3. Request the **2022 FIFA World Cup dataset originally released by PFF FC**, including tracking, events, metadata, rosters and specifications. State that you are reproducing an SSAC submission and request applicable usage terms.
 
-1. Visit the release page and use its access form if available.
-2. Otherwise email [support@gradientsports.com](mailto:support@gradientsports.com), listed on the [official contact page](https://www.gradientsports.com/contact).
-3. Request the **2022 FIFA World Cup dataset originally released by PFF FC**, including tracking, events, metadata, rosters and data specifications. Explain that you are reproducing an SSAC research submission and ask for the applicable usage and sharing terms.
+Links and the contact address were checked on 2026-10-01. The lightweight notebook needs no provider access.
 
-Both links and the listed email address were checked on 2026-10-01. Dataset access is handled by the provider. The Colab notebook uses the included derived inputs and does not require raw files.
+## Included derived inputs
 
-This repo contains normalized computed features, classifier parameters and scores, binary labels, anonymous event links, tactical recovery flags and computed pitch-control fields. Figure 1 uses rendered annotation artwork instead of numeric player positions. Raw provider files, trajectories, player velocities, event records and original coordinate arrays are excluded.
+The owner confirmed on 2026-10-01 that derived inputs may be shared and raw tracking JSONL files may not be shared. This package follows that instruction. Included inputs are computed features, normalization parameters, coefficients and scores, qualified labels and event links, derived cohort identities, scalar tactical candidate scores, authored annotations and computed control fields.
 
-SSAC accepts code, permitted derived data and provider access instructions for abstract-stage reproducibility. A dataset-specific redistribution license was not found in the provider's public documentation, and permission to share these derived inputs remains unconfirmed. The MIT license applies to code only; conference guidance does not establish data-sharing rights.
+Raw tracking JSONL/BZ2 files, tracking-cache coordinate/velocity tables, provider event JSON and the original HDF5 field bank are excluded. Reconstruction reads authorized data and places private caches in an explicitly chosen local output directory. `.gitignore` excludes raw tracking and documented private-output directories.
+
+The owner's confirmation records the sharing basis supplied for this submission. The repo does not assert an organizer-approved exception or publish correspondence that was not supplied. Reviewers obtain raw data through the provider for full reconstruction.
+
+MIT covers project source code, without granting independent redistribution rights to provider data or relicensing derived inputs. The EPV grid has its own included MIT notice; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
