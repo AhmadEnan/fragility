@@ -58,11 +58,15 @@ def test_grid_geometry():
 
 
 def test_offside_line_and_status(synthetic_state):
-    line = offside_line(synthetic_state.positions, synthetic_state.is_att, synthetic_state.ball)
+    line = offside_line(
+        synthetic_state.positions, synthetic_state.is_att, synthetic_state.ball
+    )
     # In synthetic fixture, second-last defender is at x = 25.0, ball at x = 19.0
     assert np.isclose(line, 25.0)
 
-    offside = compute_offside(synthetic_state.positions, synthetic_state.is_att, synthetic_state.ball)
+    offside = compute_offside(
+        synthetic_state.positions, synthetic_state.is_att, synthetic_state.ball
+    )
     assert isinstance(offside, np.ndarray)
     assert offside.shape == (22,)
     # All attackers in synthetic fixture are at x <= 19.5, so none are offside
@@ -98,7 +102,7 @@ def test_action_enumeration(synthetic_state):
 
 def test_tti_kinematics():
     targets = np.array([[[10.0, 0.0]]], dtype=np.float64)  # (1, 1, 2)
-    positions = np.array([[0.0, 0.0]], dtype=np.float64)   # (1, 2)
+    positions = np.array([[0.0, 0.0]], dtype=np.float64)  # (1, 2)
     velocities = np.array([[0.0, 0.0]], dtype=np.float64)  # (1, 2)
 
     # From 0 to 10m from rest:
@@ -107,7 +111,9 @@ def test_tti_kinematics():
     # Cruise distance: 10 - 25/14 = 115 / 14 m (~8.214 m).
     # Cruise time: (115/14) / 5 = 23 / 14 s (~1.643 s).
     # Total tau = t_accel + (d - s_accel)/v = 5/7 + (10 - 25/14)/5 = 33 / 14 s (~2.35714 s)
-    tau = time_to_intercept(positions, velocities, targets, max_speed=5.0, max_acceleration=7.0)
+    tau = time_to_intercept(
+        positions, velocities, targets, max_speed=5.0, max_acceleration=7.0
+    )
     assert np.isclose(tau[0, 0, 0], 33.0 / 14.0, atol=1e-5)
 
 

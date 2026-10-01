@@ -17,10 +17,11 @@ from fragility.config import SOGConfig, CANONICAL_CONFIG
 @dataclass(frozen=True)
 class PitchGrid:
     """Cell centres of the evaluation grid."""
-    x: np.ndarray          # (nx,)
-    y: np.ndarray          # (ny,)
-    targets: np.ndarray    # (ny, nx, 2)
-    goal: np.ndarray       # (2,) target goal position (+52.5, 0.0)
+
+    x: np.ndarray  # (nx,)
+    y: np.ndarray  # (ny,)
+    targets: np.ndarray  # (ny, nx, 2)
+    goal: np.ndarray  # (2,) target goal position (+52.5, 0.0)
 
     @property
     def shape(self) -> tuple[int, int]:
@@ -82,9 +83,9 @@ def time_to_intercept(
     u = np.einsum("nijc,nc->nij", unit, velocities)
 
     t_accel = np.maximum(v - u, 0.0) / a
-    s_accel = u * t_accel + 0.5 * a * (t_accel ** 2)
+    s_accel = u * t_accel + 0.5 * a * (t_accel**2)
 
-    tau_accel = (-u + np.sqrt(np.maximum(u ** 2 + 2.0 * a * distance, 0.0))) / a
+    tau_accel = (-u + np.sqrt(np.maximum(u**2 + 2.0 * a * distance, 0.0))) / a
     tau_cruise = t_accel + np.maximum(distance - s_accel, 0.0) / v
 
     tau = np.where(distance <= s_accel, tau_accel, tau_cruise)
@@ -166,7 +167,9 @@ def compute_pitch_control(
     coef = np.pi / (np.sqrt(3.0) * float(config.tti_sigma))
     travel = ball_travel_time(grid.targets, ball, config.ball_speed)
     tti = time_to_intercept(
-        positions, velocities, grid.targets,
+        positions,
+        velocities,
+        grid.targets,
         max_speed=config.max_player_speed,
         max_acceleration=config.max_acceleration,
     )
@@ -178,7 +181,10 @@ def compute_pitch_control(
     rates = np.where(offside, 0.0, rates)
 
     raw_control = control_from_E(
-        E, rates, is_att, travel,
+        E,
+        rates,
+        is_att,
+        travel,
         int_dt=config.int_dt,
         max_int_time=config.max_int_time,
         coef=coef,

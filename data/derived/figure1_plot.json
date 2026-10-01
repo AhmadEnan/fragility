@@ -1,0 +1,8 @@
+{
+  "fields": "Frozen baseline control and residual-weighted gain; no player coordinates or velocities.",
+  "artwork": "Author-rendered transparent labels, pitch markings and player symbols from the submission illustration.",
+  "correction": "Sparse raster compositing corrections preserve the original PNG pixels.",
+  "source_sha256": "40bd1b728e2e9de22417aa3357d2816d25e0d635f9f26953a5c9dd78458a7df3",
+  "source_pixels_sha256": "1dd20d7e225af2dbf2a6146a35d08204e8f089baac469a0709629977a7a2bd06",
+  "selected_score": 1.072333262660546
+}

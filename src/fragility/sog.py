@@ -20,8 +20,19 @@ import numpy as np
 import pandas as pd
 
 from fragility.config import SOGConfig, CANONICAL_CONFIG
-from fragility.pitch_control import PitchGrid, make_grid, compute_pitch_control, time_to_intercept, control_from_E
-from fragility.pff import TrackingState, carrier_index, eligible_attackers, compute_offside
+from fragility.pitch_control import (
+    PitchGrid,
+    make_grid,
+    compute_pitch_control,
+    time_to_intercept,
+    control_from_E,
+)
+from fragility.pff import (
+    TrackingState,
+    carrier_index,
+    eligible_attackers,
+    compute_offside,
+)
 
 
 def enumerate_actions(
@@ -36,24 +47,30 @@ def enumerate_actions(
     actions = []
     for att_idx in eligible:
         base_pos = state.positions[att_idx]
-        jersey = state.jerseys[att_idx] if att_idx < len(state.jerseys) else str(att_idx)
+        jersey = (
+            state.jerseys[att_idx] if att_idx < len(state.jerseys) else str(att_idx)
+        )
         for dx, dy, radius in offsets:
             new_pos = base_pos + np.array([dx, dy], dtype=np.float64)
-            deg = round(float(np.rad2deg(np.arctan2(dy, dx)) % 360.0), config.direction_decimals)
-            actions.append({
-                "attacker_index": att_idx,
-                "jersey": str(jersey),
-                "base_x": float(base_pos[0]),
-                "base_y": float(base_pos[1]),
-                "cf_x": float(new_pos[0]),
-                "cf_y": float(new_pos[1]),
-                "dx": float(dx),
-                "dy": float(dy),
-                "radius": float(radius),
-                "direction_deg": deg,
-                "cost": float(radius / 1.0),
-                "baseline_offside": bool(state.offside[att_idx]),
-            })
+            deg = round(
+                float(np.rad2deg(np.arctan2(dy, dx)) % 360.0), config.direction_decimals
+            )
+            actions.append(
+                {
+                    "attacker_index": att_idx,
+                    "jersey": str(jersey),
+                    "base_x": float(base_pos[0]),
+                    "base_y": float(base_pos[1]),
+                    "cf_x": float(new_pos[0]),
+                    "cf_y": float(new_pos[1]),
+                    "dx": float(dx),
+                    "dy": float(dy),
+                    "radius": float(radius),
+                    "direction_deg": deg,
+                    "cost": float(radius / 1.0),
+                    "baseline_offside": bool(state.offside[att_idx]),
+                }
+            )
     return actions
 
 
@@ -79,13 +96,15 @@ def score_action(
 
     # Filter 1: Boundary check
     if abs(new_xy[0]) > half_l or abs(new_xy[1]) > half_w:
-        row.update({
-            "rejected": "out_of_pitch",
-            "valid_primary": False,
-            "offside_switch": False,
-            "sog": np.nan,
-            "pcg": np.nan,
-        })
+        row.update(
+            {
+                "rejected": "out_of_pitch",
+                "valid_primary": False,
+                "offside_switch": False,
+                "sog": np.nan,
+                "pcg": np.nan,
+            }
+        )
         return row
 
     # Filter 2: Collision check with other outfield players
@@ -96,19 +115,23 @@ def score_action(
     row["min_dist_other_outfield_m"] = min_dist
 
     if min_dist < config.collision_radius_m:
-        row.update({
-            "rejected": "collision",
-            "valid_primary": False,
-            "offside_switch": False,
-            "sog": np.nan,
-            "pcg": np.nan,
-        })
+        row.update(
+            {
+                "rejected": "collision",
+                "valid_primary": False,
+                "offside_switch": False,
+                "sog": np.nan,
+                "pcg": np.nan,
+            }
+        )
         return row
 
     # Filter 3: Offside-switch check
     positions_cf = state.positions.copy()
     positions_cf[att_idx] = new_xy
-    offside_cf = compute_offside(positions_cf, state.is_att, state.ball, config.offside_tol_m)
+    offside_cf = compute_offside(
+        positions_cf, state.is_att, state.ball, config.offside_tol_m
+    )
     new_offside = bool(offside_cf[att_idx])
     offside_switch = bool(new_offside != row["baseline_offside"])
 
@@ -117,11 +140,13 @@ def score_action(
     row["valid_primary"] = not offside_switch
 
     if offside_switch:
-        row.update({
-            "rejected": "offside_switch",
-            "sog": np.nan,
-            "pcg": np.nan,
-        })
+        row.update(
+            {
+                "rejected": "offside_switch",
+                "sog": np.nan,
+                "pcg": np.nan,
+            }
+        )
         return row
 
     # Counterfactual solve: recompute TTI only for the moved player
@@ -142,7 +167,10 @@ def score_action(
     rates[att_idx] = 0.0 if new_offside else config.lambda_att
 
     raw_control_cf = control_from_E(
-        E_cf, rates, state.is_att, travel,
+        E_cf,
+        rates,
+        state.is_att,
+        travel,
         int_dt=config.int_dt,
         max_int_time=config.max_int_time,
         coef=coef,
@@ -184,17 +212,24 @@ def score_state(
 ) -> tuple[pd.DataFrame, float]:
     """Score all actions in a state and return (action_dataframe, F_SOG)."""
     if grid is None:
-        grid = make_grid(config.grid_nx, config.grid_ny, config.pitch_length, config.pitch_width)
+        grid = make_grid(
+            config.grid_nx, config.grid_ny, config.pitch_length, config.pitch_width
+        )
 
     C0, base_E, travel, coef = compute_pitch_control(
-        state.positions, state.velocities, state.is_att, state.is_gk,
-        state.offside, state.ball, grid, config,
+        state.positions,
+        state.velocities,
+        state.is_att,
+        state.is_gk,
+        state.offside,
+        state.ball,
+        grid,
+        config,
     )
 
     actions = enumerate_actions(state, config)
     scored_rows = [
-        score_action(state, a, C0, base_E, travel, coef, grid, config)
-        for a in actions
+        score_action(state, a, C0, base_E, travel, coef, grid, config) for a in actions
     ]
     df = pd.DataFrame(scored_rows)
 
@@ -213,9 +248,13 @@ def aggregate_cells(
     Direction is quantized to `direction_decimals` places to prevent floating-point
     splitting of 45° sectors.
     """
-    valid = actions_df[actions_df["valid_primary"] & actions_df[score_col].notna()].copy()
+    valid = actions_df[
+        actions_df["valid_primary"] & actions_df[score_col].notna()
+    ].copy()
     if valid.empty:
-        return pd.DataFrame(columns=["jersey", "direction_deg", "Q", "rank", "percentile"])
+        return pd.DataFrame(
+            columns=["jersey", "direction_deg", "Q", "rank", "percentile"]
+        )
 
     valid["dir_round"] = valid["direction_deg"].round(direction_decimals)
 
@@ -224,7 +263,12 @@ def aggregate_cells(
         valid.groupby(["jersey", "dir_round"], as_index=False)
         .agg(
             Q=(score_col, "max"),
-            best_radius=("radius", lambda s: valid.loc[s.index[valid.loc[s.index, score_col].argmax()], "radius"]),
+            best_radius=(
+                "radius",
+                lambda s: valid.loc[
+                    s.index[valid.loc[s.index, score_col].argmax()], "radius"
+                ],
+            ),
             n_radii=(score_col, "count"),
         )
         .rename(columns={"dir_round": "direction_deg"})
@@ -235,5 +279,7 @@ def aggregate_cells(
     scores = cells["Q"].values
     ranks = [int(1 + np.sum(scores > q)) for q in scores]
     cells["rank"] = ranks
-    cells["percentile"] = [float(1.0 - (r - 1) / (M - 1)) if M > 1 else 1.0 for r in ranks]
+    cells["percentile"] = [
+        float(1.0 - (r - 1) / (M - 1)) if M > 1 else 1.0 for r in ranks
+    ]
     return cells.sort_values("rank").reset_index(drop=True)

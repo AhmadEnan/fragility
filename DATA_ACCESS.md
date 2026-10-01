@@ -1,52 +1,17 @@
 # Data access
 
-Raw optical tracking data from the 2022 FIFA World Cup used in this paper is proprietary to **PFF FC** and cannot be redistributed.
+The research uses PFF FC's 2022 World Cup tracking and events. The provider's current [Gradient Sports release page](https://www.gradientsports.com/blog/enhanced-2022-world-cup-dataset) describes free access.
 
-This repository provides two ways to run the analysis:
+To obtain the underlying data:
 
-1. **Public mode (`MODE = "public"`):** Reproduces all paper claims and figures in seconds using shareable summary tables in `data/derived/`. No commercial data needed.
-2. **Full mode (`MODE = "full"`):** Recomputes everything from raw tracking frames if you have a licensed copy of the PFF dataset.
+1. Visit the release page and use its access form if available.
+2. Otherwise email [support@gradientsports.com](mailto:support@gradientsports.com), listed on the [official contact page](https://www.gradientsports.com/contact).
+3. Request the **2022 FIFA World Cup dataset originally released by PFF FC**, including tracking, events, metadata, rosters and data specifications. Explain that you are reproducing an SSAC research submission and ask for the applicable usage and sharing terms.
 
----
+The release and contact pages were checked on 2026-10-01. The email is publicly listed; delivery and access approval have not been tested. The Colab notebook does not require these raw files.
 
-## Obtaining PFF data
+This repo contains normalized computed features, classifier parameters and scores, binary labels, anonymous event links, tactical recovery flags and computed pitch-control fields. Figure 1 uses rendered annotation artwork instead of numeric player positions. Raw provider files, trajectories, player velocities, event records and original coordinate arrays are excluded.
 
-Commercial tracking data must be requested directly from [PFF FC](https://www.pff.com/):
-- **Dataset:** *FIFA World Cup Qatar 2022 Full Match Tracking Data*
-- **Contact:** `academic-access@pff.com` or `data-inquiries@pff.com`
+SSAC's reply confirms that code, permitted derived data/features and provider access instructions are an appropriate abstract-stage approach. It also states that reproducibility affects evaluation but is not a submission requirement.
 
----
-
-## Running in full mode
-
-Set `PFF_DATA_ROOT` to your dataset folder:
-
-```bash
-export PFF_DATA_ROOT="/path/to/FIFA World Cup 2022"
-```
-
-The loader expects either the standard PFF folder structure (`Tracking Data/`, `Event Data/`, `Metadata/`, `Rosters/`) or preprocessed frame caches in `frame_cache/match_<id>_stride8.parquet`.
-
-The code normalizes pitch coordinates to attack toward $+x$, determines the Law 11 offside line from the second-last defender, and excludes the ball carrier within 2.0 m.
-
----
-
-## Evaluated matches
-
-Full reproduction processes only the candidate windows for the benchmark cases:
-
-| Match ID | Date | Match | Benchmark cases |
-| :--- | :--- | :--- | :--- |
-| `3813` | 2022-11-21 | England vs Iran | `GOLD010`, `GOLD014` |
-| `3821` | 2022-11-23 | Germany vs Japan | `GOLD006` |
-| `3823` | 2022-11-23 | Belgium vs Canada | `GOLD009` |
-| `3834` | 2022-11-26 | France vs Denmark | `GOLD005` |
-| `3840` | 2022-11-28 | Cameroon vs Serbia | `GOLD008` |
-| `3858` | 2022-12-02 | Serbia vs Switzerland | `GOLD002`, `GOLD003` |
-| `10502` | 2022-12-03 | Netherlands vs USA | `GOLD016`, `GOLD017`, `GOLD018` |
-| `10505` | 2022-12-04 | England vs Senegal | `GOLD001`, `GOLD013`, `GOLD020` |
-| `10511` | 2022-12-09 | Netherlands vs Argentina | `GOLD007` |
-| `10513` | 2022-12-10 | England vs France | `GOLD012` |
-| `10514` | 2022-12-13 | Argentina vs Croatia | `GOLD004`, `GOLD019` |
-| `10515` | 2022-12-14 | France vs Morocco | `GOLD015` |
-| `10517` | 2022-12-18 | Argentina vs France | `GOLD011` |
+A dataset-specific redistribution license was not found on the provider's public release or terms pages. The invitation to share findings does not establish permission for downloadable feature tables. Provider permission for these derived inputs has not been independently confirmed. Conference guidance and the code's MIT license do not grant third-party data rights.

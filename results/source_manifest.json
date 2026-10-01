@@ -1,0 +1,266 @@
+[
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_common.py",
+    "function": "fit_logistic",
+    "source_sha256": "dee44d070362b586842340de281dd890c692cc429086bada9fe9107adbe62dce",
+    "function_sha256": "7efbc392759441580aa066d7c66199ad0f9187c0df8ccf021f4fb04e1886c32f",
+    "public_module": "src/fragility/models.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_common.py",
+    "function": "predict_logistic",
+    "source_sha256": "dee44d070362b586842340de281dd890c692cc429086bada9fe9107adbe62dce",
+    "function_sha256": "224c6949ab193251930c5ea5cfebfba354b5544f3d86b8166f7691227df4f85b",
+    "public_module": "src/fragility/models.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_common.py",
+    "function": "_average_ranks",
+    "source_sha256": "dee44d070362b586842340de281dd890c692cc429086bada9fe9107adbe62dce",
+    "function_sha256": "5ff5d22b9bf9d0f07a1d7aec87bb4b2c347926cac9fa6d6b4ec6c9f7176e27e9",
+    "public_module": "src/fragility/models.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_common.py",
+    "function": "roc_auc",
+    "source_sha256": "dee44d070362b586842340de281dd890c692cc429086bada9fe9107adbe62dce",
+    "function_sha256": "817bba51d73b9017ee04f2ae79637bcd58b06a463ca87c286b828f6d6b223559",
+    "public_module": "src/fragility/models.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_common.py",
+    "function": "pr_auc",
+    "source_sha256": "dee44d070362b586842340de281dd890c692cc429086bada9fe9107adbe62dce",
+    "function_sha256": "11efdcefa48ec80a4df74dae9862ad4428ab52931240dae7844f37e4a4e58efc",
+    "public_module": "src/fragility/models.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_common.py",
+    "function": "brier",
+    "source_sha256": "dee44d070362b586842340de281dd890c692cc429086bada9fe9107adbe62dce",
+    "function_sha256": "cdd68a97eb140cb80d2302362a4d85503a1acfe8b7e34893ce110f7f75251226",
+    "public_module": "src/fragility/models.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_common.py",
+    "function": "capture_at",
+    "source_sha256": "dee44d070362b586842340de281dd890c692cc429086bada9fe9107adbe62dce",
+    "function_sha256": "5bba1be6d46bb038d788b638fe9ab19eec16165dda0af0ee36e4ad37ac52827a",
+    "public_module": "src/fragility/models.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_common.py",
+    "function": "metrics_bundle",
+    "source_sha256": "dee44d070362b586842340de281dd890c692cc429086bada9fe9107adbe62dce",
+    "function_sha256": "602ad949d89e72e0928563a70d3c827089ec3a532c996e3968e7016873a42a73",
+    "public_module": "src/fragility/models.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_common.py",
+    "function": "assign_folds",
+    "source_sha256": "dee44d070362b586842340de281dd890c692cc429086bada9fe9107adbe62dce",
+    "function_sha256": "9c51dd8710ebdad102ab9c5d0a89a5308ec289b019f0be1955f6f00d1d6280bd",
+    "public_module": "src/fragility/models.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp029_sog_predictive_confirm/e29_score.py",
+    "function": "review_capture",
+    "source_sha256": "cef00e0dc9d2cc4b952767d85d5ddaa88f8cbc46c19c5c6311479da119d76376",
+    "function_sha256": "f0cf69698eefeebda579bb0ae3ebe84a2f7907d7592aebc3ebe5adf9a9428b91",
+    "public_module": "src/fragility/models.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp029_sog_predictive_confirm/e29_score.py",
+    "function": "event_capture",
+    "source_sha256": "cef00e0dc9d2cc4b952767d85d5ddaa88f8cbc46c19c5c6311479da119d76376",
+    "function_sha256": "e416240515bdf80e0833781ad8ce9c32dbd62ef4bf729b0c57d4941524243b8f",
+    "public_module": "src/fragility/models.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp032_literature_benchmark/02_standings.py",
+    "function": "average_precision",
+    "source_sha256": "b4454f16b1d54a5001493d8b4296e9057623e289e17608ff8c3383489f1b04d3",
+    "function_sha256": "149101b41596b730cf2b89e0e3b8cf1ec46efd25ccb5a731bfc6d21f55fe9c19",
+    "public_module": "src/fragility/benchmark.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp032_literature_benchmark/02_standings.py",
+    "function": "prep_arm",
+    "source_sha256": "b4454f16b1d54a5001493d8b4296e9057623e289e17608ff8c3383489f1b04d3",
+    "function_sha256": "f3ea72e2c8bdc57a90eca96ff0234749a8fc27c903b87da6144b2c5af312ea77",
+    "public_module": "src/fragility/benchmark.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp032_literature_benchmark/02_standings.py",
+    "function": "wauc",
+    "source_sha256": "b4454f16b1d54a5001493d8b4296e9057623e289e17608ff8c3383489f1b04d3",
+    "function_sha256": "0f1f6686cdd0c9e777470b990552c95463f58eec55715fc066fa3395ea36b213",
+    "public_module": "src/fragility/benchmark.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp032_literature_benchmark/02_standings.py",
+    "function": "design",
+    "source_sha256": "b4454f16b1d54a5001493d8b4296e9057623e289e17608ff8c3383489f1b04d3",
+    "function_sha256": "e0e55749f5551d2eb8b2bc72cd68e0d8b55f1d6869e6f9112eb9dbe17eaad751",
+    "public_module": "src/fragility/benchmark.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp029_sog_predictive_confirm/e29_common.py",
+    "function": "m0_features",
+    "source_sha256": "6b27b9d011963d7882ce20b5a486de17c343e40a2960bf560e44fbc4af553d0b",
+    "function_sha256": "d217ab51a2362d178f3c4add1a552b7b9fd052558e6668528e0d3b54450cb68f",
+    "public_module": "src/fragility/features.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_common.py",
+    "function": "alignment_features",
+    "source_sha256": "dee44d070362b586842340de281dd890c692cc429086bada9fe9107adbe62dce",
+    "function_sha256": "9ed7fc6675bcf4eb1a0e1fad65ca793b5390b14fd8a4761f05bfe34ca9dbe5c0",
+    "public_module": "src/fragility/features.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "archive/fragility/fragility_phase2_cache.ipynb:cell2",
+    "function": "_match_ids",
+    "source_sha256": "6a0cfb2e4aa51b2e0b96179dc899d2a71535f412ab3e8b44a0266186064bf3f7",
+    "function_sha256": "d9da59e065f098b5c5d5b6b4800563166779d3929ea3b253866215eb8d730c82",
+    "public_module": "src/fragility/preprocessing.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "archive/fragility/fragility_phase2_cache.ipynb:cell2",
+    "function": "_load_json",
+    "source_sha256": "6a0cfb2e4aa51b2e0b96179dc899d2a71535f412ab3e8b44a0266186064bf3f7",
+    "function_sha256": "52e52da92c9435f1c64a01e7a1eb659d80d68233558eb7689e01f247f41d914b",
+    "public_module": "src/fragility/preprocessing.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "archive/fragility/fragility_phase2_cache.ipynb:cell2",
+    "function": "_read_metadata",
+    "source_sha256": "6a0cfb2e4aa51b2e0b96179dc899d2a71535f412ab3e8b44a0266186064bf3f7",
+    "function_sha256": "0766015270674a68f1a78a41baaf90873e2dab5d5a4b72963841d9b892105d90",
+    "public_module": "src/fragility/preprocessing.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "archive/fragility/fragility_phase2_cache.ipynb:cell2",
+    "function": "_read_gk_jerseys",
+    "source_sha256": "6a0cfb2e4aa51b2e0b96179dc899d2a71535f412ab3e8b44a0266186064bf3f7",
+    "function_sha256": "94ec06db9eba93bef817e767d94e4c8e045e57642a98061b7fab0149b4a5b140",
+    "public_module": "src/fragility/preprocessing.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "archive/fragility/fragility_phase2_cache.ipynb:cell2",
+    "function": "_pick_players",
+    "source_sha256": "6a0cfb2e4aa51b2e0b96179dc899d2a71535f412ab3e8b44a0266186064bf3f7",
+    "function_sha256": "50fb962a6426aa10a9164452863797a7ad3572c872c9950ca2d078509a2003be",
+    "public_module": "src/fragility/preprocessing.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "archive/fragility/fragility_phase2_cache.ipynb:cell2",
+    "function": "_ball_xy",
+    "source_sha256": "6a0cfb2e4aa51b2e0b96179dc899d2a71535f412ab3e8b44a0266186064bf3f7",
+    "function_sha256": "af4bf4081d1a66d80e47bdd874f3ae8205125a22574fe1dd8a01343449b6b6ae",
+    "public_module": "src/fragility/preprocessing.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "archive/fragility/fragility_phase2_cache.ipynb:cell2",
+    "function": "_velocities",
+    "source_sha256": "6a0cfb2e4aa51b2e0b96179dc899d2a71535f412ab3e8b44a0266186064bf3f7",
+    "function_sha256": "6ae4892170e7f67056747d587673f0f3301eba71c0c1d0f2999405d022617a40",
+    "public_module": "src/fragility/preprocessing.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "archive/fragility/fragility_phase2_cache.ipynb:cell2",
+    "function": "_possession_series",
+    "source_sha256": "6a0cfb2e4aa51b2e0b96179dc899d2a71535f412ab3e8b44a0266186064bf3f7",
+    "function_sha256": "54ea48b8da32f5d037ba62e935e6c6d8b4ee7d78b306f5ab97f57b224dbb4d75",
+    "public_module": "src/fragility/preprocessing.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "archive/fragility/fragility_phase2_cache.ipynb:cell2",
+    "function": "preprocess_match",
+    "source_sha256": "6a0cfb2e4aa51b2e0b96179dc899d2a71535f412ab3e8b44a0266186064bf3f7",
+    "function_sha256": "f9a7020d57fd288f8c51bdcb6f280408bf73eaa6e74bc4f4ab92ac8bfd3fbdd8",
+    "public_module": "src/fragility/preprocessing.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "archive/fragility/fragility_phase2_cache.ipynb:cell2",
+    "function": "build_frame_cache",
+    "source_sha256": "6a0cfb2e4aa51b2e0b96179dc899d2a71535f412ab3e8b44a0266186064bf3f7",
+    "function_sha256": "5f9771784366c24aea2dc56c14aba29a55a4f4115e274d434de1ba0aff54b5ba",
+    "public_module": "src/fragility/preprocessing.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_solver.py",
+    "function": "state_scores_res0",
+    "source_sha256": "8e05a5ec33a1dda25b4c7801dd201c4c31cb9db4718d2489fcb9255c1a5faccf",
+    "function_sha256": "b77b4082b47c296a04aa5be7679fc63d38b7104f755d09a3880a12ee4e6cdce8",
+    "public_module": "src/fragility/features.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp022_res0_predictive_pilot/e22_common.py",
+    "function": "label_states",
+    "source_sha256": "dee44d070362b586842340de281dd890c692cc429086bada9fe9107adbe62dce",
+    "function_sha256": "a35c66622f2a6b44301abeadda4ebb3c1aac9add9a001f2f5a303dd092a9a602",
+    "public_module": "src/fragility/outcomes.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp032_literature_benchmark/01_comparators.py",
+    "function": "_surfaces",
+    "source_sha256": "48abdd232fb4d9bc6f5429836875d634ae2d0218187659d348b419a6f3753b58",
+    "function_sha256": "ee5da85cae91da700674ea37c67f4c7e38dd61b51d306177add9bf9d2d02f3ca",
+    "public_module": "reference/exp032_comparators.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp032_literature_benchmark/01_comparators.py",
+    "function": "_frozen_cell_area",
+    "source_sha256": "48abdd232fb4d9bc6f5429836875d634ae2d0218187659d348b419a6f3753b58",
+    "function_sha256": "88531b70b0870d03cece6fa9593a6118771a3cbef01ff604cf3cd8d07e372e12",
+    "public_module": "reference/exp032_comparators.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp032_literature_benchmark/01_comparators.py",
+    "function": "_das_batch",
+    "source_sha256": "48abdd232fb4d9bc6f5429836875d634ae2d0218187659d348b419a6f3753b58",
+    "function_sha256": "17919548a9e4789051bd3668ea6041d1a60a35ccee6d5d2d7153910646ed36b2",
+    "public_module": "reference/exp032_comparators.py",
+    "comparison": "AST excluding docstrings and formatting"
+  },
+  {
+    "source": "scripts/exp032_literature_benchmark/01_comparators.py",
+    "function": "solve_match",
+    "source_sha256": "48abdd232fb4d9bc6f5429836875d634ae2d0218187659d348b419a6f3753b58",
+    "function_sha256": "7c9fff21acebfefabe01211cd0769b89b61119e07e039df590beb25ddf666735",
+    "public_module": "reference/exp032_comparators.py",
+    "comparison": "AST excluding docstrings and formatting"
+  }
+]

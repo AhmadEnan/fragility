@@ -1,0 +1,4417 @@
+{
+  "test": {
+    "M0": {
+      "features": [
+        "ball_x_norm",
+        "abs_ball_y_m",
+        "ball_dist_to_goal_m",
+        "possession_age_s",
+        "carrier_nearest_def_dist_m",
+        "nearest_def_closing_speed_ms",
+        "carrier_speed_ms",
+        "offball_att_speed_mean_ms",
+        "offball_att_speed_max_ms",
+        "def_outfield_speed_mean_ms",
+        "def_width_m",
+        "def_depth_m",
+        "def_hull_area_m2",
+        "C0_ATTACK_AREA_m2",
+        "ball_x_norm_sq",
+        "abs_ball_y_m_sq",
+        "ball_dist_to_goal_m_sq"
+      ],
+      "stats": {
+        "ball_x_norm": {
+          "median": -0.06775526297091602,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "abs_ball_y_m": {
+          "median": -0.002557477442066228,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "ball_dist_to_goal_m": {
+          "median": 0.019333360320521905,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "possession_age_s": {
+          "median": -0.29483166724931664,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "carrier_nearest_def_dist_m": {
+          "median": -0.20279944009945347,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "nearest_def_closing_speed_ms": {
+          "median": -0.010793916379665232,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "carrier_speed_ms": {
+          "median": -0.2330159837597712,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "offball_att_speed_mean_ms": {
+          "median": -0.2270187028459716,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "offball_att_speed_max_ms": {
+          "median": -0.20574262149940362,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "def_outfield_speed_mean_ms": {
+          "median": -0.20196240920605055,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "def_width_m": {
+          "median": 0.07536625738958262,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "def_depth_m": {
+          "median": -0.052442473066135725,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "def_hull_area_m2": {
+          "median": -0.07974850768936895,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "C0_ATTACK_AREA_m2": {
+          "median": 0.019513847958599284,
+          "mean": 0.0,
+          "std": 1.0
+        }
+      },
+      "coef": [
+        -0.34570555535584013,
+        -0.3036710638147515,
+        0.24464735579501842,
+        -0.007994540357455627,
+        -0.22830863403528442,
+        0.2517196792206441,
+        -0.006330924179616466,
+        -0.14955515210258102,
+        0.15131927621845226,
+        0.25716363355250343,
+        -0.17013245999097537,
+        -0.025861560112501823,
+        0.2281701338504002,
+        0.4387740638654707,
+        -0.30341060806789005,
+        -0.12509304856925396,
+        -0.05386045952891413
+      ],
+      "intercept": -3.0566165648498806
+    },
+    "M1": {
+      "features": [
+        "ball_x_norm",
+        "abs_ball_y_m",
+        "ball_dist_to_goal_m",
+        "possession_age_s",
+        "carrier_nearest_def_dist_m",
+        "nearest_def_closing_speed_ms",
+        "carrier_speed_ms",
+        "offball_att_speed_mean_ms",
+        "offball_att_speed_max_ms",
+        "def_outfield_speed_mean_ms",
+        "def_width_m",
+        "def_depth_m",
+        "def_hull_area_m2",
+        "C0_ATTACK_AREA_m2",
+        "ball_x_norm_sq",
+        "abs_ball_y_m_sq",
+        "ball_dist_to_goal_m_sq",
+        "F_SOG"
+      ],
+      "stats": {
+        "ball_x_norm": {
+          "median": -0.06775526297091602,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "abs_ball_y_m": {
+          "median": -0.002557477442066228,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "ball_dist_to_goal_m": {
+          "median": 0.019333360320521905,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "possession_age_s": {
+          "median": -0.29483166724931664,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "carrier_nearest_def_dist_m": {
+          "median": -0.20279944009945347,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "nearest_def_closing_speed_ms": {
+          "median": -0.010793916379665232,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "carrier_speed_ms": {
+          "median": -0.2330159837597712,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "offball_att_speed_mean_ms": {
+          "median": -0.2270187028459716,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "offball_att_speed_max_ms": {
+          "median": -0.20574262149940362,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "def_outfield_speed_mean_ms": {
+          "median": -0.20196240920605055,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "def_width_m": {
+          "median": 0.07536625738958262,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "def_depth_m": {
+          "median": -0.052442473066135725,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "def_hull_area_m2": {
+          "median": -0.07974850768936895,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "C0_ATTACK_AREA_m2": {
+          "median": 0.019513847958599284,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "F_SOG": {
+          "median": -0.07590693192255013,
+          "mean": 0.0,
+          "std": 1.0
+        }
+      },
+      "coef": [
+        -0.3441071269652334,
+        -0.3052387303231367,
+        0.2415940998617497,
+        -0.008756862741112191,
+        -0.22962446993503977,
+        0.25165401448957364,
+        -0.006163505749708098,
+        -0.147828933379795,
+        0.15129449019163382,
+        0.2559394887512072,
+        -0.17207246914195667,
+        -0.02533727831858411,
+        0.22728556248472412,
+        0.42556013577269647,
+        -0.30805012863032816,
+        -0.12548206310907492,
+        -0.05354859021028938,
+        -0.018589955240577327
+      ],
+      "intercept": -3.052144155578139
+    },
+    "M2": {
+      "features": [
+        "ball_x_norm",
+        "abs_ball_y_m",
+        "ball_dist_to_goal_m",
+        "possession_age_s",
+        "carrier_nearest_def_dist_m",
+        "nearest_def_closing_speed_ms",
+        "carrier_speed_ms",
+        "offball_att_speed_mean_ms",
+        "offball_att_speed_max_ms",
+        "def_outfield_speed_mean_ms",
+        "def_width_m",
+        "def_depth_m",
+        "def_hull_area_m2",
+        "C0_ATTACK_AREA_m2",
+        "ball_x_norm_sq",
+        "abs_ball_y_m_sq",
+        "ball_dist_to_goal_m_sq",
+        "F_SOG",
+        "R_MAX",
+        "R_MEDIAN",
+        "TOP_CONCENTRATION",
+        "TOP_GAP",
+        "PLAYER_CONCENTRATION",
+        "BEST_ALIGNMENT",
+        "TOP_PLAYER_ALIGNMENT"
+      ],
+      "stats": {
+        "ball_x_norm": {
+          "median": -0.06775526297091602,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "abs_ball_y_m": {
+          "median": -0.002557477442066228,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "ball_dist_to_goal_m": {
+          "median": 0.019333360320521905,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "possession_age_s": {
+          "median": -0.29483166724931664,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "carrier_nearest_def_dist_m": {
+          "median": -0.20279944009945347,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "nearest_def_closing_speed_ms": {
+          "median": -0.010793916379665232,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "carrier_speed_ms": {
+          "median": -0.2330159837597712,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "offball_att_speed_mean_ms": {
+          "median": -0.2270187028459716,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "offball_att_speed_max_ms": {
+          "median": -0.20574262149940362,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "def_outfield_speed_mean_ms": {
+          "median": -0.20196240920605055,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "def_width_m": {
+          "median": 0.07536625738958262,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "def_depth_m": {
+          "median": -0.052442473066135725,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "def_hull_area_m2": {
+          "median": -0.07974850768936895,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "C0_ATTACK_AREA_m2": {
+          "median": 0.019513847958599284,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "F_SOG": {
+          "median": -0.07590693192255013,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "R_MAX": {
+          "median": -0.14812035878595142,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "R_MEDIAN": {
+          "median": 0.031398190854614684,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "TOP_CONCENTRATION": {
+          "median": -0.17307862157359277,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "TOP_GAP": {
+          "median": -0.17080331623830156,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "PLAYER_CONCENTRATION": {
+          "median": -0.15358774996389396,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "BEST_ALIGNMENT": {
+          "median": 0.08669917233903077,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "TOP_PLAYER_ALIGNMENT": {
+          "median": -0.26939044842349613,
+          "mean": 0.0,
+          "std": 1.0
+        }
+      },
+      "coef": [
+        -0.3325481075461348,
+        -0.2683330019689469,
+        0.23657467523183442,
+        0.0069766445765421185,
+        -0.2319832747847208,
+        0.24179209394214932,
+        -0.04919687424428971,
+        -0.18402164533907858,
+        0.13740402757253578,
+        0.31383622318651194,
+        -0.14397130901351654,
+        -0.027892565663725635,
+        0.08940980417265551,
+        0.40308502771072025,
+        -0.2720612486112406,
+        -0.09896668933666998,
+        -0.009811694479366452,
+        0.3820853031523587,
+        -0.6877957943952967,
+        0.306680762597124,
+        -0.08393051582039936,
+        0.02985372247196062,
+        0.43657708378876087,
+        0.41596726412509,
+        -0.03053761614724013
+      ],
+      "intercept": -3.272076663086975
+    },
+    "M2_LANDSCAPE_ONLY": {
+      "features": [
+        "ball_x_norm",
+        "abs_ball_y_m",
+        "ball_dist_to_goal_m",
+        "possession_age_s",
+        "carrier_nearest_def_dist_m",
+        "nearest_def_closing_speed_ms",
+        "carrier_speed_ms",
+        "offball_att_speed_mean_ms",
+        "offball_att_speed_max_ms",
+        "def_outfield_speed_mean_ms",
+        "def_width_m",
+        "def_depth_m",
+        "def_hull_area_m2",
+        "C0_ATTACK_AREA_m2",
+        "ball_x_norm_sq",
+        "abs_ball_y_m_sq",
+        "ball_dist_to_goal_m_sq",
+        "F_SOG",
+        "R_MAX",
+        "R_MEDIAN",
+        "TOP_CONCENTRATION",
+        "TOP_GAP",
+        "PLAYER_CONCENTRATION"
+      ],
+      "stats": {
+        "ball_x_norm": {
+          "median": -0.06775526297091602,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "abs_ball_y_m": {
+          "median": -0.002557477442066228,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "ball_dist_to_goal_m": {
+          "median": 0.019333360320521905,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "possession_age_s": {
+          "median": -0.29483166724931664,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "carrier_nearest_def_dist_m": {
+          "median": -0.20279944009945347,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "nearest_def_closing_speed_ms": {
+          "median": -0.010793916379665232,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "carrier_speed_ms": {
+          "median": -0.2330159837597712,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "offball_att_speed_mean_ms": {
+          "median": -0.2270187028459716,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "offball_att_speed_max_ms": {
+          "median": -0.20574262149940362,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "def_outfield_speed_mean_ms": {
+          "median": -0.20196240920605055,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "def_width_m": {
+          "median": 0.07536625738958262,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "def_depth_m": {
+          "median": -0.052442473066135725,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "def_hull_area_m2": {
+          "median": -0.07974850768936895,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "C0_ATTACK_AREA_m2": {
+          "median": 0.019513847958599284,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "F_SOG": {
+          "median": -0.07590693192255013,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "R_MAX": {
+          "median": -0.14812035878595142,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "R_MEDIAN": {
+          "median": 0.031398190854614684,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "TOP_CONCENTRATION": {
+          "median": -0.17307862157359277,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "TOP_GAP": {
+          "median": -0.17080331623830156,
+          "mean": 0.0,
+          "std": 1.0
+        },
+        "PLAYER_CONCENTRATION": {
+          "median": -0.15358774996389396,
+          "mean": 0.0,
+          "std": 1.0
+        }
+      },
+      "coef": [
+        -0.28984700535761176,
+        -0.2686154075317707,
+        0.19350936666339247,
+        -0.009100700596155711,
+        -0.22188361104435694,
+        0.22913887206805866,
+        -0.016785217312929607,
+        -0.13211873561538648,
+        0.1516636672535021,
+        0.26324175424818586,
+        -0.17413528927905841,
+        -0.013058800900516244,
+        0.07847753811578627,
+        0.3025755217013017,
+        -0.29137568072646,
+        -0.10199567893013464,
+        -0.04034905600295606,
+        0.3516176119854691,
+        -0.6686530914804516,
+        0.2982653443462676,
+        -0.15069291265157514,
+        0.029375035972910867,
+        0.40548429866329616
+      ],
+      "intercept": -3.1482890411443187
+    }
+  },
+  "dev": {
+    "M0": [
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.09766166368477994,
+            "mean": -0.02592516277320118,
+            "std": 1.0059447363724683
+          },
+          "abs_ball_y_m": {
+            "median": 0.00246402135125468,
+            "mean": -0.001200587575472177,
+            "std": 1.0012406909753881
+          },
+          "ball_dist_to_goal_m": {
+            "median": 0.055491844736932125,
+            "mean": 0.02586345003697974,
+            "std": 1.009734243333523
+          },
+          "possession_age_s": {
+            "median": -0.2965432476903115,
+            "mean": 0.0048464959488091364,
+            "std": 1.0388298100122177
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.20370358109537504,
+            "mean": 0.008274759269028804,
+            "std": 1.013601063444008
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.03269233428967995,
+            "mean": -0.014943106789419494,
+            "std": 1.002958953860039
+          },
+          "carrier_speed_ms": {
+            "median": -0.23093422583920636,
+            "mean": -0.003065920161464645,
+            "std": 0.9921471909336834
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.22749450305820654,
+            "mean": -0.004600907357952817,
+            "std": 0.9870010564627794
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.19828230376474804,
+            "mean": 0.007239969520091245,
+            "std": 1.0024841565287081
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.20620236114280713,
+            "mean": -0.009989826981155756,
+            "std": 0.9899012625809401
+          },
+          "def_width_m": {
+            "median": 0.0927015232822738,
+            "mean": 0.008353490160392043,
+            "std": 0.9966998460050991
+          },
+          "def_depth_m": {
+            "median": -0.02266862069906042,
+            "mean": 0.018834853885596907,
+            "std": 0.9881539867097473
+          },
+          "def_hull_area_m2": {
+            "median": -0.06390140423488704,
+            "mean": 0.004089598295444057,
+            "std": 0.9875291397885779
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": -0.0287381254190867,
+            "mean": -0.03588212347340116,
+            "std": 1.0002469062736097
+          }
+        },
+        "coef": [
+          -0.17035619351762976,
+          -0.3059677465622169,
+          0.37345939245867954,
+          -0.035020582923840825,
+          -0.1779564173396339,
+          0.2700986373643639,
+          -0.019584242019753603,
+          -0.09941459414259259,
+          0.16190668313162104,
+          0.23061944596108316,
+          -0.16820636275709955,
+          -0.0337337207708505,
+          0.20956779030216582,
+          0.4375340894709179,
+          -0.22788423965508375,
+          -0.15926805438020325,
+          -0.12394971619770191
+        ],
+        "intercept": -3.086736236858461,
+        "fold": 0
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.0490902751075353,
+            "mean": 0.017019347816910654,
+            "std": 0.9980611610230333
+          },
+          "abs_ball_y_m": {
+            "median": -0.014609342727096554,
+            "mean": -0.0054194903130847,
+            "std": 0.9927269095884331
+          },
+          "ball_dist_to_goal_m": {
+            "median": -0.003909108971852754,
+            "mean": -0.018332003887204094,
+            "std": 0.9958956694194626
+          },
+          "possession_age_s": {
+            "median": -0.2965432476903115,
+            "mean": 0.010103066653685582,
+            "std": 1.0437046608976186
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.22478845711993306,
+            "mean": -0.02056223292073268,
+            "std": 0.9885470683061306
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.022957868196260986,
+            "mean": -0.009344919957019564,
+            "std": 1.002138645832854
+          },
+          "carrier_speed_ms": {
+            "median": -0.23653052872936653,
+            "mean": -0.002232034632818985,
+            "std": 1.0063888077241439
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.21587374505181534,
+            "mean": 0.010795198368627258,
+            "std": 1.011211640769325
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.19243830904768094,
+            "mean": 0.01588868175721155,
+            "std": 1.0093981628849256
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.20103736077476084,
+            "mean": 0.0036193898856332124,
+            "std": 1.0102464854185618
+          },
+          "def_width_m": {
+            "median": 0.0646278502171678,
+            "mean": -0.030227490708342374,
+            "std": 1.0099520272798481
+          },
+          "def_depth_m": {
+            "median": -0.04844683907672601,
+            "mean": -0.005662334574922602,
+            "std": 1.003305766666781
+          },
+          "def_hull_area_m2": {
+            "median": -0.10547902157362686,
+            "mean": -0.02955558667701989,
+            "std": 0.9969650558203779
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.03331809222615804,
+            "mean": 0.007838519853209483,
+            "std": 1.0174766774097257
+          }
+        },
+        "coef": [
+          -0.23838213290482577,
+          -0.3494592231066207,
+          0.3770476905800217,
+          -0.01968371822128738,
+          -0.24300245911784912,
+          0.24475580102372285,
+          -0.08579919107501419,
+          -0.05495125352922453,
+          0.11243838599205437,
+          0.2126991043870808,
+          -0.1322522425026187,
+          -0.0280427600853395,
+          0.18736102128499937,
+          0.44400107355278684,
+          -0.39678774092674857,
+          -0.10951320393885575,
+          0.057798611204709985
+        ],
+        "intercept": -3.113008962193946,
+        "fold": 1
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.06817946682391798,
+            "mean": -0.0014013009848340941,
+            "std": 1.0027760742644423
+          },
+          "abs_ball_y_m": {
+            "median": 0.01853304735936171,
+            "mean": 0.01423045341743533,
+            "std": 1.0020475748820672
+          },
+          "ball_dist_to_goal_m": {
+            "median": 0.025187595889758642,
+            "mean": 0.0049362512738926724,
+            "std": 1.0002362137405145
+          },
+          "possession_age_s": {
+            "median": -0.31194747165926556,
+            "mean": -0.03309692135937592,
+            "std": 0.9425542257758094
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.20756936029735581,
+            "mean": -0.003450259828821693,
+            "std": 1.0002567346076485
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": 0.010544475206301987,
+            "mean": 0.01603164990104645,
+            "std": 0.9954390991319289
+          },
+          "carrier_speed_ms": {
+            "median": -0.20830783561547037,
+            "mean": 0.026993971269978306,
+            "std": 1.010953453020828
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.2145780953124452,
+            "mean": 0.018386152633621772,
+            "std": 1.012246030565893
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.19667824894258643,
+            "mean": 0.007473665648440315,
+            "std": 0.9965533516500178
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.182736255003051,
+            "mean": 0.02362897977815165,
+            "std": 1.0088372157314047
+          },
+          "def_width_m": {
+            "median": 0.10712209119689395,
+            "mean": 0.05216672244772078,
+            "std": 0.9805330643118216
+          },
+          "def_depth_m": {
+            "median": 0.016643051699190066,
+            "mean": 0.06988766180370568,
+            "std": 0.9992870664974618
+          },
+          "def_hull_area_m2": {
+            "median": 0.018013304695944952,
+            "mean": 0.0945918744259129,
+            "std": 1.0017000927968174
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.01495748547695445,
+            "mean": 0.00020162928110468138,
+            "std": 0.9803975644312998
+          }
+        },
+        "coef": [
+          -0.19128801422521557,
+          -0.3135149416696206,
+          0.379049213616907,
+          0.0028570702839049596,
+          -0.22940496943629626,
+          0.25014460834550023,
+          0.04726943717202143,
+          -0.25595894918121964,
+          0.17991393457899796,
+          0.30122156636510666,
+          -0.2167856397744787,
+          -0.04164829475511958,
+          0.2631763272517237,
+          0.3754506778886071,
+          -0.26735281490037643,
+          -0.14448891353839483,
+          -0.09048152621366566
+        ],
+        "intercept": -2.9824010465233557,
+        "fold": 2
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.08684445531941232,
+            "mean": -0.016836946953783214,
+            "std": 0.9900946880451433
+          },
+          "abs_ball_y_m": {
+            "median": -0.016617827309684856,
+            "mean": -0.006743521783851679,
+            "std": 1.001529728984912
+          },
+          "ball_dist_to_goal_m": {
+            "median": 0.03856512882186457,
+            "mean": 0.015480372430795138,
+            "std": 0.9902169134911945
+          },
+          "possession_age_s": {
+            "median": -0.28969692592633184,
+            "mean": 0.019278412388801514,
+            "std": 1.001262688336759
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.18188263140962319,
+            "mean": 0.014977991830556465,
+            "std": 1.0009910698225504
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.00429821215488631,
+            "mean": 0.0022158200434271736,
+            "std": 0.9921829377338844
+          },
+          "carrier_speed_ms": {
+            "median": -0.25371722200256885,
+            "mean": -0.02252772793606602,
+            "std": 0.9869662172226012
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.2456564498880062,
+            "mean": -0.020627075085002722,
+            "std": 0.9870959510020765
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.22473085068031431,
+            "mean": -0.015087278573126068,
+            "std": 0.9968120836856649
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.22389395466387443,
+            "mean": -0.021673600226374334,
+            "std": 0.9900618320542652
+          },
+          "def_width_m": {
+            "median": 0.07459934325726748,
+            "mean": 0.010659505541763504,
+            "std": 0.9925774485446286
+          },
+          "def_depth_m": {
+            "median": -0.11366530381182041,
+            "mean": -0.05070345383101973,
+            "std": 0.9881622178040014
+          },
+          "def_hull_area_m2": {
+            "median": -0.11425074068141057,
+            "mean": -0.025891519915588582,
+            "std": 0.9946557985308955
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.007642993091716694,
+            "mean": -0.010621776882431402,
+            "std": 0.9929525878290973
+          }
+        },
+        "coef": [
+          -0.22629076303463205,
+          -0.3311358406771759,
+          0.3679273075023389,
+          0.006171843428291623,
+          -0.21347202015146427,
+          0.27322654147441616,
+          0.0100561520668675,
+          -0.11947286161661745,
+          0.11780831598633103,
+          0.24388054532919642,
+          -0.15681030035171897,
+          -0.011930324081858588,
+          0.2376585645557835,
+          0.4879198241271979,
+          -0.3940616384322784,
+          -0.1104200702335083,
+          0.021423332379771853
+        ],
+        "intercept": -3.0680816357387717,
+        "fold": 3
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.036788351360320014,
+            "mean": 0.025039106237567256,
+            "std": 1.0028461828694424
+          },
+          "abs_ball_y_m": {
+            "median": 0.0004555367686663792,
+            "mean": -0.0006564860060182101,
+            "std": 1.0022166710255247
+          },
+          "ball_dist_to_goal_m": {
+            "median": -0.015403689781292676,
+            "mean": -0.025765647788463093,
+            "std": 1.0038089458052561
+          },
+          "possession_age_s": {
+            "median": -0.2914085063673268,
+            "mean": -0.001508653389550094,
+            "std": 0.9729868749216136
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.19512302194745954,
+            "mean": 0.0006910053883599347,
+            "std": 0.9971214582356059
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.00553375211354332,
+            "mean": 0.004680305295004488,
+            "std": 1.0071846796222572
+          },
+          "carrier_speed_ms": {
+            "median": -0.23377284375869192,
+            "mean": 0.0014823144891333024,
+            "std": 1.0025866098446816
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.23129147683150666,
+            "mean": -0.003297967323100062,
+            "std": 1.00123545731699
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.21348175017900717,
+            "mean": -0.013829055478820199,
+            "std": 0.9948017427943299
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.1944067128367692,
+            "mean": 0.004424780937791981,
+            "std": 0.9998719298751193
+          },
+          "def_width_m": {
+            "median": 0.039928884622794376,
+            "mean": -0.039340911090613793,
+            "std": 1.016566371814585
+          },
+          "def_depth_m": {
+            "median": -0.09136730962747742,
+            "mean": -0.027855550072586832,
+            "std": 1.0155099066144733
+          },
+          "def_hull_area_m2": {
+            "median": -0.12839320523139885,
+            "mean": -0.04038151157513114,
+            "std": 1.011744739351274
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.06884165145630164,
+            "mean": 0.03499592967603491,
+            "std": 1.0072616760233881
+          }
+        },
+        "coef": [
+          -0.22781152405998892,
+          -0.3140884909331984,
+          0.3767150310342521,
+          0.00021545961321255976,
+          -0.2709653361510678,
+          0.22388378202230055,
+          0.0006243970002969279,
+          -0.19343294765728844,
+          0.18027881609398208,
+          0.2861058073045983,
+          -0.1623051657078268,
+          -0.0027165599758527713,
+          0.2095593556042052,
+          0.4369981709582379,
+          -0.3741392390161166,
+          -0.1345732114103051,
+          -0.0245551929443945
+        ],
+        "intercept": -2.9895661843678925,
+        "fold": 4
+      }
+    ],
+    "M0+SOG(incumbent)": [
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "F_SOG",
+          "R_MAX",
+          "R_MEDIAN",
+          "TOP_CONCENTRATION",
+          "TOP_GAP",
+          "PLAYER_CONCENTRATION",
+          "BEST_ALIGNMENT",
+          "TOP_PLAYER_ALIGNMENT"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.09766166368477994,
+            "mean": -0.02592516277320118,
+            "std": 1.0059447363724683
+          },
+          "abs_ball_y_m": {
+            "median": 0.00246402135125468,
+            "mean": -0.001200587575472177,
+            "std": 1.0012406909753881
+          },
+          "ball_dist_to_goal_m": {
+            "median": 0.055491844736932125,
+            "mean": 0.02586345003697974,
+            "std": 1.009734243333523
+          },
+          "possession_age_s": {
+            "median": -0.2965432476903115,
+            "mean": 0.0048464959488091364,
+            "std": 1.0388298100122177
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.20370358109537504,
+            "mean": 0.008274759269028804,
+            "std": 1.013601063444008
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.03269233428967995,
+            "mean": -0.014943106789419494,
+            "std": 1.002958953860039
+          },
+          "carrier_speed_ms": {
+            "median": -0.23093422583920636,
+            "mean": -0.003065920161464645,
+            "std": 0.9921471909336834
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.22749450305820654,
+            "mean": -0.004600907357952817,
+            "std": 0.9870010564627794
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.19828230376474804,
+            "mean": 0.007239969520091245,
+            "std": 1.0024841565287081
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.20620236114280713,
+            "mean": -0.009989826981155756,
+            "std": 0.9899012625809401
+          },
+          "def_width_m": {
+            "median": 0.0927015232822738,
+            "mean": 0.008353490160392043,
+            "std": 0.9966998460050991
+          },
+          "def_depth_m": {
+            "median": -0.02266862069906042,
+            "mean": 0.018834853885596907,
+            "std": 0.9881539867097473
+          },
+          "def_hull_area_m2": {
+            "median": -0.06390140423488704,
+            "mean": 0.004089598295444057,
+            "std": 0.9875291397885779
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": -0.0287381254190867,
+            "mean": -0.03588212347340116,
+            "std": 1.0002469062736097
+          },
+          "F_SOG": {
+            "median": -0.06810146407667404,
+            "mean": 0.016662770857924485,
+            "std": 0.9991857597316747
+          },
+          "R_MAX": {
+            "median": -0.13062014444813047,
+            "mean": 0.017296074848353826,
+            "std": 0.9985193926559054
+          },
+          "R_MEDIAN": {
+            "median": 0.017432317855154575,
+            "mean": -0.013263943159877027,
+            "std": 1.0006847047881564
+          },
+          "TOP_CONCENTRATION": {
+            "median": -0.1602213782210693,
+            "mean": 0.009633517865638737,
+            "std": 1.0017632127241118
+          },
+          "TOP_GAP": {
+            "median": -0.16240703387051827,
+            "mean": 0.0105132695158874,
+            "std": 1.0231953427851297
+          },
+          "PLAYER_CONCENTRATION": {
+            "median": -0.12925592687026646,
+            "mean": 0.012985562325482106,
+            "std": 1.002735834849717
+          },
+          "BEST_ALIGNMENT": {
+            "median": 0.10711376835444378,
+            "mean": 0.014062148348139602,
+            "std": 0.9959243741598602
+          },
+          "TOP_PLAYER_ALIGNMENT": {
+            "median": -0.22065452703211544,
+            "mean": 0.013513476544306709,
+            "std": 0.9988371251610529
+          }
+        },
+        "coef": [
+          -0.15157995532710866,
+          -0.2779516843183827,
+          0.38365557166585923,
+          -0.0247312397376394,
+          -0.1854974461351584,
+          0.26567813489727643,
+          -0.061698302391461804,
+          -0.14222014811508818,
+          0.15311645171683966,
+          0.2947845318274212,
+          -0.14801770562902175,
+          -0.03763691135842339,
+          0.08052604348375836,
+          0.4055624187306971,
+          -0.18275575840204947,
+          -0.13478472512014972,
+          -0.08915491701184365,
+          0.2172497482707777,
+          -0.47187976008276733,
+          0.2936098828774326,
+          -0.1933172790056914,
+          0.05854650468178421,
+          0.42203552660686805,
+          0.4549173785320456,
+          -0.06861230317553285
+        ],
+        "intercept": -3.3116408150250325,
+        "fold": 0
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "F_SOG",
+          "R_MAX",
+          "R_MEDIAN",
+          "TOP_CONCENTRATION",
+          "TOP_GAP",
+          "PLAYER_CONCENTRATION",
+          "BEST_ALIGNMENT",
+          "TOP_PLAYER_ALIGNMENT"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.0490902751075353,
+            "mean": 0.017019347816910654,
+            "std": 0.9980611610230333
+          },
+          "abs_ball_y_m": {
+            "median": -0.014609342727096554,
+            "mean": -0.0054194903130847,
+            "std": 0.9927269095884331
+          },
+          "ball_dist_to_goal_m": {
+            "median": -0.003909108971852754,
+            "mean": -0.018332003887204094,
+            "std": 0.9958956694194626
+          },
+          "possession_age_s": {
+            "median": -0.2965432476903115,
+            "mean": 0.010103066653685582,
+            "std": 1.0437046608976186
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.22478845711993306,
+            "mean": -0.02056223292073268,
+            "std": 0.9885470683061306
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.022957868196260986,
+            "mean": -0.009344919957019564,
+            "std": 1.002138645832854
+          },
+          "carrier_speed_ms": {
+            "median": -0.23653052872936653,
+            "mean": -0.002232034632818985,
+            "std": 1.0063888077241439
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.21587374505181534,
+            "mean": 0.010795198368627258,
+            "std": 1.011211640769325
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.19243830904768094,
+            "mean": 0.01588868175721155,
+            "std": 1.0093981628849256
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.20103736077476084,
+            "mean": 0.0036193898856332124,
+            "std": 1.0102464854185618
+          },
+          "def_width_m": {
+            "median": 0.0646278502171678,
+            "mean": -0.030227490708342374,
+            "std": 1.0099520272798481
+          },
+          "def_depth_m": {
+            "median": -0.04844683907672601,
+            "mean": -0.005662334574922602,
+            "std": 1.003305766666781
+          },
+          "def_hull_area_m2": {
+            "median": -0.10547902157362686,
+            "mean": -0.02955558667701989,
+            "std": 0.9969650558203779
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.03331809222615804,
+            "mean": 0.007838519853209483,
+            "std": 1.0174766774097257
+          },
+          "F_SOG": {
+            "median": -0.05897676145048609,
+            "mean": 0.01556595900986035,
+            "std": 1.0169809188351333
+          },
+          "R_MAX": {
+            "median": -0.13434102968744857,
+            "mean": 0.016257307146199013,
+            "std": 1.0158412328666662
+          },
+          "R_MEDIAN": {
+            "median": 0.0004758902175494734,
+            "mean": -0.033659183549011,
+            "std": 1.0050417839242471
+          },
+          "TOP_CONCENTRATION": {
+            "median": -0.1669288950236949,
+            "mean": 0.007055660210661686,
+            "std": 1.0018891394226408
+          },
+          "TOP_GAP": {
+            "median": -0.1729870057181944,
+            "mean": -0.012034899838901405,
+            "std": 0.9588183585178056
+          },
+          "PLAYER_CONCENTRATION": {
+            "median": -0.13995285299467658,
+            "mean": 0.01746000520381388,
+            "std": 1.010495938537077
+          },
+          "BEST_ALIGNMENT": {
+            "median": 0.07774195836018574,
+            "mean": -0.0037870130578500304,
+            "std": 1.0027934617849117
+          },
+          "TOP_PLAYER_ALIGNMENT": {
+            "median": -0.2691437837542372,
+            "mean": 0.001651957084467141,
+            "std": 1.001136618335861
+          }
+        },
+        "coef": [
+          -0.2140130143710137,
+          -0.30889292316622163,
+          0.374968401728742,
+          -0.0025320004595871934,
+          -0.24604274436690043,
+          0.23275378375283395,
+          -0.1318876559672374,
+          -0.0806680037576936,
+          0.09694374339645871,
+          0.2598482933656098,
+          -0.11561989229937553,
+          -0.03529136623269768,
+          0.04352230137040417,
+          0.3999134456805438,
+          -0.37745685274769203,
+          -0.07893205828578181,
+          0.11299663030000058,
+          0.3347068890784597,
+          -0.6515627613666934,
+          0.33522730913014204,
+          -0.15088144345286347,
+          0.07164423981426617,
+          0.4664585050150149,
+          0.4036415712568468,
+          -0.008861571358179289
+        ],
+        "intercept": -3.3424485696840462,
+        "fold": 1
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "F_SOG",
+          "R_MAX",
+          "R_MEDIAN",
+          "TOP_CONCENTRATION",
+          "TOP_GAP",
+          "PLAYER_CONCENTRATION",
+          "BEST_ALIGNMENT",
+          "TOP_PLAYER_ALIGNMENT"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.06817946682391798,
+            "mean": -0.0014013009848340941,
+            "std": 1.0027760742644423
+          },
+          "abs_ball_y_m": {
+            "median": 0.01853304735936171,
+            "mean": 0.01423045341743533,
+            "std": 1.0020475748820672
+          },
+          "ball_dist_to_goal_m": {
+            "median": 0.025187595889758642,
+            "mean": 0.0049362512738926724,
+            "std": 1.0002362137405145
+          },
+          "possession_age_s": {
+            "median": -0.31194747165926556,
+            "mean": -0.03309692135937592,
+            "std": 0.9425542257758094
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.20756936029735581,
+            "mean": -0.003450259828821693,
+            "std": 1.0002567346076485
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": 0.010544475206301987,
+            "mean": 0.01603164990104645,
+            "std": 0.9954390991319289
+          },
+          "carrier_speed_ms": {
+            "median": -0.20830783561547037,
+            "mean": 0.026993971269978306,
+            "std": 1.010953453020828
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.2145780953124452,
+            "mean": 0.018386152633621772,
+            "std": 1.012246030565893
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.19667824894258643,
+            "mean": 0.007473665648440315,
+            "std": 0.9965533516500178
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.182736255003051,
+            "mean": 0.02362897977815165,
+            "std": 1.0088372157314047
+          },
+          "def_width_m": {
+            "median": 0.10712209119689395,
+            "mean": 0.05216672244772078,
+            "std": 0.9805330643118216
+          },
+          "def_depth_m": {
+            "median": 0.016643051699190066,
+            "mean": 0.06988766180370568,
+            "std": 0.9992870664974618
+          },
+          "def_hull_area_m2": {
+            "median": 0.018013304695944952,
+            "mean": 0.0945918744259129,
+            "std": 1.0017000927968174
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.01495748547695445,
+            "mean": 0.00020162928110468138,
+            "std": 0.9803975644312998
+          },
+          "F_SOG": {
+            "median": -0.0908446801187019,
+            "mean": -0.016241939145522948,
+            "std": 0.9948456143921663
+          },
+          "R_MAX": {
+            "median": -0.16770688707842307,
+            "mean": -0.024512720174046883,
+            "std": 0.9926172154055364
+          },
+          "R_MEDIAN": {
+            "median": 0.11788175013661865,
+            "mean": 0.08220809457196195,
+            "std": 0.9888953427113869
+          },
+          "TOP_CONCENTRATION": {
+            "median": -0.20141934200101222,
+            "mean": -0.026459231839024155,
+            "std": 0.988206961139648
+          },
+          "TOP_GAP": {
+            "median": -0.17364356192723013,
+            "mean": 0.0064718538084798756,
+            "std": 1.0259681366717948
+          },
+          "PLAYER_CONCENTRATION": {
+            "median": -0.19517904790954338,
+            "mean": -0.04706776922037472,
+            "std": 0.9752810212764618
+          },
+          "BEST_ALIGNMENT": {
+            "median": 0.10148074151624893,
+            "mean": 0.011704271837944754,
+            "std": 0.9983835062601754
+          },
+          "TOP_PLAYER_ALIGNMENT": {
+            "median": -0.26501774330875855,
+            "mean": 0.004225472968928477,
+            "std": 1.0043027765297565
+          }
+        },
+        "coef": [
+          -0.1644817706484319,
+          -0.2777972206565402,
+          0.38026046291730525,
+          0.016672746519697697,
+          -0.23442666908459364,
+          0.24041667042388173,
+          0.004377407230118707,
+          -0.30539555299616833,
+          0.17136095084748598,
+          0.3686307991108432,
+          -0.19255992154905463,
+          -0.04788623326054,
+          0.131664442574683,
+          0.34223936070113015,
+          -0.22708543136984907,
+          -0.11872693676971512,
+          -0.04816069792785908,
+          0.5222347328903074,
+          -0.8414564113203762,
+          0.28521261665171016,
+          -0.01568852671749995,
+          0.034593394506901895,
+          0.40338562641146625,
+          0.3921878386879449,
+          -0.0003205452862648228
+        ],
+        "intercept": -3.2035146454036463,
+        "fold": 2
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "F_SOG",
+          "R_MAX",
+          "R_MEDIAN",
+          "TOP_CONCENTRATION",
+          "TOP_GAP",
+          "PLAYER_CONCENTRATION",
+          "BEST_ALIGNMENT",
+          "TOP_PLAYER_ALIGNMENT"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.08684445531941232,
+            "mean": -0.016836946953783214,
+            "std": 0.9900946880451433
+          },
+          "abs_ball_y_m": {
+            "median": -0.016617827309684856,
+            "mean": -0.006743521783851679,
+            "std": 1.001529728984912
+          },
+          "ball_dist_to_goal_m": {
+            "median": 0.03856512882186457,
+            "mean": 0.015480372430795138,
+            "std": 0.9902169134911945
+          },
+          "possession_age_s": {
+            "median": -0.28969692592633184,
+            "mean": 0.019278412388801514,
+            "std": 1.001262688336759
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.18188263140962319,
+            "mean": 0.014977991830556465,
+            "std": 1.0009910698225504
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.00429821215488631,
+            "mean": 0.0022158200434271736,
+            "std": 0.9921829377338844
+          },
+          "carrier_speed_ms": {
+            "median": -0.25371722200256885,
+            "mean": -0.02252772793606602,
+            "std": 0.9869662172226012
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.2456564498880062,
+            "mean": -0.020627075085002722,
+            "std": 0.9870959510020765
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.22473085068031431,
+            "mean": -0.015087278573126068,
+            "std": 0.9968120836856649
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.22389395466387443,
+            "mean": -0.021673600226374334,
+            "std": 0.9900618320542652
+          },
+          "def_width_m": {
+            "median": 0.07459934325726748,
+            "mean": 0.010659505541763504,
+            "std": 0.9925774485446286
+          },
+          "def_depth_m": {
+            "median": -0.11366530381182041,
+            "mean": -0.05070345383101973,
+            "std": 0.9881622178040014
+          },
+          "def_hull_area_m2": {
+            "median": -0.11425074068141057,
+            "mean": -0.025891519915588582,
+            "std": 0.9946557985308955
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.007642993091716694,
+            "mean": -0.010621776882431402,
+            "std": 0.9929525878290973
+          },
+          "F_SOG": {
+            "median": -0.07480673548155928,
+            "mean": 0.0039117661756593106,
+            "std": 0.9846600221085092
+          },
+          "R_MAX": {
+            "median": -0.147888536485438,
+            "mean": 0.0039129311536768435,
+            "std": 0.9894168694601705
+          },
+          "R_MEDIAN": {
+            "median": 0.024826548798506053,
+            "mean": -0.0044342530136421586,
+            "std": 1.0006973931123377
+          },
+          "TOP_CONCENTRATION": {
+            "median": -0.16978321237054506,
+            "mean": 0.0022917775054531087,
+            "std": 1.0002664835546549
+          },
+          "TOP_GAP": {
+            "median": -0.1638768928213733,
+            "mean": 0.0018588381672061927,
+            "std": 0.9930614976527369
+          },
+          "PLAYER_CONCENTRATION": {
+            "median": -0.148018595558513,
+            "mean": 0.008040550913229286,
+            "std": 1.0046603894407196
+          },
+          "BEST_ALIGNMENT": {
+            "median": 0.06097891763250235,
+            "mean": -0.016169468611810796,
+            "std": 1.0020081452664595
+          },
+          "TOP_PLAYER_ALIGNMENT": {
+            "median": -0.30855539209093186,
+            "mean": -0.012894227150654422,
+            "std": 0.9970160786300688
+          }
+        },
+        "coef": [
+          -0.20869944707871177,
+          -0.2897939742108099,
+          0.37013296714609495,
+          0.020223701621931375,
+          -0.2147453387566451,
+          0.26204286772394,
+          -0.029975555738836136,
+          -0.15275428350047496,
+          0.10369162049986436,
+          0.2971917244619813,
+          -0.12061236437768834,
+          -0.01026857928097453,
+          0.08088701535564605,
+          0.4473361450730709,
+          -0.37781532128413525,
+          -0.0836432917980439,
+          0.07487489838600278,
+          0.276556551431449,
+          -0.541485988346261,
+          0.3032541849973147,
+          -0.09716864159133665,
+          -0.033858033657927486,
+          0.4000982676383091,
+          0.41169774482103705,
+          -0.0299705959176342
+        ],
+        "intercept": -3.2759303746306876,
+        "fold": 3
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "F_SOG",
+          "R_MAX",
+          "R_MEDIAN",
+          "TOP_CONCENTRATION",
+          "TOP_GAP",
+          "PLAYER_CONCENTRATION",
+          "BEST_ALIGNMENT",
+          "TOP_PLAYER_ALIGNMENT"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.036788351360320014,
+            "mean": 0.025039106237567256,
+            "std": 1.0028461828694424
+          },
+          "abs_ball_y_m": {
+            "median": 0.0004555367686663792,
+            "mean": -0.0006564860060182101,
+            "std": 1.0022166710255247
+          },
+          "ball_dist_to_goal_m": {
+            "median": -0.015403689781292676,
+            "mean": -0.025765647788463093,
+            "std": 1.0038089458052561
+          },
+          "possession_age_s": {
+            "median": -0.2914085063673268,
+            "mean": -0.001508653389550094,
+            "std": 0.9729868749216136
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.19512302194745954,
+            "mean": 0.0006910053883599347,
+            "std": 0.9971214582356059
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.00553375211354332,
+            "mean": 0.004680305295004488,
+            "std": 1.0071846796222572
+          },
+          "carrier_speed_ms": {
+            "median": -0.23377284375869192,
+            "mean": 0.0014823144891333024,
+            "std": 1.0025866098446816
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.23129147683150666,
+            "mean": -0.003297967323100062,
+            "std": 1.00123545731699
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.21348175017900717,
+            "mean": -0.013829055478820199,
+            "std": 0.9948017427943299
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.1944067128367692,
+            "mean": 0.004424780937791981,
+            "std": 0.9998719298751193
+          },
+          "def_width_m": {
+            "median": 0.039928884622794376,
+            "mean": -0.039340911090613793,
+            "std": 1.016566371814585
+          },
+          "def_depth_m": {
+            "median": -0.09136730962747742,
+            "mean": -0.027855550072586832,
+            "std": 1.0155099066144733
+          },
+          "def_hull_area_m2": {
+            "median": -0.12839320523139885,
+            "mean": -0.04038151157513114,
+            "std": 1.011744739351274
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.06884165145630164,
+            "mean": 0.03499592967603491,
+            "std": 1.0072616760233881
+          },
+          "F_SOG": {
+            "median": -0.08885860402269946,
+            "mean": -0.01815294758756816,
+            "std": 1.0039251349916365
+          },
+          "R_MAX": {
+            "median": -0.15613331869263838,
+            "mean": -0.011415000183744849,
+            "std": 1.0029777630179115
+          },
+          "R_MEDIAN": {
+            "median": 0.006181333061233632,
+            "mean": -0.030517023596145502,
+            "std": 1.000108345902175
+          },
+          "TOP_CONCENTRATION": {
+            "median": -0.166260168281523,
+            "mean": 0.0077956498164912565,
+            "std": 1.00717137331455
+          },
+          "TOP_GAP": {
+            "median": -0.18021994778951944,
+            "mean": -0.005915393958623253,
+            "std": 0.9992804945983129
+          },
+          "PLAYER_CONCENTRATION": {
+            "median": -0.14797790194372692,
+            "mean": 0.008875208671839989,
+            "std": 1.0048608840195599
+          },
+          "BEST_ALIGNMENT": {
+            "median": 0.07995027945974986,
+            "mean": -0.003978001793334272,
+            "std": 1.00018194576124
+          },
+          "TOP_PLAYER_ALIGNMENT": {
+            "median": -0.28149234627136366,
+            "mean": -0.004802691717457377,
+            "std": 0.9985910838102321
+          }
+        },
+        "coef": [
+          -0.2028959023764321,
+          -0.2884473887317797,
+          0.37232922138280883,
+          0.02032631457488791,
+          -0.2727052014404135,
+          0.2115043610511262,
+          -0.0436794046773473,
+          -0.21740253365296702,
+          0.15769045087178904,
+          0.3405487265584851,
+          -0.13103049075709713,
+          -0.0004785905444027649,
+          0.07842898724004012,
+          0.4039115681099645,
+          -0.34908187702860116,
+          -0.11175386422994198,
+          0.018269256737296718,
+          0.462508170784384,
+          -0.8071880573009759,
+          0.31611917701818865,
+          -0.01777474338765693,
+          0.0158815533975109,
+          0.4790409093815571,
+          0.4195600084177768,
+          -0.04531425535320472
+        ],
+        "intercept": -3.187810747603967,
+        "fold": 4
+      }
+    ],
+    "M0+EPV_WEIGHTED_CONTROL": [
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "EPV_WEIGHTED_CONTROL"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.09766166368477994,
+            "mean": -0.02592516277320118,
+            "std": 1.0059447363724683
+          },
+          "abs_ball_y_m": {
+            "median": 0.00246402135125468,
+            "mean": -0.001200587575472177,
+            "std": 1.0012406909753881
+          },
+          "ball_dist_to_goal_m": {
+            "median": 0.055491844736932125,
+            "mean": 0.02586345003697974,
+            "std": 1.009734243333523
+          },
+          "possession_age_s": {
+            "median": -0.2965432476903115,
+            "mean": 0.0048464959488091364,
+            "std": 1.0388298100122177
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.20370358109537504,
+            "mean": 0.008274759269028804,
+            "std": 1.013601063444008
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.03269233428967995,
+            "mean": -0.014943106789419494,
+            "std": 1.002958953860039
+          },
+          "carrier_speed_ms": {
+            "median": -0.23093422583920636,
+            "mean": -0.003065920161464645,
+            "std": 0.9921471909336834
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.22749450305820654,
+            "mean": -0.004600907357952817,
+            "std": 0.9870010564627794
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.19828230376474804,
+            "mean": 0.007239969520091245,
+            "std": 1.0024841565287081
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.20620236114280713,
+            "mean": -0.009989826981155756,
+            "std": 0.9899012625809401
+          },
+          "def_width_m": {
+            "median": 0.0927015232822738,
+            "mean": 0.008353490160392043,
+            "std": 0.9966998460050991
+          },
+          "def_depth_m": {
+            "median": -0.02266862069906042,
+            "mean": 0.018834853885596907,
+            "std": 0.9881539867097473
+          },
+          "def_hull_area_m2": {
+            "median": -0.06390140423488704,
+            "mean": 0.004089598295444057,
+            "std": 0.9875291397885779
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": -0.0287381254190867,
+            "mean": -0.03588212347340116,
+            "std": 1.0002469062736097
+          },
+          "EPV_WEIGHTED_CONTROL": {
+            "median": -0.2421262252592849,
+            "mean": -0.03380276656702912,
+            "std": 0.9951959117767453
+          }
+        },
+        "coef": [
+          -0.2229902799803176,
+          -0.32582728983874243,
+          0.40353992580173587,
+          -0.039810159739019794,
+          -0.1794575936344462,
+          0.2673335070900409,
+          -0.010530955465773161,
+          -0.08703130328580239,
+          0.149780252847801,
+          0.22824440633262014,
+          -0.11435156122837248,
+          -0.06913457929778725,
+          0.17657617284631064,
+          -0.2982517779245363,
+          -0.3070146383557954,
+          -0.16097136800469755,
+          -0.15722369127629254,
+          0.8084780788071879
+        ],
+        "intercept": -2.990132402009236,
+        "fold": 0
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "EPV_WEIGHTED_CONTROL"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.0490902751075353,
+            "mean": 0.017019347816910654,
+            "std": 0.9980611610230333
+          },
+          "abs_ball_y_m": {
+            "median": -0.014609342727096554,
+            "mean": -0.0054194903130847,
+            "std": 0.9927269095884331
+          },
+          "ball_dist_to_goal_m": {
+            "median": -0.003909108971852754,
+            "mean": -0.018332003887204094,
+            "std": 0.9958956694194626
+          },
+          "possession_age_s": {
+            "median": -0.2965432476903115,
+            "mean": 0.010103066653685582,
+            "std": 1.0437046608976186
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.22478845711993306,
+            "mean": -0.02056223292073268,
+            "std": 0.9885470683061306
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.022957868196260986,
+            "mean": -0.009344919957019564,
+            "std": 1.002138645832854
+          },
+          "carrier_speed_ms": {
+            "median": -0.23653052872936653,
+            "mean": -0.002232034632818985,
+            "std": 1.0063888077241439
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.21587374505181534,
+            "mean": 0.010795198368627258,
+            "std": 1.011211640769325
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.19243830904768094,
+            "mean": 0.01588868175721155,
+            "std": 1.0093981628849256
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.20103736077476084,
+            "mean": 0.0036193898856332124,
+            "std": 1.0102464854185618
+          },
+          "def_width_m": {
+            "median": 0.0646278502171678,
+            "mean": -0.030227490708342374,
+            "std": 1.0099520272798481
+          },
+          "def_depth_m": {
+            "median": -0.04844683907672601,
+            "mean": -0.005662334574922602,
+            "std": 1.003305766666781
+          },
+          "def_hull_area_m2": {
+            "median": -0.10547902157362686,
+            "mean": -0.02955558667701989,
+            "std": 0.9969650558203779
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.03331809222615804,
+            "mean": 0.007838519853209483,
+            "std": 1.0174766774097257
+          },
+          "EPV_WEIGHTED_CONTROL": {
+            "median": -0.18304159836727488,
+            "mean": 0.011012459196899865,
+            "std": 1.016148666966369
+          }
+        },
+        "coef": [
+          -0.30465098585920786,
+          -0.37108239559084216,
+          0.4183286604713695,
+          -0.024148688292352435,
+          -0.24702229071991602,
+          0.24087864417052324,
+          -0.08132313466834357,
+          -0.057827957174760004,
+          0.10390850623155518,
+          0.22717468290313508,
+          -0.07194250714574678,
+          -0.06331976704918958,
+          0.15766250954388597,
+          -0.3455375143991119,
+          -0.4839517830258725,
+          -0.11248854860716515,
+          0.019891657411258735,
+          0.8885631972220994
+        ],
+        "intercept": -3.0057706898890766,
+        "fold": 1
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "EPV_WEIGHTED_CONTROL"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.06817946682391798,
+            "mean": -0.0014013009848340941,
+            "std": 1.0027760742644423
+          },
+          "abs_ball_y_m": {
+            "median": 0.01853304735936171,
+            "mean": 0.01423045341743533,
+            "std": 1.0020475748820672
+          },
+          "ball_dist_to_goal_m": {
+            "median": 0.025187595889758642,
+            "mean": 0.0049362512738926724,
+            "std": 1.0002362137405145
+          },
+          "possession_age_s": {
+            "median": -0.31194747165926556,
+            "mean": -0.03309692135937592,
+            "std": 0.9425542257758094
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.20756936029735581,
+            "mean": -0.003450259828821693,
+            "std": 1.0002567346076485
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": 0.010544475206301987,
+            "mean": 0.01603164990104645,
+            "std": 0.9954390991319289
+          },
+          "carrier_speed_ms": {
+            "median": -0.20830783561547037,
+            "mean": 0.026993971269978306,
+            "std": 1.010953453020828
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.2145780953124452,
+            "mean": 0.018386152633621772,
+            "std": 1.012246030565893
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.19667824894258643,
+            "mean": 0.007473665648440315,
+            "std": 0.9965533516500178
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.182736255003051,
+            "mean": 0.02362897977815165,
+            "std": 1.0088372157314047
+          },
+          "def_width_m": {
+            "median": 0.10712209119689395,
+            "mean": 0.05216672244772078,
+            "std": 0.9805330643118216
+          },
+          "def_depth_m": {
+            "median": 0.016643051699190066,
+            "mean": 0.06988766180370568,
+            "std": 0.9992870664974618
+          },
+          "def_hull_area_m2": {
+            "median": 0.018013304695944952,
+            "mean": 0.0945918744259129,
+            "std": 1.0017000927968174
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.01495748547695445,
+            "mean": 0.00020162928110468138,
+            "std": 0.9803975644312998
+          },
+          "EPV_WEIGHTED_CONTROL": {
+            "median": -0.19414348726715194,
+            "mean": 0.006188535014992821,
+            "std": 0.9883120480018508
+          }
+        },
+        "coef": [
+          -0.22935779181838672,
+          -0.3273221581227142,
+          0.3999086302108765,
+          0.0018328066650914391,
+          -0.22969591328064756,
+          0.2487489962806507,
+          0.05078740255042629,
+          -0.25508581516941026,
+          0.17160543438272427,
+          0.3074806832422875,
+          -0.18555030198491437,
+          -0.05869681207308712,
+          0.23740174797459856,
+          -0.09638393294037668,
+          -0.32404585547623,
+          -0.14437917523928395,
+          -0.10894498224903011,
+          0.5299916106144902
+        ],
+        "intercept": -2.9150642067893062,
+        "fold": 2
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "EPV_WEIGHTED_CONTROL"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.08684445531941232,
+            "mean": -0.016836946953783214,
+            "std": 0.9900946880451433
+          },
+          "abs_ball_y_m": {
+            "median": -0.016617827309684856,
+            "mean": -0.006743521783851679,
+            "std": 1.001529728984912
+          },
+          "ball_dist_to_goal_m": {
+            "median": 0.03856512882186457,
+            "mean": 0.015480372430795138,
+            "std": 0.9902169134911945
+          },
+          "possession_age_s": {
+            "median": -0.28969692592633184,
+            "mean": 0.019278412388801514,
+            "std": 1.001262688336759
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.18188263140962319,
+            "mean": 0.014977991830556465,
+            "std": 1.0009910698225504
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.00429821215488631,
+            "mean": 0.0022158200434271736,
+            "std": 0.9921829377338844
+          },
+          "carrier_speed_ms": {
+            "median": -0.25371722200256885,
+            "mean": -0.02252772793606602,
+            "std": 0.9869662172226012
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.2456564498880062,
+            "mean": -0.020627075085002722,
+            "std": 0.9870959510020765
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.22473085068031431,
+            "mean": -0.015087278573126068,
+            "std": 0.9968120836856649
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.22389395466387443,
+            "mean": -0.021673600226374334,
+            "std": 0.9900618320542652
+          },
+          "def_width_m": {
+            "median": 0.07459934325726748,
+            "mean": 0.010659505541763504,
+            "std": 0.9925774485446286
+          },
+          "def_depth_m": {
+            "median": -0.11366530381182041,
+            "mean": -0.05070345383101973,
+            "std": 0.9881622178040014
+          },
+          "def_hull_area_m2": {
+            "median": -0.11425074068141057,
+            "mean": -0.025891519915588582,
+            "std": 0.9946557985308955
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.007642993091716694,
+            "mean": -0.010621776882431402,
+            "std": 0.9929525878290973
+          },
+          "EPV_WEIGHTED_CONTROL": {
+            "median": -0.21631419527103174,
+            "mean": -0.020913336332006476,
+            "std": 0.986491690929094
+          }
+        },
+        "coef": [
+          -0.28576760787673655,
+          -0.35487111983258257,
+          0.40202448720154627,
+          -0.000947243680357012,
+          -0.21904972527561464,
+          0.2691678995877075,
+          0.0159519035858743,
+          -0.12776859228213394,
+          0.11191711928732416,
+          0.2605989865333283,
+          -0.10032724973372023,
+          -0.051747423924731785,
+          0.20122221648305777,
+          -0.3234817204787221,
+          -0.48202322112189055,
+          -0.11195792516089026,
+          -0.014507990015753217,
+          0.8935892053067902
+        ],
+        "intercept": -2.9616738718781157,
+        "fold": 3
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "EPV_WEIGHTED_CONTROL"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.036788351360320014,
+            "mean": 0.025039106237567256,
+            "std": 1.0028461828694424
+          },
+          "abs_ball_y_m": {
+            "median": 0.0004555367686663792,
+            "mean": -0.0006564860060182101,
+            "std": 1.0022166710255247
+          },
+          "ball_dist_to_goal_m": {
+            "median": -0.015403689781292676,
+            "mean": -0.025765647788463093,
+            "std": 1.0038089458052561
+          },
+          "possession_age_s": {
+            "median": -0.2914085063673268,
+            "mean": -0.001508653389550094,
+            "std": 0.9729868749216136
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.19512302194745954,
+            "mean": 0.0006910053883599347,
+            "std": 0.9971214582356059
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.00553375211354332,
+            "mean": 0.004680305295004488,
+            "std": 1.0071846796222572
+          },
+          "carrier_speed_ms": {
+            "median": -0.23377284375869192,
+            "mean": 0.0014823144891333024,
+            "std": 1.0025866098446816
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.23129147683150666,
+            "mean": -0.003297967323100062,
+            "std": 1.00123545731699
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.21348175017900717,
+            "mean": -0.013829055478820199,
+            "std": 0.9948017427943299
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.1944067128367692,
+            "mean": 0.004424780937791981,
+            "std": 0.9998719298751193
+          },
+          "def_width_m": {
+            "median": 0.039928884622794376,
+            "mean": -0.039340911090613793,
+            "std": 1.016566371814585
+          },
+          "def_depth_m": {
+            "median": -0.09136730962747742,
+            "mean": -0.027855550072586832,
+            "std": 1.0155099066144733
+          },
+          "def_hull_area_m2": {
+            "median": -0.12839320523139885,
+            "mean": -0.04038151157513114,
+            "std": 1.011744739351274
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.06884165145630164,
+            "mean": 0.03499592967603491,
+            "std": 1.0072616760233881
+          },
+          "EPV_WEIGHTED_CONTROL": {
+            "median": -0.15422499174639737,
+            "mean": 0.034640077788684026,
+            "std": 1.0117995325152838
+          }
+        },
+        "coef": [
+          -0.27451089288634056,
+          -0.33189746629791983,
+          0.40367858578215576,
+          -0.005162379648280077,
+          -0.2733695789633826,
+          0.220892075112308,
+          0.005578715556012508,
+          -0.1873375013874957,
+          0.16819394437063054,
+          0.292570814316935,
+          -0.11922179988251838,
+          -0.037640728160939156,
+          0.1869897994686156,
+          -0.19077521519289403,
+          -0.4412434731504447,
+          -0.13511683641324707,
+          -0.05460323842008781,
+          0.6945460891801466
+        ],
+        "intercept": -2.904545205784585,
+        "fold": 4
+      }
+    ],
+    "M0+EPV_AT_BALL": [
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "EPV_AT_BALL"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.09766166368477994,
+            "mean": -0.02592516277320118,
+            "std": 1.0059447363724683
+          },
+          "abs_ball_y_m": {
+            "median": 0.00246402135125468,
+            "mean": -0.001200587575472177,
+            "std": 1.0012406909753881
+          },
+          "ball_dist_to_goal_m": {
+            "median": 0.055491844736932125,
+            "mean": 0.02586345003697974,
+            "std": 1.009734243333523
+          },
+          "possession_age_s": {
+            "median": -0.2965432476903115,
+            "mean": 0.0048464959488091364,
+            "std": 1.0388298100122177
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.20370358109537504,
+            "mean": 0.008274759269028804,
+            "std": 1.013601063444008
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.03269233428967995,
+            "mean": -0.014943106789419494,
+            "std": 1.002958953860039
+          },
+          "carrier_speed_ms": {
+            "median": -0.23093422583920636,
+            "mean": -0.003065920161464645,
+            "std": 0.9921471909336834
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.22749450305820654,
+            "mean": -0.004600907357952817,
+            "std": 0.9870010564627794
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.19828230376474804,
+            "mean": 0.007239969520091245,
+            "std": 1.0024841565287081
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.20620236114280713,
+            "mean": -0.009989826981155756,
+            "std": 0.9899012625809401
+          },
+          "def_width_m": {
+            "median": 0.0927015232822738,
+            "mean": 0.008353490160392043,
+            "std": 0.9966998460050991
+          },
+          "def_depth_m": {
+            "median": -0.02266862069906042,
+            "mean": 0.018834853885596907,
+            "std": 0.9881539867097473
+          },
+          "def_hull_area_m2": {
+            "median": -0.06390140423488704,
+            "mean": 0.004089598295444057,
+            "std": 0.9875291397885779
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": -0.0287381254190867,
+            "mean": -0.03588212347340116,
+            "std": 1.0002469062736097
+          },
+          "EPV_AT_BALL": {
+            "median": -0.2205396507271772,
+            "mean": 0.0028450092016636696,
+            "std": 1.025200532838823
+          }
+        },
+        "coef": [
+          0.051032721637575496,
+          -0.3408537181100443,
+          0.1439742058645216,
+          -0.03378995834662788,
+          -0.15984626352710093,
+          0.27968001719868824,
+          -0.022903085523678167,
+          -0.09634022763444933,
+          0.15813084210729583,
+          0.2303317854686914,
+          -0.15043278267447158,
+          -0.04478946238362748,
+          0.20256515089192356,
+          0.38118360177535404,
+          -0.21234112518964507,
+          -0.15738101648593306,
+          0.06418857511156709,
+          -1.6737148639138169
+        ],
+        "intercept": -3.4713844455180523,
+        "fold": 0
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "EPV_AT_BALL"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.0490902751075353,
+            "mean": 0.017019347816910654,
+            "std": 0.9980611610230333
+          },
+          "abs_ball_y_m": {
+            "median": -0.014609342727096554,
+            "mean": -0.0054194903130847,
+            "std": 0.9927269095884331
+          },
+          "ball_dist_to_goal_m": {
+            "median": -0.003909108971852754,
+            "mean": -0.018332003887204094,
+            "std": 0.9958956694194626
+          },
+          "possession_age_s": {
+            "median": -0.2965432476903115,
+            "mean": 0.010103066653685582,
+            "std": 1.0437046608976186
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.22478845711993306,
+            "mean": -0.02056223292073268,
+            "std": 0.9885470683061306
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.022957868196260986,
+            "mean": -0.009344919957019564,
+            "std": 1.002138645832854
+          },
+          "carrier_speed_ms": {
+            "median": -0.23653052872936653,
+            "mean": -0.002232034632818985,
+            "std": 1.0063888077241439
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.21587374505181534,
+            "mean": 0.010795198368627258,
+            "std": 1.011211640769325
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.19243830904768094,
+            "mean": 0.01588868175721155,
+            "std": 1.0093981628849256
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.20103736077476084,
+            "mean": 0.0036193898856332124,
+            "std": 1.0102464854185618
+          },
+          "def_width_m": {
+            "median": 0.0646278502171678,
+            "mean": -0.030227490708342374,
+            "std": 1.0099520272798481
+          },
+          "def_depth_m": {
+            "median": -0.04844683907672601,
+            "mean": -0.005662334574922602,
+            "std": 1.003305766666781
+          },
+          "def_hull_area_m2": {
+            "median": -0.10547902157362686,
+            "mean": -0.02955558667701989,
+            "std": 0.9969650558203779
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.03331809222615804,
+            "mean": 0.007838519853209483,
+            "std": 1.0174766774097257
+          },
+          "EPV_AT_BALL": {
+            "median": -0.21374334985116164,
+            "mean": -0.0037364365322201517,
+            "std": 0.9643335003144544
+          }
+        },
+        "coef": [
+          -0.03633086892504809,
+          -0.38051587367975004,
+          0.15241646975194023,
+          -0.018780518303777492,
+          -0.22508394223182393,
+          0.2522482942546583,
+          -0.08978870784961232,
+          -0.052370010474117205,
+          0.10751957785621104,
+          0.21446351406466646,
+          -0.11934359776737474,
+          -0.041329322519706294,
+          0.18677345010722823,
+          0.38887332240922196,
+          -0.4145209364625436,
+          -0.1052549048050821,
+          0.2605829202604608,
+          -1.4023884987190662
+        ],
+        "intercept": -3.437410109212907,
+        "fold": 1
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "EPV_AT_BALL"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.06817946682391798,
+            "mean": -0.0014013009848340941,
+            "std": 1.0027760742644423
+          },
+          "abs_ball_y_m": {
+            "median": 0.01853304735936171,
+            "mean": 0.01423045341743533,
+            "std": 1.0020475748820672
+          },
+          "ball_dist_to_goal_m": {
+            "median": 0.025187595889758642,
+            "mean": 0.0049362512738926724,
+            "std": 1.0002362137405145
+          },
+          "possession_age_s": {
+            "median": -0.31194747165926556,
+            "mean": -0.03309692135937592,
+            "std": 0.9425542257758094
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.20756936029735581,
+            "mean": -0.003450259828821693,
+            "std": 1.0002567346076485
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": 0.010544475206301987,
+            "mean": 0.01603164990104645,
+            "std": 0.9954390991319289
+          },
+          "carrier_speed_ms": {
+            "median": -0.20830783561547037,
+            "mean": 0.026993971269978306,
+            "std": 1.010953453020828
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.2145780953124452,
+            "mean": 0.018386152633621772,
+            "std": 1.012246030565893
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.19667824894258643,
+            "mean": 0.007473665648440315,
+            "std": 0.9965533516500178
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.182736255003051,
+            "mean": 0.02362897977815165,
+            "std": 1.0088372157314047
+          },
+          "def_width_m": {
+            "median": 0.10712209119689395,
+            "mean": 0.05216672244772078,
+            "std": 0.9805330643118216
+          },
+          "def_depth_m": {
+            "median": 0.016643051699190066,
+            "mean": 0.06988766180370568,
+            "std": 0.9992870664974618
+          },
+          "def_hull_area_m2": {
+            "median": 0.018013304695944952,
+            "mean": 0.0945918744259129,
+            "std": 1.0017000927968174
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.01495748547695445,
+            "mean": 0.00020162928110468138,
+            "std": 0.9803975644312998
+          },
+          "EPV_AT_BALL": {
+            "median": -0.21374334985116164,
+            "mean": -0.005039783335051958,
+            "std": 0.9861562875494013
+          }
+        },
+        "coef": [
+          0.05378089649885068,
+          -0.3499837830579252,
+          0.131249670694976,
+          0.0024817199444372414,
+          -0.2110423891493973,
+          0.2544664575965209,
+          0.042145648692503014,
+          -0.25469712404350936,
+          0.17575825679227988,
+          0.3016976678597194,
+          -0.20289825720816876,
+          -0.04723093954068088,
+          0.253386282042966,
+          0.31835120168408265,
+          -0.23898535137258556,
+          -0.1440326697305396,
+          0.08965098688286356,
+          -1.7992833943378206
+        ],
+        "intercept": -3.3791361752241604,
+        "fold": 2
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "EPV_AT_BALL"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.08684445531941232,
+            "mean": -0.016836946953783214,
+            "std": 0.9900946880451433
+          },
+          "abs_ball_y_m": {
+            "median": -0.016617827309684856,
+            "mean": -0.006743521783851679,
+            "std": 1.001529728984912
+          },
+          "ball_dist_to_goal_m": {
+            "median": 0.03856512882186457,
+            "mean": 0.015480372430795138,
+            "std": 0.9902169134911945
+          },
+          "possession_age_s": {
+            "median": -0.28969692592633184,
+            "mean": 0.019278412388801514,
+            "std": 1.001262688336759
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.18188263140962319,
+            "mean": 0.014977991830556465,
+            "std": 1.0009910698225504
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.00429821215488631,
+            "mean": 0.0022158200434271736,
+            "std": 0.9921829377338844
+          },
+          "carrier_speed_ms": {
+            "median": -0.25371722200256885,
+            "mean": -0.02252772793606602,
+            "std": 0.9869662172226012
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.2456564498880062,
+            "mean": -0.020627075085002722,
+            "std": 0.9870959510020765
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.22473085068031431,
+            "mean": -0.015087278573126068,
+            "std": 0.9968120836856649
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.22389395466387443,
+            "mean": -0.021673600226374334,
+            "std": 0.9900618320542652
+          },
+          "def_width_m": {
+            "median": 0.07459934325726748,
+            "mean": 0.010659505541763504,
+            "std": 0.9925774485446286
+          },
+          "def_depth_m": {
+            "median": -0.11366530381182041,
+            "mean": -0.05070345383101973,
+            "std": 0.9881622178040014
+          },
+          "def_hull_area_m2": {
+            "median": -0.11425074068141057,
+            "mean": -0.025891519915588582,
+            "std": 0.9946557985308955
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.007642993091716694,
+            "mean": -0.010621776882431402,
+            "std": 0.9929525878290973
+          },
+          "EPV_AT_BALL": {
+            "median": -0.21600878347650015,
+            "mean": -0.008693155528488794,
+            "std": 0.9948069082403425
+          }
+        },
+        "coef": [
+          -0.0011020885123204365,
+          -0.36668380260647593,
+          0.12812632665231183,
+          0.007999495315936698,
+          -0.1935654241808014,
+          0.2805517912533748,
+          0.006320025559370848,
+          -0.11336578446838147,
+          0.11241553561173577,
+          0.24148759614535945,
+          -0.14605492524937366,
+          -0.024721078369862592,
+          0.23847936845402234,
+          0.43019448046496,
+          -0.39341295158248146,
+          -0.10835706422080028,
+          0.22314248576684148,
+          -1.701472970753059
+        ],
+        "intercept": -3.4449039208901757,
+        "fold": 3
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "EPV_AT_BALL"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.036788351360320014,
+            "mean": 0.025039106237567256,
+            "std": 1.0028461828694424
+          },
+          "abs_ball_y_m": {
+            "median": 0.0004555367686663792,
+            "mean": -0.0006564860060182101,
+            "std": 1.0022166710255247
+          },
+          "ball_dist_to_goal_m": {
+            "median": -0.015403689781292676,
+            "mean": -0.025765647788463093,
+            "std": 1.0038089458052561
+          },
+          "possession_age_s": {
+            "median": -0.2914085063673268,
+            "mean": -0.001508653389550094,
+            "std": 0.9729868749216136
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.19512302194745954,
+            "mean": 0.0006910053883599347,
+            "std": 0.9971214582356059
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.00553375211354332,
+            "mean": 0.004680305295004488,
+            "std": 1.0071846796222572
+          },
+          "carrier_speed_ms": {
+            "median": -0.23377284375869192,
+            "mean": 0.0014823144891333024,
+            "std": 1.0025866098446816
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.23129147683150666,
+            "mean": -0.003297967323100062,
+            "std": 1.00123545731699
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.21348175017900717,
+            "mean": -0.013829055478820199,
+            "std": 0.9948017427943299
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.1944067128367692,
+            "mean": 0.004424780937791981,
+            "std": 0.9998719298751193
+          },
+          "def_width_m": {
+            "median": 0.039928884622794376,
+            "mean": -0.039340911090613793,
+            "std": 1.016566371814585
+          },
+          "def_depth_m": {
+            "median": -0.09136730962747742,
+            "mean": -0.027855550072586832,
+            "std": 1.0155099066144733
+          },
+          "def_hull_area_m2": {
+            "median": -0.12839320523139885,
+            "mean": -0.04038151157513114,
+            "std": 1.011744739351274
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.06884165145630164,
+            "mean": 0.03499592967603491,
+            "std": 1.0072616760233881
+          },
+          "EPV_AT_BALL": {
+            "median": -0.21374334985116164,
+            "mean": 0.014634612391773369,
+            "std": 1.028776007931875
+          }
+        },
+        "coef": [
+          -0.02712195745376304,
+          -0.34360089182753173,
+          0.1583444864327796,
+          0.00022236176594397477,
+          -0.2530456848308222,
+          0.23130451518204845,
+          -0.0037354008166673946,
+          -0.18908208061140638,
+          0.17345322932896626,
+          0.2892204297264101,
+          -0.14776063551457366,
+          -0.016371746169013185,
+          0.2081930196221729,
+          0.38444646315794556,
+          -0.3852164068528787,
+          -0.13040692206075788,
+          0.17387839222702048,
+          -1.4753170101635382
+        ],
+        "intercept": -3.334743901239002,
+        "fold": 4
+      }
+    ],
+    "M0+D_OBSO": [
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "D_OBSO"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.09766166368477994,
+            "mean": -0.02592516277320118,
+            "std": 1.0059447363724683
+          },
+          "abs_ball_y_m": {
+            "median": 0.00246402135125468,
+            "mean": -0.001200587575472177,
+            "std": 1.0012406909753881
+          },
+          "ball_dist_to_goal_m": {
+            "median": 0.055491844736932125,
+            "mean": 0.02586345003697974,
+            "std": 1.009734243333523
+          },
+          "possession_age_s": {
+            "median": -0.2965432476903115,
+            "mean": 0.0048464959488091364,
+            "std": 1.0388298100122177
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.20370358109537504,
+            "mean": 0.008274759269028804,
+            "std": 1.013601063444008
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.03269233428967995,
+            "mean": -0.014943106789419494,
+            "std": 1.002958953860039
+          },
+          "carrier_speed_ms": {
+            "median": -0.23093422583920636,
+            "mean": -0.003065920161464645,
+            "std": 0.9921471909336834
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.22749450305820654,
+            "mean": -0.004600907357952817,
+            "std": 0.9870010564627794
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.19828230376474804,
+            "mean": 0.007239969520091245,
+            "std": 1.0024841565287081
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.20620236114280713,
+            "mean": -0.009989826981155756,
+            "std": 0.9899012625809401
+          },
+          "def_width_m": {
+            "median": 0.0927015232822738,
+            "mean": 0.008353490160392043,
+            "std": 0.9966998460050991
+          },
+          "def_depth_m": {
+            "median": -0.02266862069906042,
+            "mean": 0.018834853885596907,
+            "std": 0.9881539867097473
+          },
+          "def_hull_area_m2": {
+            "median": -0.06390140423488704,
+            "mean": 0.004089598295444057,
+            "std": 0.9875291397885779
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": -0.0287381254190867,
+            "mean": -0.03588212347340116,
+            "std": 1.0002469062736097
+          },
+          "D_OBSO": {
+            "median": -0.4312963806924852,
+            "mean": -0.007929702194142735,
+            "std": 1.0092307451635623
+          }
+        },
+        "coef": [
+          -0.14167107790109562,
+          -0.3071609618945493,
+          0.35156854994226117,
+          -0.03480405628170449,
+          -0.1755885963933737,
+          0.27148914833584853,
+          -0.02048039331540928,
+          -0.10002980544087062,
+          0.1636293332170178,
+          0.22963311895892555,
+          -0.17057821759672456,
+          -0.031601879656214284,
+          0.21042922422682983,
+          0.44396862771119483,
+          -0.2014430610831397,
+          -0.1608237892347828,
+          -0.1163289807699764,
+          -0.08838954462373153
+        ],
+        "intercept": -3.1205809382874574,
+        "fold": 0
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "D_OBSO"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.0490902751075353,
+            "mean": 0.017019347816910654,
+            "std": 0.9980611610230333
+          },
+          "abs_ball_y_m": {
+            "median": -0.014609342727096554,
+            "mean": -0.0054194903130847,
+            "std": 0.9927269095884331
+          },
+          "ball_dist_to_goal_m": {
+            "median": -0.003909108971852754,
+            "mean": -0.018332003887204094,
+            "std": 0.9958956694194626
+          },
+          "possession_age_s": {
+            "median": -0.2965432476903115,
+            "mean": 0.010103066653685582,
+            "std": 1.0437046608976186
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.22478845711993306,
+            "mean": -0.02056223292073268,
+            "std": 0.9885470683061306
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.022957868196260986,
+            "mean": -0.009344919957019564,
+            "std": 1.002138645832854
+          },
+          "carrier_speed_ms": {
+            "median": -0.23653052872936653,
+            "mean": -0.002232034632818985,
+            "std": 1.0063888077241439
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.21587374505181534,
+            "mean": 0.010795198368627258,
+            "std": 1.011211640769325
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.19243830904768094,
+            "mean": 0.01588868175721155,
+            "std": 1.0093981628849256
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.20103736077476084,
+            "mean": 0.0036193898856332124,
+            "std": 1.0102464854185618
+          },
+          "def_width_m": {
+            "median": 0.0646278502171678,
+            "mean": -0.030227490708342374,
+            "std": 1.0099520272798481
+          },
+          "def_depth_m": {
+            "median": -0.04844683907672601,
+            "mean": -0.005662334574922602,
+            "std": 1.003305766666781
+          },
+          "def_hull_area_m2": {
+            "median": -0.10547902157362686,
+            "mean": -0.02955558667701989,
+            "std": 0.9969650558203779
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.03331809222615804,
+            "mean": 0.007838519853209483,
+            "std": 1.0174766774097257
+          },
+          "D_OBSO": {
+            "median": -0.417951949006092,
+            "mean": 0.005039416084776086,
+            "std": 0.9822450384148291
+          }
+        },
+        "coef": [
+          -0.2289623660189641,
+          -0.34968767388103655,
+          0.3693462200981082,
+          -0.01976172915987377,
+          -0.2421890146000455,
+          0.2451118159517547,
+          -0.08607967145786094,
+          -0.0546602291518868,
+          0.11274347309429443,
+          0.21208154171447702,
+          -0.13333442778973917,
+          -0.027504121186713745,
+          0.1877505514915666,
+          0.4460696021349145,
+          -0.3895726640426391,
+          -0.10982852556285161,
+          0.061386379882814764,
+          -0.028092363647415852
+        ],
+        "intercept": -3.123793020168059,
+        "fold": 1
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "D_OBSO"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.06817946682391798,
+            "mean": -0.0014013009848340941,
+            "std": 1.0027760742644423
+          },
+          "abs_ball_y_m": {
+            "median": 0.01853304735936171,
+            "mean": 0.01423045341743533,
+            "std": 1.0020475748820672
+          },
+          "ball_dist_to_goal_m": {
+            "median": 0.025187595889758642,
+            "mean": 0.0049362512738926724,
+            "std": 1.0002362137405145
+          },
+          "possession_age_s": {
+            "median": -0.31194747165926556,
+            "mean": -0.03309692135937592,
+            "std": 0.9425542257758094
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.20756936029735581,
+            "mean": -0.003450259828821693,
+            "std": 1.0002567346076485
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": 0.010544475206301987,
+            "mean": 0.01603164990104645,
+            "std": 0.9954390991319289
+          },
+          "carrier_speed_ms": {
+            "median": -0.20830783561547037,
+            "mean": 0.026993971269978306,
+            "std": 1.010953453020828
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.2145780953124452,
+            "mean": 0.018386152633621772,
+            "std": 1.012246030565893
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.19667824894258643,
+            "mean": 0.007473665648440315,
+            "std": 0.9965533516500178
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.182736255003051,
+            "mean": 0.02362897977815165,
+            "std": 1.0088372157314047
+          },
+          "def_width_m": {
+            "median": 0.10712209119689395,
+            "mean": 0.05216672244772078,
+            "std": 0.9805330643118216
+          },
+          "def_depth_m": {
+            "median": 0.016643051699190066,
+            "mean": 0.06988766180370568,
+            "std": 0.9992870664974618
+          },
+          "def_hull_area_m2": {
+            "median": 0.018013304695944952,
+            "mean": 0.0945918744259129,
+            "std": 1.0017000927968174
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.01495748547695445,
+            "mean": 0.00020162928110468138,
+            "std": 0.9803975644312998
+          },
+          "D_OBSO": {
+            "median": -0.42238694951872374,
+            "mean": 0.004511278291560107,
+            "std": 1.0144059138736998
+          }
+        },
+        "coef": [
+          -0.11890880212254945,
+          -0.31533963693221695,
+          0.3247568380820885,
+          0.003293931261628797,
+          -0.2231373614549313,
+          0.25165485645232,
+          0.045538222443916754,
+          -0.25707159074560865,
+          0.18388105606668892,
+          0.2978314323134321,
+          -0.22438234606513516,
+          -0.03672952250238861,
+          0.2659243591964949,
+          0.38970613126399206,
+          -0.2013431594063194,
+          -0.1482616078409591,
+          -0.07588413155907454,
+          -0.22228513840313655
+        ],
+        "intercept": -3.0656726467217874,
+        "fold": 2
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "D_OBSO"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.08684445531941232,
+            "mean": -0.016836946953783214,
+            "std": 0.9900946880451433
+          },
+          "abs_ball_y_m": {
+            "median": -0.016617827309684856,
+            "mean": -0.006743521783851679,
+            "std": 1.001529728984912
+          },
+          "ball_dist_to_goal_m": {
+            "median": 0.03856512882186457,
+            "mean": 0.015480372430795138,
+            "std": 0.9902169134911945
+          },
+          "possession_age_s": {
+            "median": -0.28969692592633184,
+            "mean": 0.019278412388801514,
+            "std": 1.001262688336759
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.18188263140962319,
+            "mean": 0.014977991830556465,
+            "std": 1.0009910698225504
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.00429821215488631,
+            "mean": 0.0022158200434271736,
+            "std": 0.9921829377338844
+          },
+          "carrier_speed_ms": {
+            "median": -0.25371722200256885,
+            "mean": -0.02252772793606602,
+            "std": 0.9869662172226012
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.2456564498880062,
+            "mean": -0.020627075085002722,
+            "std": 0.9870959510020765
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.22473085068031431,
+            "mean": -0.015087278573126068,
+            "std": 0.9968120836856649
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.22389395466387443,
+            "mean": -0.021673600226374334,
+            "std": 0.9900618320542652
+          },
+          "def_width_m": {
+            "median": 0.07459934325726748,
+            "mean": 0.010659505541763504,
+            "std": 0.9925774485446286
+          },
+          "def_depth_m": {
+            "median": -0.11366530381182041,
+            "mean": -0.05070345383101973,
+            "std": 0.9881622178040014
+          },
+          "def_hull_area_m2": {
+            "median": -0.11425074068141057,
+            "mean": -0.025891519915588582,
+            "std": 0.9946557985308955
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.007642993091716694,
+            "mean": -0.010621776882431402,
+            "std": 0.9929525878290973
+          },
+          "D_OBSO": {
+            "median": -0.42931147123107954,
+            "mean": -0.022378454739436414,
+            "std": 0.9724557813669457
+          }
+        },
+        "coef": [
+          -0.19835330856416236,
+          -0.3320832912420843,
+          0.345439510221173,
+          0.006459116060742529,
+          -0.21067485188722526,
+          0.2744072347166511,
+          0.009318437162822372,
+          -0.11827006487163029,
+          0.11860361500119533,
+          0.2417874693281947,
+          -0.1593518311317556,
+          -0.009607533797813856,
+          0.2388596088454849,
+          0.4940568127795693,
+          -0.37122547280486223,
+          -0.1115959199371618,
+          0.031486114428271705,
+          -0.086835585582759
+        ],
+        "intercept": -3.1012603498559312,
+        "fold": 3
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "D_OBSO"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.036788351360320014,
+            "mean": 0.025039106237567256,
+            "std": 1.0028461828694424
+          },
+          "abs_ball_y_m": {
+            "median": 0.0004555367686663792,
+            "mean": -0.0006564860060182101,
+            "std": 1.0022166710255247
+          },
+          "ball_dist_to_goal_m": {
+            "median": -0.015403689781292676,
+            "mean": -0.025765647788463093,
+            "std": 1.0038089458052561
+          },
+          "possession_age_s": {
+            "median": -0.2914085063673268,
+            "mean": -0.001508653389550094,
+            "std": 0.9729868749216136
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.19512302194745954,
+            "mean": 0.0006910053883599347,
+            "std": 0.9971214582356059
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.00553375211354332,
+            "mean": 0.004680305295004488,
+            "std": 1.0071846796222572
+          },
+          "carrier_speed_ms": {
+            "median": -0.23377284375869192,
+            "mean": 0.0014823144891333024,
+            "std": 1.0025866098446816
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.23129147683150666,
+            "mean": -0.003297967323100062,
+            "std": 1.00123545731699
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.21348175017900717,
+            "mean": -0.013829055478820199,
+            "std": 0.9948017427943299
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.1944067128367692,
+            "mean": 0.004424780937791981,
+            "std": 0.9998719298751193
+          },
+          "def_width_m": {
+            "median": 0.039928884622794376,
+            "mean": -0.039340911090613793,
+            "std": 1.016566371814585
+          },
+          "def_depth_m": {
+            "median": -0.09136730962747742,
+            "mean": -0.027855550072586832,
+            "std": 1.0155099066144733
+          },
+          "def_hull_area_m2": {
+            "median": -0.12839320523139885,
+            "mean": -0.04038151157513114,
+            "std": 1.011744739351274
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.06884165145630164,
+            "mean": 0.03499592967603491,
+            "std": 1.0072616760233881
+          },
+          "D_OBSO": {
+            "median": -0.41231672073404574,
+            "mean": 0.020347775110108296,
+            "std": 1.0211951578220917
+          }
+        },
+        "coef": [
+          -0.21308572548128407,
+          -0.31441978572998663,
+          0.36499576554663726,
+          0.00018462043649389474,
+          -0.2696266190913518,
+          0.22446341943535303,
+          0.0001737871692475376,
+          -0.1935995958239872,
+          0.18096283640400312,
+          0.28566605019604435,
+          -0.16350627502262877,
+          -0.0013310631118827706,
+          0.2096004046414034,
+          0.4403827068764096,
+          -0.3621525466551571,
+          -0.1351336513148296,
+          -0.019134826743361266,
+          -0.04509938695968854
+        ],
+        "intercept": -3.007047192071892,
+        "fold": 4
+      }
+    ],
+    "M0+DAS": [
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "DAS"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.09766166368477994,
+            "mean": -0.02592516277320118,
+            "std": 1.0059447363724683
+          },
+          "abs_ball_y_m": {
+            "median": 0.00246402135125468,
+            "mean": -0.001200587575472177,
+            "std": 1.0012406909753881
+          },
+          "ball_dist_to_goal_m": {
+            "median": 0.055491844736932125,
+            "mean": 0.02586345003697974,
+            "std": 1.009734243333523
+          },
+          "possession_age_s": {
+            "median": -0.2965432476903115,
+            "mean": 0.0048464959488091364,
+            "std": 1.0388298100122177
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.20370358109537504,
+            "mean": 0.008274759269028804,
+            "std": 1.013601063444008
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.03269233428967995,
+            "mean": -0.014943106789419494,
+            "std": 1.002958953860039
+          },
+          "carrier_speed_ms": {
+            "median": -0.23093422583920636,
+            "mean": -0.003065920161464645,
+            "std": 0.9921471909336834
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.22749450305820654,
+            "mean": -0.004600907357952817,
+            "std": 0.9870010564627794
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.19828230376474804,
+            "mean": 0.007239969520091245,
+            "std": 1.0024841565287081
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.20620236114280713,
+            "mean": -0.009989826981155756,
+            "std": 0.9899012625809401
+          },
+          "def_width_m": {
+            "median": 0.0927015232822738,
+            "mean": 0.008353490160392043,
+            "std": 0.9966998460050991
+          },
+          "def_depth_m": {
+            "median": -0.02266862069906042,
+            "mean": 0.018834853885596907,
+            "std": 0.9881539867097473
+          },
+          "def_hull_area_m2": {
+            "median": -0.06390140423488704,
+            "mean": 0.004089598295444057,
+            "std": 0.9875291397885779
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": -0.0287381254190867,
+            "mean": -0.03588212347340116,
+            "std": 1.0002469062736097
+          },
+          "DAS": {
+            "median": -0.4026416552845101,
+            "mean": -0.009453531796772068,
+            "std": 0.9986017581900314
+          }
+        },
+        "coef": [
+          -0.13108240301584656,
+          -0.3138572983831317,
+          0.3229914701244316,
+          -0.03352356512034759,
+          -0.17068918813267686,
+          0.27403675913473,
+          -0.02122454461239888,
+          -0.09784802860520411,
+          0.16451971536422144,
+          0.22635423550294093,
+          -0.17154558503481007,
+          -0.031029720862241705,
+          0.2107572470271609,
+          0.448018042391194,
+          -0.23499893530469212,
+          -0.16165844230894924,
+          -0.054049190462878094,
+          -0.17524561373264355
+        ],
+        "intercept": -3.152219483697501,
+        "fold": 0
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "DAS"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.0490902751075353,
+            "mean": 0.017019347816910654,
+            "std": 0.9980611610230333
+          },
+          "abs_ball_y_m": {
+            "median": -0.014609342727096554,
+            "mean": -0.0054194903130847,
+            "std": 0.9927269095884331
+          },
+          "ball_dist_to_goal_m": {
+            "median": -0.003909108971852754,
+            "mean": -0.018332003887204094,
+            "std": 0.9958956694194626
+          },
+          "possession_age_s": {
+            "median": -0.2965432476903115,
+            "mean": 0.010103066653685582,
+            "std": 1.0437046608976186
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.22478845711993306,
+            "mean": -0.02056223292073268,
+            "std": 0.9885470683061306
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.022957868196260986,
+            "mean": -0.009344919957019564,
+            "std": 1.002138645832854
+          },
+          "carrier_speed_ms": {
+            "median": -0.23653052872936653,
+            "mean": -0.002232034632818985,
+            "std": 1.0063888077241439
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.21587374505181534,
+            "mean": 0.010795198368627258,
+            "std": 1.011211640769325
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.19243830904768094,
+            "mean": 0.01588868175721155,
+            "std": 1.0093981628849256
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.20103736077476084,
+            "mean": 0.0036193898856332124,
+            "std": 1.0102464854185618
+          },
+          "def_width_m": {
+            "median": 0.0646278502171678,
+            "mean": -0.030227490708342374,
+            "std": 1.0099520272798481
+          },
+          "def_depth_m": {
+            "median": -0.04844683907672601,
+            "mean": -0.005662334574922602,
+            "std": 1.003305766666781
+          },
+          "def_hull_area_m2": {
+            "median": -0.10547902157362686,
+            "mean": -0.02955558667701989,
+            "std": 0.9969650558203779
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.03331809222615804,
+            "mean": 0.007838519853209483,
+            "std": 1.0174766774097257
+          },
+          "DAS": {
+            "median": -0.3947748994157482,
+            "mean": 0.008124529725033034,
+            "std": 0.9997688193233198
+          }
+        },
+        "coef": [
+          -0.1990537500466964,
+          -0.35689053423135564,
+          0.32267054504722514,
+          -0.018464533912134217,
+          -0.2355288871608611,
+          0.24750484615227192,
+          -0.08699577092725942,
+          -0.052883458391627156,
+          0.11476241622485832,
+          0.20699044449345885,
+          -0.1378318374298941,
+          -0.02622004365641696,
+          0.19014062786636576,
+          0.45497724644852205,
+          -0.41402642740540163,
+          -0.11109668002837018,
+          0.13534082260295005,
+          -0.17463661071654535
+        ],
+        "intercept": -3.1770089110652298,
+        "fold": 1
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "DAS"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.06817946682391798,
+            "mean": -0.0014013009848340941,
+            "std": 1.0027760742644423
+          },
+          "abs_ball_y_m": {
+            "median": 0.01853304735936171,
+            "mean": 0.01423045341743533,
+            "std": 1.0020475748820672
+          },
+          "ball_dist_to_goal_m": {
+            "median": 0.025187595889758642,
+            "mean": 0.0049362512738926724,
+            "std": 1.0002362137405145
+          },
+          "possession_age_s": {
+            "median": -0.31194747165926556,
+            "mean": -0.03309692135937592,
+            "std": 0.9425542257758094
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.20756936029735581,
+            "mean": -0.003450259828821693,
+            "std": 1.0002567346076485
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": 0.010544475206301987,
+            "mean": 0.01603164990104645,
+            "std": 0.9954390991319289
+          },
+          "carrier_speed_ms": {
+            "median": -0.20830783561547037,
+            "mean": 0.026993971269978306,
+            "std": 1.010953453020828
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.2145780953124452,
+            "mean": 0.018386152633621772,
+            "std": 1.012246030565893
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.19667824894258643,
+            "mean": 0.007473665648440315,
+            "std": 0.9965533516500178
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.182736255003051,
+            "mean": 0.02362897977815165,
+            "std": 1.0088372157314047
+          },
+          "def_width_m": {
+            "median": 0.10712209119689395,
+            "mean": 0.05216672244772078,
+            "std": 0.9805330643118216
+          },
+          "def_depth_m": {
+            "median": 0.016643051699190066,
+            "mean": 0.06988766180370568,
+            "std": 0.9992870664974618
+          },
+          "def_hull_area_m2": {
+            "median": 0.018013304695944952,
+            "mean": 0.0945918744259129,
+            "std": 1.0017000927968174
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.01495748547695445,
+            "mean": 0.00020162928110468138,
+            "std": 0.9803975644312998
+          },
+          "DAS": {
+            "median": -0.3975469114983884,
+            "mean": -0.0017029781517805631,
+            "std": 1.0000428770202145
+          }
+        },
+        "coef": [
+          -0.09267340803814571,
+          -0.3310481043699647,
+          0.2579038931596333,
+          0.006544049241144542,
+          -0.21197494611815265,
+          0.253625839631857,
+          0.044268455175594267,
+          -0.25897271663394944,
+          0.18755773387559327,
+          0.2942808390660401,
+          -0.22678700938416801,
+          -0.038361264211101524,
+          0.27092066656309327,
+          0.397065886426071,
+          -0.27956113117971665,
+          -0.15198638610487367,
+          0.062268062883512096,
+          -0.44611006142814497
+        ],
+        "intercept": -3.141155873207418,
+        "fold": 2
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "DAS"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.08684445531941232,
+            "mean": -0.016836946953783214,
+            "std": 0.9900946880451433
+          },
+          "abs_ball_y_m": {
+            "median": -0.016617827309684856,
+            "mean": -0.006743521783851679,
+            "std": 1.001529728984912
+          },
+          "ball_dist_to_goal_m": {
+            "median": 0.03856512882186457,
+            "mean": 0.015480372430795138,
+            "std": 0.9902169134911945
+          },
+          "possession_age_s": {
+            "median": -0.28969692592633184,
+            "mean": 0.019278412388801514,
+            "std": 1.001262688336759
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.18188263140962319,
+            "mean": 0.014977991830556465,
+            "std": 1.0009910698225504
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.00429821215488631,
+            "mean": 0.0022158200434271736,
+            "std": 0.9921829377338844
+          },
+          "carrier_speed_ms": {
+            "median": -0.25371722200256885,
+            "mean": -0.02252772793606602,
+            "std": 0.9869662172226012
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.2456564498880062,
+            "mean": -0.020627075085002722,
+            "std": 0.9870959510020765
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.22473085068031431,
+            "mean": -0.015087278573126068,
+            "std": 0.9968120836856649
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.22389395466387443,
+            "mean": -0.021673600226374334,
+            "std": 0.9900618320542652
+          },
+          "def_width_m": {
+            "median": 0.07459934325726748,
+            "mean": 0.010659505541763504,
+            "std": 0.9925774485446286
+          },
+          "def_depth_m": {
+            "median": -0.11366530381182041,
+            "mean": -0.05070345383101973,
+            "std": 0.9881622178040014
+          },
+          "def_hull_area_m2": {
+            "median": -0.11425074068141057,
+            "mean": -0.025891519915588582,
+            "std": 0.9946557985308955
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.007642993091716694,
+            "mean": -0.010621776882431402,
+            "std": 0.9929525878290973
+          },
+          "DAS": {
+            "median": -0.40212017855083887,
+            "mean": -0.019162336308959565,
+            "std": 0.9739818442832233
+          }
+        },
+        "coef": [
+          -0.17277959254773417,
+          -0.3409161272002573,
+          0.2971837855336196,
+          0.00911031870746232,
+          -0.20229568977742204,
+          0.27652658090262,
+          0.007807568764669547,
+          -0.1157010216932001,
+          0.12046808759591285,
+          0.23618766703315355,
+          -0.16327531923100452,
+          -0.009516529716381816,
+          0.24286317299018054,
+          0.5020735426379248,
+          -0.4105902790545677,
+          -0.11310281565461704,
+          0.12103117853071235,
+          -0.2434411457442407
+        ],
+        "intercept": -3.1573479264695723,
+        "fold": 3
+      },
+      {
+        "features": [
+          "ball_x_norm",
+          "abs_ball_y_m",
+          "ball_dist_to_goal_m",
+          "possession_age_s",
+          "carrier_nearest_def_dist_m",
+          "nearest_def_closing_speed_ms",
+          "carrier_speed_ms",
+          "offball_att_speed_mean_ms",
+          "offball_att_speed_max_ms",
+          "def_outfield_speed_mean_ms",
+          "def_width_m",
+          "def_depth_m",
+          "def_hull_area_m2",
+          "C0_ATTACK_AREA_m2",
+          "ball_x_norm_sq",
+          "abs_ball_y_m_sq",
+          "ball_dist_to_goal_m_sq",
+          "DAS"
+        ],
+        "stats": {
+          "ball_x_norm": {
+            "median": -0.036788351360320014,
+            "mean": 0.025039106237567256,
+            "std": 1.0028461828694424
+          },
+          "abs_ball_y_m": {
+            "median": 0.0004555367686663792,
+            "mean": -0.0006564860060182101,
+            "std": 1.0022166710255247
+          },
+          "ball_dist_to_goal_m": {
+            "median": -0.015403689781292676,
+            "mean": -0.025765647788463093,
+            "std": 1.0038089458052561
+          },
+          "possession_age_s": {
+            "median": -0.2914085063673268,
+            "mean": -0.001508653389550094,
+            "std": 0.9729868749216136
+          },
+          "carrier_nearest_def_dist_m": {
+            "median": -0.19512302194745954,
+            "mean": 0.0006910053883599347,
+            "std": 0.9971214582356059
+          },
+          "nearest_def_closing_speed_ms": {
+            "median": -0.00553375211354332,
+            "mean": 0.004680305295004488,
+            "std": 1.0071846796222572
+          },
+          "carrier_speed_ms": {
+            "median": -0.23377284375869192,
+            "mean": 0.0014823144891333024,
+            "std": 1.0025866098446816
+          },
+          "offball_att_speed_mean_ms": {
+            "median": -0.23129147683150666,
+            "mean": -0.003297967323100062,
+            "std": 1.00123545731699
+          },
+          "offball_att_speed_max_ms": {
+            "median": -0.21348175017900717,
+            "mean": -0.013829055478820199,
+            "std": 0.9948017427943299
+          },
+          "def_outfield_speed_mean_ms": {
+            "median": -0.1944067128367692,
+            "mean": 0.004424780937791981,
+            "std": 0.9998719298751193
+          },
+          "def_width_m": {
+            "median": 0.039928884622794376,
+            "mean": -0.039340911090613793,
+            "std": 1.016566371814585
+          },
+          "def_depth_m": {
+            "median": -0.09136730962747742,
+            "mean": -0.027855550072586832,
+            "std": 1.0155099066144733
+          },
+          "def_hull_area_m2": {
+            "median": -0.12839320523139885,
+            "mean": -0.04038151157513114,
+            "std": 1.011744739351274
+          },
+          "C0_ATTACK_AREA_m2": {
+            "median": 0.06884165145630164,
+            "mean": 0.03499592967603491,
+            "std": 1.0072616760233881
+          },
+          "DAS": {
+            "median": -0.3919016954129607,
+            "mean": 0.021501415895707466,
+            "std": 1.026365067748459
+          }
+        },
+        "coef": [
+          -0.18386405006968834,
+          -0.32188843960449276,
+          0.31808438555324603,
+          0.0017793060823839278,
+          -0.26212225708650166,
+          0.22662185746422664,
+          -0.0014140597836942166,
+          -0.19359559786844868,
+          0.18359590069871715,
+          0.2826003894010926,
+          -0.16611664804421086,
+          0.0008883894888007189,
+          0.21110799594944224,
+          0.44981521709737116,
+          -0.3881609625151369,
+          -0.13649444615258907,
+          0.058979153284636,
+          -0.19889828692503556
+        ],
+        "intercept": -3.0638978908683754,
+        "fold": 4
+      }
+    ]
+  },
+  "folds": 5,
+  "dev_coefficient_provenance": "Original EXP032 fold coefficients were not saved. Recovered from frozen OOF logits and the same fold design matrices; all probabilities checked within 1e-12. No outcome labels enter recovery."
+}

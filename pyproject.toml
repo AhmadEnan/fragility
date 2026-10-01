@@ -7,25 +7,26 @@ name = "fragility"
 version = "1.0.0"
 description = "Counterfactual Defensive Fragility and SOG Engine for SSAC 2027"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.12"
 license = {text = "MIT"}
 authors = [
     {name = "MIT Sloan Sports Analytics Conference 2027 Submission"}
 ]
 dependencies = [
-    "numpy>=1.22.0",
-    "pandas>=1.4.0",
-    "scipy>=1.8.0",
-    "matplotlib>=3.5.0",
-    "pyarrow>=10.0.0",
+    "numpy>=1.24,<3",
+    "pandas>=2.2,<4",
+    "scipy>=1.10,<2",
+    "matplotlib>=3.7,<4",
+    "pyarrow>=12,<26",
+    "pillow>=9",
 ]
 
 [project.optional-dependencies]
 test = [
     "pytest>=7.0.0",
-]
-dev = [
-    "pytest>=7.0.0",
+    "nbformat>=5.10",
+    "nbclient>=0.10",
+    "ipykernel>=6",
 ]
 
 [tool.setuptools.packages.find]

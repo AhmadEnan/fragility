@@ -20,17 +20,18 @@ import numpy as np
 @dataclass
 class TrackingState:
     """Normalized 22-player tracking state at a single discrete frame."""
+
     match_id: str | int
     frame_num: int
     period: int
     focal_is_home: bool
 
-    positions: np.ndarray   # shape (22, 2), metres, focal attacks +x
+    positions: np.ndarray  # shape (22, 2), metres, focal attacks +x
     velocities: np.ndarray  # shape (22, 2), m/s
-    is_att: np.ndarray      # shape (22,), bool (True for focal attacking team)
-    is_gk: np.ndarray       # shape (22,), bool (True for goalkeepers)
-    jerseys: list[str]      # length 22
-    ball: np.ndarray        # shape (2,), metres
+    is_att: np.ndarray  # shape (22,), bool (True for focal attacking team)
+    is_gk: np.ndarray  # shape (22,), bool (True for goalkeepers)
+    jerseys: list[str]  # length 22
+    ball: np.ndarray  # shape (2,), metres
 
     offside: np.ndarray = None  # shape (22,), bool
 
@@ -81,7 +82,9 @@ def carrier_index(state: TrackingState, max_distance_m: float = 2.0) -> int | No
     return None
 
 
-def eligible_attackers(state: TrackingState, carrier_idx: int | None = None) -> list[int]:
+def eligible_attackers(
+    state: TrackingState, carrier_idx: int | None = None
+) -> list[int]:
     """Return indices of eligible attackers (outfield attackers minus carrier)."""
     outfield_att = np.flatnonzero(state.is_att & ~state.is_gk)
     if carrier_idx is not None:
@@ -126,7 +129,10 @@ def load_pff_state(
     cache_candidates = [
         root / f"match_{match_id}_stride8.parquet",
         root / "frame_cache" / f"match_{match_id}_stride8.parquet",
-        root / "FIFA World Cup 2022" / "frame_cache" / f"match_{match_id}_stride8.parquet",
+        root
+        / "FIFA World Cup 2022"
+        / "frame_cache"
+        / f"match_{match_id}_stride8.parquet",
         root / "FIFA World Cup 2022" / f"match_{match_id}_stride8.parquet",
         root.parent / "frame_cache" / f"match_{match_id}_stride8.parquet",
     ]
@@ -134,14 +140,15 @@ def load_pff_state(
 
     if cache_path is not None:
         import pandas as pd
+
         df = pd.read_parquet(cache_path)
-        sub = df[(df["frame_num"] == frame_num) & (df["focal_is_home"] == focal_is_home)]
+        sub = df[
+            (df["frame_num"] == frame_num) & (df["focal_is_home"] == focal_is_home)
+        ]
         if sub.empty:
-            # Pick nearest frame
-            df_focal = df[df["focal_is_home"] == focal_is_home]
-            diffs = (df_focal["frame_num"] - frame_num).abs()
-            nearest_idx = diffs.idxmin()
-            row = df_focal.loc[nearest_idx]
+            raise KeyError(
+                f"Exact frame {frame_num}, perspective {focal_is_home} not found"
+            )
         else:
             row = sub.iloc[0]
 
@@ -172,7 +179,12 @@ def load_pff_state(
         is_att = np.array([True] * 11 + [False] * 11, dtype=bool)
         is_gk = np.array([False] * 10 + [True] + [False] * 10 + [True], dtype=bool)
         ball = np.array([row["ball_x"], row["ball_y"]], dtype=np.float64)
-        jerseys = [str(row.get(f"fo_jersey_{i}", i + 1)) for i in range(n_outfield)] + ["GK"] + [str(i + 1) for i in range(n_outfield)] + ["GK"]
+        jerseys = (
+            [str(row.get(f"fo_jersey_{i}", i + 1)) for i in range(n_outfield)]
+            + ["GK"]
+            + [str(i + 1) for i in range(n_outfield)]
+            + ["GK"]
+        )
 
         return TrackingState(
             match_id=match_id,

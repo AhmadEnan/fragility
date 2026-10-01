@@ -1,42 +1,46 @@
 {
-  "action_recovery.csv": {
-    "filename": "action_recovery.csv",
-    "sha256": "67f0adb1bcbc44edd93d57d62862861d57a6b060f7ba57083446faa3f4bc8fc8",
-    "bytes": 7154,
-    "row_count": 46,
-    "raw_pff_content": false,
-    "role_in_reproduction": "Per-action SOG recovery percentiles and hit flags for tactical benchmark validation"
+  "dev_event_links.parquet": {
+    "sha256": "29eea47fd0c491886aaf6a83da63610cb6b1bae0e0e0b1a3b89defc189748f4b",
+    "bytes": 13583
   },
-  "case_summary.csv": {
-    "filename": "case_summary.csv",
-    "sha256": "46394b892f94ac7478023e4dd20765b6effaf3cece4ef27b278e3017b1043b22",
-    "bytes": 1819,
-    "row_count": 20,
-    "raw_pff_content": false,
-    "role_in_reproduction": "Case-level recovery performance and background null rates across 20 benchmark cases"
+  "dev_features.parquet": {
+    "sha256": "e5e7beb88963983e90eb2767d5bd6a1720ff32186154ea957bdb8c41fcd46e92",
+    "bytes": 8398186
   },
-  "residual_ablation.csv": {
-    "filename": "residual_ablation.csv",
-    "sha256": "2556d6ad4ad5ddadb53d469cb6ca643e742e98081dfae0cd1b5f750123793a95",
-    "bytes": 3952,
-    "row_count": 29,
-    "raw_pff_content": false,
-    "role_in_reproduction": "Paired action comparison between SOG and unweighted PCG for residual ablation"
+  "dev_predictions.parquet": {
+    "sha256": "3e9cee2b78eda1c0982a735236eb96588985fe72c6ded0c029a88f30b3f90d42",
+    "bytes": 2729089
   },
-  "grid_stability.csv": {
-    "filename": "grid_stability.csv",
-    "sha256": "66e9413b8ff0cbdab63bec343d5255b34443d7a4586538bf6f3867a4451f34ce",
-    "bytes": 3401,
-    "row_count": 36,
-    "raw_pff_content": false,
-    "role_in_reproduction": "Numerical convergence metrics comparing G0 (50x32) to G1 (100x64) across 36 states"
+  "figure1_plot.json": {
+    "sha256": "17e65be59f0b29eed6df9a05de5d301a0af3c172e673294c80f2383826a6ac4c",
+    "bytes": 546
   },
-  "counterattack_pairs.csv": {
-    "filename": "counterattack_pairs.csv",
-    "sha256": "6744f1755cec5123d0798784cb1d9bbf472b99a616f988b151074f083186e6ee",
-    "bytes": 6914,
-    "row_count": 32,
-    "raw_pff_content": false,
-    "role_in_reproduction": "Pairwise scores for 32 counter-attack matched pairs comparing SOG, PA, and RADIAL"
+  "figure1_plot.npz": {
+    "sha256": "9d241bef3aa744f85dedc6a23c5449f5055d07fee64d7e432d69cc408f35b181",
+    "bytes": 581321
+  },
+  "models.json": {
+    "sha256": "2be55c3650a5cf729c28f47a3b683f65cf599c135ee0f6d0655681cbe05dc7c6",
+    "bytes": 141897
+  },
+  "tactical_comparison.csv": {
+    "sha256": "f1444fe7ee6a08d105ea8aa1dfe91d17543451bd83dcb0377e973d6a2ffe0cb0",
+    "bytes": 727
+  },
+  "test_event_links.parquet": {
+    "sha256": "3a4db9588d807ed368a96f1ebddc616b73bff48c5d6f7f06ac53c77ba8981f45",
+    "bytes": 12726
+  },
+  "test_features.parquet": {
+    "sha256": "14b6af8bc02baece6985456cdcbdc12028c32252fce38310ce25cd7b060b8d1d",
+    "bytes": 7353263
+  },
+  "test_predictions.parquet": {
+    "sha256": "c83594b7c26f534e2c20880b1602c40a42557689425954b25a5200d3a6c392ff",
+    "bytes": 2008374
+  },
+  "train_features.parquet": {
+    "sha256": "c6ecb7f7e6e71bd47a40e1da48f5dfaf6aa26bf537722720f0998e12dbedc961",
+    "bytes": 7215344
   }
 }

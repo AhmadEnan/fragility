@@ -1,0 +1,151 @@
+{
+  "held_out": [
+    {
+      "model": "M0",
+      "n": 38751,
+      "n_pos": 1216,
+      "event_rate": 0.031379835359087505,
+      "roc_auc": 0.6449802333611436,
+      "pr_auc": 0.04822291046706274,
+      "brier": 0.030318008628304045,
+      "capture_at_10": 0.18174342105263158,
+      "events_captured": 170,
+      "events_total": 694,
+      "review_states": 3876
+    },
+    {
+      "model": "M1",
+      "n": 38751,
+      "n_pos": 1216,
+      "event_rate": 0.031379835359087505,
+      "roc_auc": 0.6448874909733372,
+      "pr_auc": 0.0481682362555753,
+      "brier": 0.030320100739318897,
+      "capture_at_10": 0.17927631578947367,
+      "events_captured": 168,
+      "events_total": 694,
+      "review_states": 3876
+    },
+    {
+      "model": "M2",
+      "n": 38751,
+      "n_pos": 1216,
+      "event_rate": 0.031379835359087505,
+      "roc_auc": 0.6784619442905919,
+      "pr_auc": 0.05983614245895386,
+      "brier": 0.03011411286927963,
+      "capture_at_10": 0.24177631578947367,
+      "events_captured": 220,
+      "events_total": 694,
+      "review_states": 3876
+    },
+    {
+      "model": "M2_LANDSCAPE_ONLY",
+      "n": 38751,
+      "n_pos": 1216,
+      "event_rate": 0.031379835359087505,
+      "roc_auc": 0.6576829389061437,
+      "pr_auc": 0.051528833895204976,
+      "brier": 0.03026651489454824,
+      "capture_at_10": 0.19983552631578946,
+      "events_captured": 176,
+      "events_total": 694,
+      "review_states": 3876
+    }
+  ],
+  "development": [
+    {
+      "model": "M0",
+      "n": 38035,
+      "n_pos": 1314,
+      "event_rate": 0.034547127645589586,
+      "roc_auc": 0.6586306086825181,
+      "pr_auc": 0.05523919961381605,
+      "brier": 0.03313125828897324,
+      "capture_at_10": 0.19101978691019786,
+      "events_captured": 195,
+      "events_total": 752,
+      "review_states": 3804
+    },
+    {
+      "model": "M0+SOG(incumbent)",
+      "n": 38035,
+      "n_pos": 1314,
+      "event_rate": 0.034547127645589586,
+      "roc_auc": 0.6984857266507161,
+      "pr_auc": 0.06910850519197619,
+      "brier": 0.03288963809001527,
+      "capture_at_10": 0.24277016742770166,
+      "events_captured": 245,
+      "events_total": 752,
+      "review_states": 3804
+    },
+    {
+      "model": "M0+EPV_WEIGHTED_CONTROL",
+      "n": 38035,
+      "n_pos": 1314,
+      "event_rate": 0.034547127645589586,
+      "roc_auc": 0.6654806491186556,
+      "pr_auc": 0.05603834697765562,
+      "brier": 0.03314320780838638,
+      "capture_at_10": 0.18493150684931506,
+      "events_captured": 191,
+      "events_total": 752,
+      "review_states": 3804
+    },
+    {
+      "model": "M0+EPV_AT_BALL",
+      "n": 38035,
+      "n_pos": 1314,
+      "event_rate": 0.034547127645589586,
+      "roc_auc": 0.6620979281966445,
+      "pr_auc": 0.05611602006438926,
+      "brier": 0.033108014059940474,
+      "capture_at_10": 0.18949771689497716,
+      "events_captured": 193,
+      "events_total": 752,
+      "review_states": 3804
+    },
+    {
+      "model": "M0+D_OBSO",
+      "n": 38035,
+      "n_pos": 1314,
+      "event_rate": 0.034547127645589586,
+      "roc_auc": 0.6578757911118589,
+      "pr_auc": 0.05507908664760903,
+      "brier": 0.0331321700654021,
+      "capture_at_10": 0.1902587519025875,
+      "events_captured": 195,
+      "events_total": 752,
+      "review_states": 3804
+    },
+    {
+      "model": "M0+DAS",
+      "n": 38035,
+      "n_pos": 1314,
+      "event_rate": 0.034547127645589586,
+      "roc_auc": 0.6566188740578148,
+      "pr_auc": 0.05488096682146468,
+      "brier": 0.03313368064074477,
+      "capture_at_10": 0.18645357686453576,
+      "events_captured": 190,
+      "events_total": 752,
+      "review_states": 3804
+    }
+  ],
+  "relative_event_gain": 0.2941176470588236,
+  "tactical": {
+    "sog_hits": 13,
+    "pcg_hits": 11,
+    "actions": 20,
+    "pre_release_hits_each": 10,
+    "bootstrap95": [
+      0.0,
+      0.23529411764705882
+    ]
+  },
+  "development_auc_interval": [
+    0.0279436457611903,
+    0.05118323645328555
+  ]
+}

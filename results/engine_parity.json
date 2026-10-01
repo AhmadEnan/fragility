@@ -1,0 +1,26 @@
+[
+  {
+    "match_id": "3844",
+    "frame_num": 19209,
+    "f_sog_absolute_error": 1.5543122344752192e-15,
+    "r_max_absolute_error": 3.9968028886505635e-15
+  },
+  {
+    "match_id": "3854",
+    "frame_num": 11597,
+    "f_sog_absolute_error": 4.884981308350689e-15,
+    "r_max_absolute_error": 8.881784197001252e-16
+  },
+  {
+    "match_id": "10506",
+    "frame_num": 22110,
+    "f_sog_absolute_error": 3.1086244689504383e-15,
+    "r_max_absolute_error": 5.329070518200751e-15
+  },
+  {
+    "match_id": "10516",
+    "frame_num": 18958,
+    "f_sog_absolute_error": 4.884981308350689e-15,
+    "r_max_absolute_error": 2.6645352591003757e-15
+  }
+]

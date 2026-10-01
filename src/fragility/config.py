@@ -43,15 +43,15 @@ class SOGConfig:
     direction_decimals: int = 6
 
     # Pitch control kinematics (db10578 canonical specification)
-    max_player_speed: float = 5.0      # m/s
-    max_acceleration: float = 7.0      # m/s^2
-    ball_speed: float = 15.0           # m/s
-    tti_sigma: float = 0.54            # logistic scale parameter (s)
-    lambda_att: float = 3.99           # control rate (Hz)
-    lambda_def: float = 3.99           # control rate (Hz)
-    lambda_gk: float = 3.99            # goalkeeper control rate (Hz)
-    int_dt: float = 0.04               # integration timestep (s)
-    max_int_time: float = 10.0         # integration horizon (s)
+    max_player_speed: float = 5.0  # m/s
+    max_acceleration: float = 7.0  # m/s^2
+    ball_speed: float = 15.0  # m/s
+    tti_sigma: float = 0.54  # logistic scale parameter (s)
+    lambda_att: float = 3.99  # control rate (Hz)
+    lambda_def: float = 3.99  # control rate (Hz)
+    lambda_gk: float = 3.99  # goalkeeper control rate (Hz)
+    int_dt: float = 0.04  # integration timestep (s)
+    max_int_time: float = 10.0  # integration horizon (s)
 
     def action_offsets(self) -> np.ndarray:
         """Return (24, 3) array of (dx, dy, radius) for each action."""

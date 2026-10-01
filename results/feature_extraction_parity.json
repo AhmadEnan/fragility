@@ -1,0 +1,26 @@
+[
+  {
+    "match_id": "3844",
+    "frame_num": 19209,
+    "features_checked": 23,
+    "max_absolute_error": 3.9968028886505635e-15
+  },
+  {
+    "match_id": "3854",
+    "frame_num": 11597,
+    "features_checked": 23,
+    "max_absolute_error": 1.2878587085651816e-14
+  },
+  {
+    "match_id": "10506",
+    "frame_num": 22110,
+    "features_checked": 23,
+    "max_absolute_error": 5.329070518200751e-15
+  },
+  {
+    "match_id": "10516",
+    "frame_num": 18958,
+    "features_checked": 23,
+    "max_absolute_error": 1.1324274851176597e-14
+  }
+]

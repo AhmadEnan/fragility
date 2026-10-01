@@ -1,117 +1,26 @@
-# One Meter from Trouble: Counterfactual Defensive Fragility from Player Tracking
+# Fragility Score: Mapping Counterfactual Openings in Soccer Defenses
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AhmadEnan/fragility/blob/main/notebooks/reproduce_ssac27.ipynb)
-[![CI Tests](https://github.com/AhmadEnan/fragility/actions/workflows/tests.yml/badge.svg)](https://github.com/AhmadEnan/fragility/actions/workflows/tests.yml)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+Code and derived inputs for the SSAC 2027 abstract.
 
-> **Official Public Reproduction Package** (MIT Sloan Sports Analytics Conference 2027, Soccer Track)
+[Run in Colab](https://colab.research.google.com/github/AhmadEnan/fragility/blob/main/notebooks/reproduce_ssac27.ipynb)
 
-Modern pitch control models evaluate spatial control in observed player configurations, but miss how precarious a defensive structure is to small attacking adjustments. **`fragility`** measures **Structural Opening Gain (SOG)** by subjecting every off-ball attacker to an exhaustive grid of micro-counterfactual displacements ($\pm 0.5\text{ m}, \pm 1.0\text{ m}, \pm 1.5\text{ m}$ in 8 compass directions). Aggregating the top 10% of these gains yields a scalar measure of defensive fragility ($F_{\text{SOG}}$).
+Choose **Runtime > Run all**. The notebook recomputes classifier scores, verifies the abstract results and creates both submission figures. No PFF download, credentials or GPU are needed.
 
----
-
-## Abstract Claims & Empirical Results
-
-All empirical results reported in the submission abstract reproduce deterministically:
-
-| Claim | Benchmark | Metric | Expected Result | Reproduced | Status |
-| :--- | :--- | :--- | :---: | :---: | :---: |
-| **C01: Action Recovery** | Benchmark Primary Cohort (13 cases) | Top-10% Action Recovery | **65.0%** (13/20) | **65.0%** (95% CI: [43.3%, 81.9%]) | **PASS** |
-| **C02: Space-Creators** | Benchmark Primary Cohort (13 cases) | Decoy / Space-Creator Recovery | **100.0%** (5/5) | **100.0%** (Exploiters: 53.8%) | **PASS** |
-| **C03: Residual Weighting** | Benchmark Primary Cohort (13 cases) | Gain over unweighted PCG | **+10.0 pp** | **+10.0 pp** (95% CI: [0.0%, 23.5%]) | **PASS** |
-| **C04: Grid Invariance** | 36 states ($G_0$ vs $G_1$) | Rank Stability ($50\times 32$ vs $100\times 64$) | **$\rho = 0.9998$** | **$\rho = 0.9998$**, Best-Player: **100%** | **PASS** |
-| **C05: Matched Pairs** | 32 Counter-Attack Matched Pairs | Angular vs Radial Accessibility | **$\Delta = 0.0000$** | **$\Delta = 0.0000$** (`DISTANCE_ONLY`) | **PASS** |
-| **C06: Validation Cohort** | 11 qualitative states | Benchmark Protocol | *Pending* | Pilot Cohort Verified | **PASS** |
-
----
-
-## Published Abstract Figures
-
-The figures below are generated programmatically from the derived benchmarks:
-
-| Figure 1: Tactical Action Recovery & Residual Ablation | Figure 2: Numerical Stability & Grid Resolution Convergence |
-| :---: | :---: |
-| ![Figure 1: Tactical Recovery](results/figures/figure1_action_recovery.png) | ![Figure 2: Grid Convergence](results/figures/figure2_grid_stability.png) |
-| *Top-10% tactical action recovery across benchmark cases, illustrating the +10.0 pp boost from residual weighting.* | *Spearman rank correlation ($\rho = 0.9998$) and best-player identity preservation (100%) across grid resolutions.* |
-
----
-
-## 60-Second Quickstart
-
-### 1. Interactive Colab Execution (One-Click)
-
-Click the badge to launch the orchestrator notebook directly in Google Colab:
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AhmadEnan/fragility/blob/main/notebooks/reproduce_ssac27.ipynb)
-
-The notebook runs in under 6 seconds, regenerates both publication figures, and asserts numerical parity against `results/expected_results.json`.
-
-### 2. Local Installation & Tests
+For local runs, use Python 3.12 or newer:
 
 ```bash
-git clone https://github.com/AhmadEnan/fragility.git
-cd fragility
-python -m pip install -e .
-python -m pytest tests/ -v
+python -m pip install -r requirements-reproduce.txt -e ".[test]"
+python tests/verify_notebook.py
+python -m pytest
 ```
 
-The test suite runs 13 tests in ~40s without external data dependencies:
-- **Unit tests:** Physics invariants, acceleration-cruise kinematics, Law 11 offside line projection, carrier exclusion, and tail reduction on synthetic fixtures.
-- **Parity tests:** Bit-level assertions reproducing Claims C01–C05 and end-to-end SOG calculation on canonical World Cup states.
+| Evaluation | Matches | States | Result |
+|---|---:|---:|---|
+| Held-out test | 16 | 38,751 | AP 0.0482 to 0.0598; 170 to 220 retrieved events |
+| Figure 2, development comparison | 16 | 38,035 | 195 to 245 retrieved events |
 
----
+SOG recovers 13/20 documented tactical actions versus 11/20 for plain control gain. Pre-release recovery ties at 10/20. Centered velocities include subsequent positions, so evaluation is retrospective.
 
-## The Method in Brief
+Public reproduction starts from derived features and computed control fields. Raw PFF files are excluded. The [tracking feature extractor](src/fragility/extract_features.py) is included for reference and licensed-data checks. See [data access](DATA_ACCESS.md), [reproduction](REPRODUCIBILITY.md) and [verification](RELEASE_AUDIT.md). The MIT license covers code only.
 
-For each candidate perturbation $\mathbf{u} = (\Delta x, \Delta y)$ with travel cost $\text{cost}(\rho) = \rho / 1.0\text{ m}$, SOG weights newly opened pitch control $C_{\mathbf{u}}(\mathbf{r}) - C_0(\mathbf{r})$ by the *currently uncontrolled* baseline space $(1 - C_0(\mathbf{r}))$:
-
-$$\text{SOG}_k(\mathbf{u}) = \sum_{\mathbf{r} \in \text{Pitch}} \big(1 - C_0(\mathbf{r})\big) \max\big(C_{\mathbf{u}}(\mathbf{r}) - C_0(\mathbf{r}), 0\big) - \text{cost}(\rho)$$
-
-Macro defensive fragility $F_{\text{SOG}}$ is the arithmetic mean of the top 10% highest-scoring valid counterfactual actions across all attacking players:
-
-$$F_{\text{SOG}} = \frac{1}{|K_{\text{top10}}|} \sum_{a \in K_{\text{top10}}} \text{SOG}(a)$$
-
----
-
-## Repository Structure
-
-```text
-fragility/
-├── src/fragility/             # Core library (config, kinematics, PPCF, SOG, figures)
-├── notebooks/                 # reproduce_ssac27.ipynb (Colab orchestrator, <=140 LOC)
-├── data/
-│   ├── derived/               # Frozen, vetted shareable benchmark tables + SHA256 manifest
-│   └── validation/            # Independent benchmark tactical labels & 47 source citations
-├── results/                   # Canonical expected_results.json & publication figures
-├── tests/                     # Synthetic unit tests & canonical parity tests
-├── ABSTRACT_CLAIMS.md         # Scientific claim provenance matrix
-├── CODE_PROVENANCE.md         # Lineage mapping to canonical research commits
-├── DATA_ACCESS.md             # Reviewer guide for licensed PFF FC tracking data
-├── REPRODUCIBILITY.md         # Full reproduction protocol and environment specifications
-└── RELEASE_AUDIT.md           # Release checklist and data licensing audit
-```
-
----
-
-## Dual Execution Modes
-
-1. **`MODE = "public"` (Default):** Runs immediately from shareable derived tables in `data/derived/`. Requires no credentials or raw tracking files.
-2. **`MODE = "full"`:** Allows reviewers with licensed PFF 2022 World Cup optical tracking data to recompute SOG from raw frames in memory (`export PFF_DATA_ROOT="/path/to/FIFA World Cup 2022"`). See [DATA_ACCESS.md](DATA_ACCESS.md).
-
----
-
-## Licensing & Data Availability
-
-- **Code & Derived Benchmarks:** Released under the [MIT License](LICENSE).
-- **Tracking Data:** Raw tracking trajectories are proprietary to [PFF FC](https://www.pff.com/) and are not redistributed in this repository.
-
-```bibtex
-@inproceedings{ssac2027fragility,
-  title={One Meter from Trouble: Counterfactual Defensive Fragility from Player Tracking},
-  author={SSAC 2027 Research Team},
-  booktitle={Proceedings of the MIT Sloan Sports Analytics Conference},
-  year={2027},
-  month={March}
-}
-```
+The package is verified in fresh Windows and Linux kernels. See [data access](DATA_ACCESS.md) for provider terms and [verification](RELEASE_AUDIT.md) for the scope of the checks.

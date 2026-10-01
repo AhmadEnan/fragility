@@ -1,12 +1,16 @@
-# Derived data
+# Derived inputs
 
-Precomputed tables used by `notebooks/reproduce_ssac27.ipynb` in public mode. These contain aggregate model outputs and percentiles, with no raw coordinates or tracking trajectories.
+| Files | Contents |
+|---|---|
+| `train_features.parquet` | Normalized development inputs for refitting held-out models |
+| `dev_features.parquet` | Common Figure 2 cohort, normalized inputs and original fold assignments |
+| `test_features.parquet` | Normalized held-out inputs |
+| `models.json` | Transformed frozen parameters and recovered development fold parameters |
+| `*_predictions.parquet` | Original scores for verification, labels, anonymous matches and tie order |
+| `*_event_links.parquet` | Row-to-event links with anonymous event IDs |
+| `tactical_comparison.csv` | Paired recovery and pre-release support flags |
+| `figure1_plot.npz` | Computed control fields, raster annotation artwork and compositing corrections |
+| `figure1_plot.json` | Illustration provenance and original pixel hash |
+| `manifest.json` | SHA-256 hashes for all inputs |
 
-| File | Description |
-| :--- | :--- |
-| `action_recovery.csv` | SOG recovery percentiles for the 46 tactical actions. |
-| `case_summary.csv` | Case-level recovery summaries for the 20 benchmark cases. |
-| `residual_ablation.csv` | Paired comparison between SOG and unweighted PCG. |
-| `grid_stability.csv` | Resolution convergence metrics ($50 \times 32$ vs $100 \times 64$). |
-| `counterattack_pairs.csv` | Fragility scores on 32 counter-attack matched pairs. |
-| `manifest.json` | SHA-256 checksums for each file. |
+Row order is fixed. Anonymous match labels preserve bootstrap ordering. Tie order preserves review selection. Feature values are dimensionless. Normalization is not a license or a guarantee against inference. See [data access](../../DATA_ACCESS.md) for sharing status.
