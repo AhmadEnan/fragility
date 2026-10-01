@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, reproducible workflows, or derived validation datasets, please cite it as below."
+message: "Please cite this repository if you use its code or derived data."
 title: "Fragility Score: Mapping Counterfactual Openings in Soccer Defenses"
 abstract: "Code and derived inputs for reproducing the SSAC 2027 soccer abstract and its Structural Opening Gain (SOG) results."
 authors:

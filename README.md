@@ -6,7 +6,7 @@ Mapping counterfactual openings in soccer defenses.
 [![Tests](https://github.com/AhmadEnan/fragility/actions/workflows/tests.yml/badge.svg)](https://github.com/AhmadEnan/fragility/actions/workflows/tests.yml)
 [![Code license: MIT](https://img.shields.io/badge/Code%20license-MIT-blue.svg)](LICENSE)
 
-Reproduction package for the SSAC 2027 soccer abstract using PFF FC's 2022 World Cup data. Structural Opening Gain (SOG) scores and ranks hypothetical player movements by the openings they create in a fixed defensive configuration.
+Code and derived data accompanying the SSAC 2027 soccer abstract, using PFF FC's 2022 World Cup dataset. Structural Opening Gain (SOG) scores and ranks hypothetical player movements by the openings they create in a fixed defensive configuration.
 
 ## Reproduce the figures
 
@@ -36,11 +36,11 @@ Event retrieval uses the same top 10% review budget. The Figure 2 comparison use
 
 The notebook uses derived features, outcome labels, event links and computed control fields. Raw PFF files are excluded. The [data-access guide](DATA_ACCESS.md) explains how to request the underlying dataset from Gradient Sports.
 
-The repo includes the original preprocessing and feature functions, a [runnable tracking feature extractor](src/fragility/extract_features.py), and the original [comparator extraction functions](reference/exp032_comparators.py) for reference. The complete raw-event qualification pipeline is outside this compact package.
+Original preprocessing and feature functions are included, with a [tracking feature extractor](src/fragility/extract_features.py) and [comparator reference code](reference/exp032_comparators.py). Reproduction starts from the supplied derived inputs; the complete raw-event cohort and outcome qualification pipeline is not included.
 
 - [Reproduction details](REPRODUCIBILITY.md)
 - [Code provenance](CODE_PROVENANCE.md)
-- [Abstract claims](ABSTRACT_CLAIMS.md)
-- [Verification record](RELEASE_AUDIT.md)
+- [Abstract results](ABSTRACT_CLAIMS.md)
+- [Reproducibility checks](RELEASE_AUDIT.md)
 
 The MIT license covers code only. See the data-access guide for the status of derived-data sharing terms.
