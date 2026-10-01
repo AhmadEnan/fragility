@@ -1,6 +1,6 @@
 # Reproduction
 
-The notebook verifies input hashes, recomputes held-out and development classifier scores, checks the abstract statistics and renders both figures. Expected scores are comparison artifacts; they are not substituted for inference.
+The notebook verifies input hashes, recomputes held-out and development classifier scores, checks the abstract statistics and renders both figures. Calculations run in fresh Python processes to avoid conflicts with Colab's preloaded packages. Expected scores are comparison artifacts; they are not substituted for inference.
 
 Inputs are normalized with development-only affine transforms. Absolute ball coordinates and the transforms back to provider units are not included. The original feature names identify their mathematical roles; released values are dimensionless. Squared ball-context terms are computed after fold standardization, as in the research code.
 

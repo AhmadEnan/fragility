@@ -33,6 +33,7 @@ plt.rcParams.update(
         "ytick.color": "#52616a",
         "pdf.fonttype": 42,
         "svg.fonttype": "none",
+        "svg.hashsalt": "ssac27",
         "mathtext.fontset": "stix",
         "axes.spines.top": False,
         "axes.spines.right": False,
@@ -49,7 +50,12 @@ GRAY = "#bbc4ca"
 def save(fig, name):
     for ext in ["png", "pdf", "svg"]:
         path = OUT / f"{name}.{ext}"
-        fig.savefig(path, dpi=300, facecolor="white")
+        metadata = (
+            {"Date": None}
+            if ext == "svg"
+            else ({"CreationDate": None, "ModDate": None} if ext == "pdf" else None)
+        )
+        fig.savefig(path, dpi=300, facecolor="white", metadata=metadata)
         if ext == "svg":
             path.write_text(
                 "\n".join(
