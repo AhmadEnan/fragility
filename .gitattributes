@@ -1,0 +1,4 @@
+data/derived/*.json text eol=lf
+data/derived/*.csv text eol=lf
+*.parquet binary
+*.npz binary
