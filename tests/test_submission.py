@@ -3,6 +3,7 @@
 import ast
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 from fragility.reproduce import verify
@@ -42,9 +43,10 @@ def test_original_function_provenance():
         )
         if ast.get_docstring(node):
             node.body = node.body[1:]
-        digest = hashlib.sha256(
-            ast.dump(node, include_attributes=False).encode()
-        ).hexdigest()
+        options = {"include_attributes": False}
+        if sys.version_info >= (3, 13):
+            options["show_empty"] = True
+        digest = hashlib.sha256(ast.dump(node, **options).encode()).hexdigest()
         assert digest == entry["function_sha256"]
 
 
