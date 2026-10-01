@@ -1,10 +1,10 @@
-# Verification record: source completion
+# Version 1.1.0 verification
 
-Checked locally on 2026-10-01, starting from submission commit `d8e5176550684955f73cdeb63a668faab339ad4a`.
+Checks for version 1.1.0 ran locally on 2026-10-01, using `d8e5176550684955f73cdeb63a668faab339ad4a` as the reference for the existing code and results.
 
-The source export preserves the frozen study and adds the missing reconstruction paths. The GitHub Actions workflow file has been removed, and the existing remote workflow was disabled and verified as `disabled_manually` at the owner's request. The checks below ran locally.
+This release preserves the original study and adds commands for reconstructing its inputs. The checks below ran locally.
 
-| Check | Independently verified result |
+| Check | Result |
 |---|---|
 | Original research checkout protection | 647 file hashes, HEAD and working-tree status unchanged |
 | Source and split integrity | 52 copied/extracted source entries checked; all 32 match identities disjoint across splits |
@@ -20,7 +20,7 @@ The source export preserves the frozen study and adds the missing reconstruction
 | Figure 1 engine reconstruction | Selected score 1.0723332626605457; C0 error 2.23e-16; gain error 8.84e-17 |
 | Full notebook execution | Completed both in this checkout and from an extracted source archive in a separate virtual environment/kernel |
 | Local checks with licensed cache | 12 passed; 116.71 seconds |
-| Submission figure PNGs | Both remain byte-for-byte identical to the starting submission |
+| Figure PNGs | Both remain byte-for-byte identical to the reference images |
 
 Machine-readable evidence is in `results/raw_*_completion_parity.json`, `results/export_bridge_completion_parity.json`, `results/refit_verification.json` and `results/original_checkout_protection.json`. The source manifest records original function/file fingerprints. The original four-state extractor and preprocessing checks remain available in their earlier evidence files.
 
@@ -28,12 +28,12 @@ Machine-readable evidence is in `results/raw_*_completion_parity.json`, `results
 
 Full raw-event/cohort/outcome reconstruction used authorized provider event/metadata files and existing original stride-8 caches and event indices, read-only. No raw tracking files were redistributed. The earlier preprocessing audit reproduced all 30,284 rows and 109 columns for match 10507.
 
-The full normalization/fitting bridge used freshly reconstructed cohorts, labels and links with the original frozen research-unit feature/comparator tables. Fresh pitch-control/SOG and comparator extraction were verified on the bounded samples above; every feature for all 76,786 states was not recalculated in this completion run. Tactical extraction from tracking covered one complete case; full recovery covered the entire supplied candidate bank. The exported commands support those longer complete reconstructions without the private checkout.
+Normalization and classifier fitting used reconstructed cohorts, labels and links with the original feature and comparator tables. Pitch-control/SOG and comparator extraction were checked on the samples listed above. Features were not recalculated for all 76,786 states in this run. Tactical extraction from tracking covered one complete case; recovery was recalculated across the entire included candidate bank. The reconstruction commands also support full runs from raw data.
 
-The revised notebook was executed locally on Windows/Python 3.13.14 and from the extracted source archive in an isolated environment. `results/source_archive_verification.json` confirms all final code and input files match that executed snapshot. A new browser-based Google Colab run and cross-platform run were not performed for this version. Earlier Colab/CI results apply to earlier commits only.
+The version 1.1.0 notebook ran on Windows/Python 3.13.14 and from the extracted source archive in a separate environment. `results/source_archive_verification.json` records the code and input hashes checked against that snapshot. Google Colab and cross-platform execution were not repeated for this version; earlier results apply to earlier commits.
 
-## Frozen submission artifact
+## Source archive
 
-`python tools/build_submission.py` creates `dist/ssac27-source-v1.1.0.zip`, a deterministic source archive with an embedded file manifest and a companion SHA-256 checksum. The archive excludes raw tracking, private caches, the historical local audit and GitHub workflow files. Install from the extracted checkout using `pip -e .`.
+`python tools/build_submission.py` creates `dist/ssac27-source-v1.1.0.zip`, a deterministic source archive with a per-file manifest and a SHA-256 checksum. It contains the code and shared inputs, excluding raw tracking and private caches. Install from the extracted directory using `pip -e .`.
 
-Version 1.1.0 uses the publication reference `ssac27-abstract-v1.1.0`. The old `ssac27-abstract-v1.0.0` tag is preserved. The README and remote notebook bootstrap target the new reference. The [versioned release](https://github.com/AhmadEnan/fragility/releases/tag/ssac27-abstract-v1.1.0) provides the source archive and its SHA-256 checksum as frozen reviewer artifacts.
+Version 1.1.0 is tagged `ssac27-abstract-v1.1.0`; the earlier `ssac27-abstract-v1.0.0` tag is preserved. The Colab link and notebook bootstrap use version 1.1.0. The [release](https://github.com/AhmadEnan/fragility/releases/tag/ssac27-abstract-v1.1.0) includes a source archive and its SHA-256 checksum.

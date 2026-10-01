@@ -1,4 +1,4 @@
-"""Render the two submission figures."""
+"""Render the opening-landscape and event-retrieval figures."""
 
 from pathlib import Path
 import numpy as np

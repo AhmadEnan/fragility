@@ -1,4 +1,4 @@
-"""Recalculate submission results from derived scores and event links."""
+"""Recalculate research results from derived scores and event links."""
 
 from pathlib import Path
 import json
@@ -211,4 +211,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
     DATA, OUTPUT = args.data_root, args.output_root
     verify(args.tactical_candidates)
-    print("Submission results verified.")
+    print("Results verified.")

@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "Please cite this repository if you use its code or derived data."
 title: "Fragility Score: Mapping Counterfactual Openings in Soccer Defenses"
-abstract: "Code and derived inputs for reproducing the SSAC 2027 soccer abstract and its Structural Opening Gain (SOG) results."
+abstract: "Structural Opening Gain (SOG) scores hypothetical player movements by their gains in attacking pitch control. Includes the implementation, derived data and analyses for reproducing the research results."
 authors:
   - name: "SSAC 2027 Research Team"
 date-released: "2026-10-01"

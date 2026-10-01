@@ -7,11 +7,19 @@
 
 An organized defense can still offer an attacker a useful movement nearby. **Structural Opening Gain (SOG)** makes those opportunities visible: it scores small hypothetical movements, holds the other players fixed, and ranks the resulting gains in attacking control. This deterministic scoring algorithm has no learned scoring parameters.
 
-This repository accompanies the **SSAC 2027 abstract** and includes the source behind scoring, cohort construction, event qualification, comparator extraction, classifier analysis and documented-action recovery. The [exact abstract](docs/submission/ABSTRACT.md) and [figure captions](docs/submission/FIGURE_CAPTIONS.md) are included.
+This repository contains the SOG implementation, data-processing code and analyses needed to reproduce the findings. It includes cohort construction, event qualification, comparator extraction, classifier fitting and recovery of documented player actions. The research is described in the [SSAC 2027 abstract](docs/submission/ABSTRACT.md) and [figure captions](docs/submission/FIGURE_CAPTIONS.md).
 
-## Reproduce the submission
+## How SOG works
 
-Open the Colab notebook and select **Runtime → Run all**. It verifies source and input integrity, independently refits the classifiers, recomputes results and tactical recovery, and displays both figures. It uses permitted derived inputs; no raw-data download, credentials or GPU are needed.
+SOG compares attacking pitch control before and after a short hypothetical movement. It discounts gains in space the team already controls and divides by the distance moved. Repeating this calculation across players and directions gives an opening landscape.
+
+![Original pitch control, a hypothetical Richarlison movement, and the resulting gain in attacking control](results/figures/FIGURE_1_OPENING_LANDSCAPE.png)
+
+In this Brazil–South Korea example, Richarlison moves 1.5 m northeast while everyone else stays fixed. The green field shows the resulting weighted control gain. The inset compares tested directions; dashed pass and shot routes illustrate static clearance, not predicted success.
+
+## Reproduce the results
+
+Open the Colab notebook and select **Runtime → Run all**. It checks the code and data hashes, refits the classifiers, recalculates the results and tactical recovery, and displays both figures. It uses the included derived data; no raw-data download, credentials or GPU are needed.
 
 Locally, with Python 3.12 or newer:
 
@@ -20,7 +28,7 @@ python -m pip install -r requirements-reproduce.txt -e ".[test]"
 python tests/verify_notebook.py
 ```
 
-For reconstruction from authorized provider data, follow the [raw-data instructions](REPRODUCIBILITY.md#reconstruction-from-authorized-provider-data). That route runs independently of the original research repository. Raw tracking stays on the reviewer's computer.
+To start from tracking and event data, follow the [raw-data instructions](REPRODUCIBILITY.md#reconstruction-from-authorized-provider-data). You'll need access to the provider's dataset; the raw files stay on your computer.
 
 ## What the evidence shows
 
@@ -40,15 +48,15 @@ Separately, 13 externally documented tactical sequences provide 20 evaluable pla
 
 The scalar SOG summary alone adds essentially no held-out discrimination. The contribution is the **action landscape and movement alignment**. Centered velocities include subsequent positions, so these results support retrospective retrieval, without establishing live forecasting, causal movement effects or a universal defensive-quality scale.
 
-## Where to look
+## Code and documentation
 
-| Reviewer question | Source |
+| Topic | Files |
 |---|---|
-| What does SOG compute? | [Method and features](METHODS.md), [frozen solver](src/fragility/fast_sog.py) |
-| How are situations and successful penetrations selected? | [Cohort driver](src/fragility/raw_pipeline.py), [CAP qualification](src/fragility/raw_cap.py) |
-| How are Figure 2 comparators calculated? | [Comparator extraction](src/fragility/comparators.py), [settings](configs/literature_benchmark.json) |
-| How are documented actions recovered? | [Ranking and recovery](src/fragility/tactical.py), [frame evidence](results/reproduced/tactical_frame_evidence.parquet) |
-| How do raw features connect to released rows? | [Export bridge](src/fragility/export_inputs.py), [row identities](data/identity/row_identity.parquet) |
-| What was independently checked? | [Verification](RELEASE_AUDIT.md), [source provenance](CODE_PROVENANCE.md) |
+| SOG scoring and features | [Methods](METHODS.md), [solver](src/fragility/fast_sog.py) |
+| Situation selection and penetration events | [Data pipeline](src/fragility/raw_pipeline.py), [CAP qualification](src/fragility/raw_cap.py) |
+| Figure 2 comparators | [Comparator extraction](src/fragility/comparators.py), [settings](configs/literature_benchmark.json) |
+| Documented player actions | [Ranking and recovery](src/fragility/tactical.py), [frame-level results](results/reproduced/tactical_frame_evidence.parquet) |
+| Feature normalization and row mapping | [Input export](src/fragility/export_inputs.py), [row identities](data/identity/row_identity.parquet) |
+| Reproduction checks and code origins | [Verification record](RELEASE_AUDIT.md), [source provenance](CODE_PROVENANCE.md) |
 
-The [data-access guide](DATA_ACCESS.md) explains provider access and sharing. MIT covers project code; [third-party notices](THIRD_PARTY_NOTICES.md) cover external methods and the EPV asset. No GitHub Actions test workflows are configured.
+See [data access](DATA_ACCESS.md) for the dataset and sharing terms. The code is available under the [MIT license](LICENSE); [third-party notices](THIRD_PARTY_NOTICES.md) describe the external methods and EPV grid used here.

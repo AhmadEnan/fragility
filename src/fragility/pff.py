@@ -118,7 +118,7 @@ def load_pff_state(
     focal_is_home: bool = True,
     offside_tol_m: float = 0.0,
 ) -> TrackingState:
-    """Load a specific match frame from reviewer-provided PFF dataset directory.
+    """Load a match frame from a local PFF tracking cache.
 
     Reads a stride-8 cache Parquet. Build it first with fragility.preprocessing;
     this function does not decode raw tracking JSONL files.

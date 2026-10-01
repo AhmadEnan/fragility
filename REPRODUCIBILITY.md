@@ -1,8 +1,8 @@
-# Reproducing the submission
+# Reproducing the results
 
-## Lightweight reviewer route
+## Using the included data
 
-The notebook checks source fingerprints and input hashes, independently fits all ten classifier arms from labels, replays frozen coefficients, recomputes event retrieval and both 10,000-draw intervals, and regenerates both figures. Tactical recovery is computed from candidate scores and frozen annotations, rather than accepting supplied hit flags.
+The notebook checks source fingerprints and input hashes, refits all ten classifiers from labels, checks saved coefficients, recomputes event retrieval and both 10,000-draw bootstrap intervals, and regenerates both figures. Tactical recovery is calculated by ranking candidate scores against the documented player actions.
 
 ```bash
 python -m pip install -r requirements-reproduce.txt -e ".[test]"
@@ -37,11 +37,11 @@ python -m fragility.integrity --cohort-root WORK/cohort
 python -m fragility.raw_tactical WORK/cohort/private_cache WORK/tactical --raw-root RAW_ROOT
 python -m fragility.tactical --candidates WORK/tactical/tactical_candidate_scores.parquet --output WORK/tactical_results
 
-# Recalculate the submission statistics from the freshly fitted classifier inputs.
+# Recalculate the results from the freshly fitted classifier inputs.
 python -m fragility.reproduce --data-root WORK/derived --output-root WORK/results --tactical-candidates WORK/tactical/tactical_candidate_scores.parquet
 ```
 
-Scripts never write into explicit raw/cache/index inputs. Existing caches and indices may be supplied read-only. Importing modules does not launch jobs or create research directories. Reconstruction uses this repository's dependencies and does not need the original research checkout.
+Keep the raw dataset, caches and event indices separate from each command's output directory. Existing caches and indices can be reused; the commands read them without modifying them. All reconstruction code is included here.
 
 Full feature reconstruction is CPU-intensive: up to 240 movements per state over 1,600 pitch cells. Allow hours, depending on hardware. Serial match processing bounds memory. A quick wiring check adds `--matches 3844 --limit 4` to the feature stage, or `--matches 3812 --limit 4` to the comparator stage. Bounded runs are recorded as such and cannot replace full-study inputs. Tactical extraction accepts `--cases GOLD001`. No GPU is required.
 
@@ -57,13 +57,13 @@ The original development run did not retain fold coefficients. Frozen replay coe
 
 ## Illustration and optional local checks
 
-Figure 1 renders saved scientific fields beneath fixed annotation artwork with sparse raster corrections, preserving the submitted image. Independently recompute its selected action and fields:
+Figure 1 combines saved control fields with labels, player symbols and raster corrections to reproduce the original image. To recalculate the illustrated action and control fields from tracking data:
 
 ```bash
 python -m fragility.preprocessing RAW_ROOT CACHE_ROOT --match 10507 10505
 python -m fragility.verify_illustration CACHE_ROOT
 ```
 
-Set `PFF_DATA_ROOT` to `CACHE_ROOT` for the existing optional local engine-parity check, `python -m pytest`. It uses match **10505**. `load_pff_state` requires a cache and does not decode raw JSONL. No GitHub Actions tests are configured.
+Set `PFF_DATA_ROOT` to `CACHE_ROOT` for the optional local engine-parity check, `python -m pytest`. It uses match **10505**. `load_pff_state` requires a cache and does not decode raw JSONL.
 
 The frozen [held-out](docs/protocols/heldout.md) and [tactical ablation](docs/protocols/tactical_ablation.md) protocols preserve historical registration. Their predictive language is qualified by the centered-velocity disclosure in the submitted abstract and [METHODS.md](METHODS.md). Reconstruction preserves the existing method without new thresholds or sampling.

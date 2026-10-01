@@ -1,6 +1,6 @@
 # Abstract results
 
-Results in the [exact submitted abstract](docs/submission/ABSTRACT.md) and [figure captions](docs/submission/FIGURE_CAPTIONS.md), exported from the original submission packet on 2026-10-01.
+The table links results reported in the [SSAC 2027 abstract](docs/submission/ABSTRACT.md) and [figure captions](docs/submission/FIGURE_CAPTIONS.md) to their inputs and reproduced values.
 
 | Result | Derived input | Reproduced value |
 |---|---|---|

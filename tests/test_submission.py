@@ -1,4 +1,4 @@
-"""Submission data integrity, provenance and result checks."""
+"""Data integrity, source provenance and result checks."""
 
 import ast
 import hashlib
